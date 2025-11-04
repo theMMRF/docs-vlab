@@ -10,9 +10,7 @@ body:
       value: |
         Thanks for taking the time to create an issue. Please read the following before posting:
 
-        - DO NOT post any Personally Identifiable Information (PII) in a GitHub Issue.  This includes IP address, hostnames, and tokens.
-        - If you have questions please ask on our [Gen3 Community Slack channel](https://app.slack.com/client/T03A08KRA/C03A08KRY)! Not yet in the channel? Request Slack access [here](https://docs.google.com/forms/d/e/1FAIpQLSczyhhOXeCK9FdVtpQpelOHYnRj1EAq1rwwnm9q6cPAe5a7ug/viewform).
-        - Issue or Pull Request? Create only one, not both.  If unsure, start with an issue or ask on Slack.
+        DO NOT post any Personally Identifiable Information (PII) in a GitHub Issue.  This includes IP address, hostnames, and tokens.
 
   - type: input
     attributes:

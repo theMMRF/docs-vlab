@@ -1,0 +1,3 @@
+{# Custom logo partial #}
+{% set logo = config.theme.logo | d('img/MMRF20Square_Plum_CMYK.png') %}
+<img src="{{ logo | url }}" alt="{{ config.site_name }}" class="mmrf-logo">
