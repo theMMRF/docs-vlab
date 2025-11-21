@@ -7,10 +7,14 @@ The **Repository** is where users can browse and download data files associated 
 > **Note:** Filters in the Repository apply to *files* within your cohort. To filter *cases or participants*, use the **Cohort Builder**.
 
 The Repository can be accessed in two ways:
+
 - By selecting **Repository** in the Analysis Center toolbar.
+
+  ![Repository entry point header](img/repository-entry-point-header.png)
+
 - By clicking the **Repository** card on the Analysis Center homepage.
 
-![Repository Entry Placeholder — replace with screenshot](../images/repository-entry.png)
+  ![Repository entry point run app](img/repository-entry-point-app.png)
 
 ---
 
@@ -20,7 +24,7 @@ The files displayed in the Repository correspond to the active cohort you are cu
 
 To explore all available files in the MMRF Virtual Lab, you can create a new cohort from the toolbar and use it within the Repository.
 
-![Cohort Bar Placeholder — replace with screenshot](../images/cohort-bar.png)
+  ![Repository Cohort Bar](img/repository-cohort-bar.png)
 
 ---
 
@@ -42,13 +46,9 @@ The following filter categories are currently available in the **MMRF Virtual La
 - **Specimen Type:** Source specimen (e.g., *bone marrow NOS*, *peripheral blood NOS*).  
 - **Preservation Method:** Method used to preserve the specimen (e.g., *unknown*).
 
-![Repository Filter Panel – MMRF Virtual Lab](../images/repository-filters.png)
+![Repository Filter Panel](img/repository-filters.png)
 
 Filters can be sorted alphabetically by **Name** or by **Files** count using the arrow icons in each card header. To search within a filter card, click the magnifying-glass icon. To reset a filter, click the circular arrow icon in the upper-right corner of the card.
-
-If you need a filter not listed, use **Add a Custom Filter** at the top of the panel. You can browse additional filters or search by name. Added filters will appear under the **Custom Filters** section and can be removed by clicking the **X** in the card header.
-
-![Custom Filter Placeholder — replace with screenshot](../images/custom-filter.png)
 
 ---
 
@@ -70,7 +70,7 @@ You can customize visible columns using the **Customize Columns** button above t
 
 The **JSON** and **TSV** buttons allow you to download metadata summaries for all files currently displayed.
 
-![Files Table Placeholder — replace with screenshot](../images/files-table.png)
+![Files Table](img/repository-files-table.png)
 
 ---
 
@@ -102,7 +102,7 @@ Once you have refined your filters and file list, you can export data and metada
 
 > The **Manifest** file is required for downloading files using the **Gen3 Client** (instructions below).
 
-![Repository Toolbar — replace with screenshot](../images/repository-toolbar.png)
+![Repository Toolbar](img/repository-toolbar.png)
 
 ---
 
@@ -118,7 +118,7 @@ Click **My Cart** in the upper-right corner to review all files you’ve selecte
 
 Each row includes interactive links for **File Name**, **Cases**, and **Project ID**, which navigate to corresponding detail pages.
 
-![Cart Page Placeholder — replace with screenshot](../images/cart.png)
+![Cart Page](img/repository-cart.png)
 
 ---
 
@@ -133,7 +133,7 @@ To generate a manifest:
 
 3. Save the `.json` file to your local system.
 
-![Manifest Placeholder — replace with screenshot](../images/repository-manifest.png)
+![Download Manifest](img/repository-manifest.png)
 
 ---
 
@@ -160,12 +160,14 @@ The **Gen3 Client** is a secure command-line tool for downloading data from Gen3
 
 ### Step 2. Obtain Your Credentials
 
-1. Go to [https://dev-virtuallab.themmrf.org](https://dev-virtuallab.themmrf.org) and log in.  
+1. Go to [https://virtuallab.themmrf.org](https://virtuallab.themmrf.org) and log in.  
 2. Click your username in the top-right corner.  
 3. Select **Create an API Key**.  
 4. Download your credentials JSON file.  
 
 > Keep your credentials secure. API keys are valid for **30 days**, after which new credentials must be generated.
+
+![Create API key](img/repository-api-key.png)
 
 ---
 
@@ -175,12 +177,12 @@ Once installed, configure your Gen3 Client profile with your credentials:
 
 ```bash
 /Applications/gen3-client configure \
-  --profile=dev-mmrf \
+  --profile=mmrf \
   --cred=path-from-current-dir-to-file.json \
-  --apiendpoint=https://dev-virtuallab.themmrf.org
+  --apiendpoint=https://virtuallab.themmrf.org
 ```
 
-- `profile`: Name your configuration (e.g., *dev-mmrf*). 
+- `profile`: Name your configuration (e.g., *mmrf*). 
 
 - `cred`: Path to your downloaded credentials file.
 
@@ -189,7 +191,7 @@ Once installed, configure your Gen3 Client profile with your credentials:
 Test your setup:
 
 ```bash
-/Applications/gen3-client auth --profile=dev-mmrf
+/Applications/gen3-client auth --profile=mmrf
 ```
 
 You should see a lsit of your authorized projects and permissions.
@@ -200,7 +202,7 @@ You should see a lsit of your authorized projects and permissions.
 
 ```bash
 /Applications/gen3-client download-single \
---profile=dev-mmrf \
+--profile=mmrf \
 --guid=dg.MMRF/dc1040c6-abc3-4863-8560-d5107a30a828 \
 --no-prompt --skip-completed
 ```
@@ -209,7 +211,7 @@ You should see a lsit of your authorized projects and permissions.
 
 ```bash
 /Applications/gen3-client download-multiple \
---profile=dev-mmrf \
+--profile=mmrf \
 --manifest='/path-to-manifest.json' \
 --no-prompt --skip-completed
 ```
