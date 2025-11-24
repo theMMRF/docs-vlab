@@ -8,11 +8,13 @@ The Cohort Builder can be accessed via:
 
 - Selecting the Cohort Builder link in the MMRF Virtual Lab header
 
-  ![Cohort entry point header](img/entry-point-header.png)
+  ![Cohort Builder entry point header](img/cohort-builder-entry-point-header.png)
 
-- Selecting the 'Run App' button on the Cohort Builder card in the Analysis Center
+OR
 
-  ![Cohort entry point run app](img/entry-point-app.png)
+-  Selecting the 'Run App' button on the Cohort Builder card in the Analysis Center
+
+  ![Cohort Builder entry point run app](img/cohort-builder-entry-point-app.png)
 ---
 
 ## Cohort Builder Panel Layout
@@ -20,7 +22,8 @@ The Cohort Builder can be accessed via:
 ![Cohort builder panel](img/cohort-builder-panel.png)
 
 The **Cohort Builder** appears as a panel within the **Analysis Center** and is used to refine the active cohort to a specific set of cases.
-Your **current cohort** is always visible in the top navigation bar and can be updated directly from that toolbar at any time,
+
+Your **current cohort** is always visible in the top navigation bar and can be updated directly from that toolbar at any time.
 
 On the left side of the panel, you'll find a set of **broad filter categories** that can be expanded.
 
@@ -34,6 +37,7 @@ Each **Cohort Builder** card represents a specific variable or attribute that ca
 Cards are grouped within broader categories such as *Subject*, *Demographic*, *Diagnosis*, or *Outcomes*.
 
 Each **Cohort Builder card** includes tools in the top-right corner of the header that make filtering faster and more interactive:
+
 - **Search** - click the magnifying-glass icon to show or hide a text field for searching within the card's available values.
 <!--- **Flip Card** - select the flip icon to reveal or hide a summary chart. This view provides a quick visualization of the data distribution for that variable, helping you understand trends before applying filters. -->
 - **Reset Card** - click the reset icon to clear any filters currently applied within that card and restore all default values.
@@ -52,7 +56,92 @@ As you make selections within a card, the number of cases that meet your criteri
 
 ![Cohort builder case change panel](img/cohort-builder-card-case-change-panel.png)
 
-### Custom Filters
+Some **Cohort Builder cards** include hundreds of possible values - for example **Regimen Name, Regimen Short Name** or other treatment variables. These filters use a **search-enabled multi-select interface** rather than a long checkbox list.
+
+This design allows users to quickly identify the values they want without scrolling.
+
+Features include:
+
+<figure markdown>
+  ![Cohort Builder searchable text entry box](img/cohort-builder-search-text-entry.png)
+  <figcaption>
+    A searchable text entry box.
+  </figcaption>
+</figure>
+
+<figure markdown>
+  ![Cohort builder text entry drop down](img/cohort-builder-text-entry-drop-down.png)
+  <figcaption>
+    A dropdown showing the top ~5 most frequent values by default, dynamically updating as you type.
+  </figcaption>
+</figure>
+
+<figure markdown>
+  ![Cohort builder select multiple values](img/cohort-builder-text-box-select-values.png)
+  <figcaption>
+    The ability to select multiple values, each appearing as a removable tag.
+  </figcaption>
+</figure>
+
+<figure markdown>
+  ![Cohort builder cohort bar update](img/cohort-builder-text-box-update-bar.png)
+  <figcaption>
+    Automatic updates to the Cohort Bar and case count as selections are made.
+  </figcaption>
+</figure>
+
+<!--A searchable text entry box ![Cohort Builder searchable text entry box](img/cohort-builder-search-text-entry.png)
+A dropdown that displays the top ~5 most frequent values (default) and all matching results as you type ![Cohort builder text entry drop down](img/cohort-builder-text-entry-drop-down.png)
+The ability to select multiple values, each appearing as a removable tag ![Cohort builder select multiple values](img/cohort-builder-text-box-select-values.png)
+Automatic updates to the Cohort Bar and case count ![Cohort builder cohort bar update](img/cohort-builder-text-box-update-bar.png)-->
+
+This interface is ideal for filtering by treatment patterns or selecting specific therapeutic combinations.
+
+Some clinical variables - such as **Age at Index, Days to Death**, or **Days to Last Follow-Up** - are numeric and use a range-based interface instead of a list of categorical values.
+
+These cards include:
+<figure markdown>
+  ![Cohort builder age unit toggle](img/cohort-builder-unit-toggle.png)
+  <figcaption>
+    <strong>Unit toggle</strong> between <em>Days</em> and <em>Years</em>.
+  </figcaption>
+</figure>
+
+<figure markdown>
+  ![Cohort builder age numeric inputs](img/cohort-builder-min-max.png)
+  <figcaption>
+    <strong>From / To</strong> numeric input fields for defining ranges.
+  </figcaption>
+</figure>
+
+<figure markdown>
+  ![Cohort builder age min max](img/cohort-builder-greater-equal.png)
+  <figcaption>
+    Built-in constraints displaying the minimum and maximum valid values.
+  </figcaption>
+</figure>
+
+<figure markdown>
+  ![Cohort builder age apply filter](img/cohort-builder-age-apply-filter.png)
+  <figcaption>
+    An <strong>Apply</strong> button to confirm selections and update the cohort.
+  </figcaption>
+</figure>
+
+<figure markdown>
+  ![Cohort builder age auto filter](img/cohort-builder-age-auto-filter.png)
+  <figcaption>
+    Automatically generated labeled bins shown beneath the card after applying filters.
+  </figcaption>
+</figure>
+<!--**Unit toggle** between *Days* and *Years* ![Cohort builder age unit toggle](img/cohort-builder-unit-toggle.png)
+**From / To** numeric inputs ![Cohort builder age numeric inputs](img/cohort-builder-numeric-input.png)
+Built-in constraints showing min/max valid values ![Cohort builder age min max](img/cohort-builder-min-max.png)
+Ability to specify ≥ or ≤ using toggle buttons ![Cohort builder greater than](img/cohort-builder-greater-equal.png)
+An **Apply** button to confirm and update the cohort ![Cohort builder age apply filter](img/cohort-builder-age-apply-filter.png)
+Automatically created labeled bins below the card after filters are applied ![Cohort builder age auto filter](img/cohort-builder-age-auto-filter.png)-->
+
+<!--### Custom Filters
 If you can't find a specific filter within the standard categories, use the **"Custom Filters"** section to access any additional variables not displayed by default. 
 
 You can browse through the full list of available filters or use the search bar to quickly locate a filter by name. Once selected, the filter will appear as a new **Custom Filter card** within this section, where it can be used like any other card.
@@ -61,7 +150,7 @@ To remove a custom filter, click the **"X"** in the upper-right corner of the ca
 
 You can also simplify the list by enabling **"Only show properties with values"** option, which hides filters that currently have no associated data in the MMRF Virtual Lab.
 
-![Cohort builder custom filters](img/cohort-builder-custom-filters.png)
+![Cohort builder custom filters](img/cohort-builder-custom-filters.png)-->
 
 ## Cohort Bar
 The **Cohort Bar** appears at the top of the **Cohort Builder** panel and display the filters that define your active cohort. 
@@ -76,10 +165,9 @@ Each tag can be removed individually by clicking the **"X"** icon, or you can re
 
 The Cohort Bar automatically updates in real time as new filters are applied, ensuring that the active cohort always reflects your current selections. 
 
-![Cohort builder cohort bar study](img/cohort-builder-cohort-study.png)
-![Cohort builder cohort bar demo](img/cohort-builder-cohort-demo.png)
+![Cohort builder cohort bar demo](img/cohort-builder-cohort-demo.gif)
 
-The Cohort Bar provides a simple, visual summary of your applied filters and acts as the control center for your cohort definition. As the MMRF releases data periodicallly rather than continuously, cohort definitions will remain consistent over time unless new datasets are introduced to Virtual Lab.
+The Cohort Bar provides a simple, visual summary of your applied filters and acts as the control center for your cohort definition. As the MMRF releases data periodicallly rather than continuously, cohort definitions will remain consistent over time unless new datasets are introduced to Virtual Lab. 
 
 
 ## Closing the Cohort Builder

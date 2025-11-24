@@ -2,7 +2,11 @@
 
 To ensure data consistency and scientific rigor, all CoMMpass sequencing data were processed through a standardized bioinformatics pipeline developed and maintained by the **Translational Genomics Research Institute (TGen)**.
 
-This system, known as the **Phoenix pipeline**, was designed to generate high-quality, harmonized genomic outputs from raw sequencing data across the study’s many sites and timepoints. The pipeline enabled reproducible analyses and uniform quality control for every sample in the study — ensuring comparability across more than a decade of sequencing.
+This system, known as the **Phoenix pipeline**, was designed to generate high-quality, harmonized genomic outputs from raw sequencing data across the study’s many sites and timepoints. The pipeline enabled reproducible analyses and uniform quality control for every sample in the study - ensuring comparability across more than a decade of sequencing.
+
+Because CoMMpass spanned more than a decade, samples were generated across multiple sequencing centers, platforms, and versions of chemistry. Harmonization ensured that every sample - regardless of when or where it was sequenced - was processed in a consistent and comparable way.
+
+Each sample passed through a defined series of quality control steps, including checks on sequencing depth, alignment quality, contamination, and sample identity. Samples failing QC assessments were flagged and excluded from downstream harmonized releases.
 
 The Phoenix framework supports multiple data types, including:
 
@@ -19,6 +23,8 @@ For example:
 
 - `MMRF_1234_BM_CD138_DNA_WES.bam` → Whole exome sequencing BAM file for patient 1234, CD138+ bone marrow sample.
 - `MMRF_1234_TP1_RNA_Seq.counts` → RNA-Seq gene expression counts for patient 1234 at timepoint 1.
+
+Within the MMRF Virtual Lab, processed genomic outputs and summary-level files from historic IA releases can be accessed through the Repository.
 
 ---
 

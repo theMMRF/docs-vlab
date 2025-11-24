@@ -1,6 +1,6 @@
 # What is the MMRF Virtual Lab?
 
-The MMRF Virtual Lab is a secure, cloud-based data platform designed to accelerate multiple myeloma research through open, collaborative science. Built on the Gen3 framework, the Virtual Lab enables researchers to explore, analyze, and share genomic and clinical data from the MMRF research programs, including CoMMpass, Immune Atlas, and other initiatives. 
+The **MMRF Virtual Lab** is a secure, cloud-based data platform designed to accelerate multiple myeloma research through open, collaborative science. Built on the Gen3 framework, the Virtual Lab enables researchers to explore, analyze, and share genomic and clinical data from the MMRF research programs, including CoMMpass, Immune Atlas, and other initiatives. 
 
 Virtual Lab brings together comprehensive multi-omics datasets and advanced visualization tools in one environment, helping researchers generate insights, develop hypotheses, and drive discoveries that improve outcomes for patients with multiple myeloma.
 
@@ -15,7 +15,7 @@ You can find more information about Gen3 on [gen3.org](https://gen3.org/).
 
 The Virtual Lab platform leverages Gen3 software, which is licensed under an Apache 2.0 license.
 
-This permissive license allows the MMRF to build upon Gen3's open0source foundation while extending the platform with myeloma-specific datasets, visualizations, and analytical tools.
+This permissive license allows the MMRF to build upon Gen3's open source foundation while extending the platform with myeloma-specific datasets, visualizations, and analytical tools.
 
 The full text of the Apache 2.0 license is available here (https://github.com/apache/.github/blob/main/LICENSE).
 

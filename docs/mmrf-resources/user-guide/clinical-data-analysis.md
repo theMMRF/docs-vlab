@@ -16,7 +16,7 @@ To access this feature:
 2. Select or create a cohort to analyze.  
 3. Under **Analysis Tools**, click the **Clinical Data Analysis** card.  
 
-![Analysis Center Overview Placeholder — replace with screenshot](../images/analysis-center.png)
+![Clinical Data Analysis Center Overview](img/clinical-data-analysis-navigation.png)
 
 The page will display all available clinical attributes for your cohort along with interactive visualization options.
 
@@ -40,7 +40,7 @@ The Clinical Data Analysis tool enables users to:
 
 Use the control panel on the left to choose which clinical variables to visualize. Click the toggle switches next to each variable to enable or disable its display. Each enabled variable appears as a **card** in the workspace with selectable plot types.
 
-![Clinical Variable Toggle Placeholder — replace with screenshot](../images/clinical-data-toggles.png)
+![Clinical Data Analysis Variable Toggle](img/clinical-data-toggles.png)
 
 Clinical fields are grouped into the following categories:
 
@@ -58,13 +58,14 @@ Each clinical variable card supports one or more visualization types. Use the ic
 Displays the distribution of cases across a selected clinical field as a bar chart. This plot supports both **categorical** and **continuous** variables.
 
 Features:
+
 - View frequency and percentage of cases in each category.  
 - View the data in tabular format.  
 - Select specific bars to define new cohorts or modify existing ones.  
 - Download plots in **SVG** or **PNG**.  
 - Export data in **JSON** or **TSV** formats.
 
-![Histogram Placeholder — replace with screenshot](../images/clinical-histogram.png)
+![Clinical Data Analysis Histogram](img/clinical-data-analysis-histogram.png)
 
 ---
 
@@ -73,17 +74,19 @@ Features:
 Displays survival outcomes over time for one or more patient categories (e.g., gender or treatment type). The MMRF Virtual Lab uses the **Kaplan–Meier estimator** to calculate survival probability over time.
 
 Required fields:
+
 - **Days to death** or **days to last follow-up**  
 - **Vital status (alive/deceased)**  
 - **Category field** to separate cases (e.g., gender or treatment group)
 
 Features:
+
 - Select up to 5 categories to include in the plot.  
 - View counts and survival percentages in the accompanying data table.  
 - Download survival curves in **SVG** or **PNG**.  
 - Export underlying data as **JSON** or **TSV**.
 
-![Survival Plot Placeholder — replace with screenshot](../images/clinical-survival.png)
+![Clinical Data Analysis Survival Plot](img/clinical-data-analysis-survival-plot.png)
 
 ---
 
@@ -99,7 +102,7 @@ Click **Customize Bins** → **Edit Bins** to open the configuration window.
 - Rename or hide categories.  
 - Ungroup or restore previously hidden values.  
 
-![Categorical Binning Placeholder — replace with screenshot](../images/clinical-binning-categorical.png)
+![Clinical Data Analysis Categorical Binning](img/clinical-data-analysis-binning-categorical.png)
 
 ---
 
@@ -107,15 +110,17 @@ Click **Customize Bins** → **Edit Bins** to open the configuration window.
 
 Two binning methods are supported:
 
-1. **Equidistant Bins**  
+**1. Equidistant Bins**  
+
    - Define interval sizes (e.g., 10 years, 1,000 days).  
    - Optionally set start and end values.  
 
-2. **Custom Range Bins**  
+**2. Custom Range Bins**  
+
    - Manually create bins with user-defined ranges.  
    - Name each range and specify min/max values.
 
-![Continuous Binning Placeholder — replace with screenshot](../images/clinical-binning-continuous.png)
+![Clinical Data Analysis Continuous Binning Placeholder](img/clinical-data-analysis-binning-continuous.png)
 
 You can reset any custom binning to default values at any time by selecting **Reset to Default**.
 

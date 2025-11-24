@@ -8,11 +8,11 @@ It provides step-by-step instructions for navigating the platform, building coho
 
 ### Sections in This Guide
 
-* [Cohort Builder](cohort-builder.md) – Learn how to filter and define participant cohorts based on clinical, molecular, and biospecimen attributes.
-* [Repository](repository.md) – Instructions for accessing, filtering, and downloading data files available within the platform.
-* [Mutation Frequency](mutation-frequency.md) – Explore gene- and variant-level summaries, mutation frequencies, and comparison tools.
-* [Clinical Data Analysis](clinical-data-analysis.md) – Review integrated clinical data, visualize outcomes, and correlate findings with genomic features.
-* [Cohort Comparison](cohort-comparison.md) – Compare two or more cohorts side-by-side to assess differences across key variables.
+* [Cohort Builder](cohort-builder.md) - Learn how to filter and define participant cohorts based on clinical, molecular, and biospecimen attributes.
+* [Repository](repository.md) - Instructions for accessing, filtering, and downloading data files available within the platform.
+* [Mutation Frequency](mutation-frequency.md) - Explore gene- and variant-level summaries, mutation frequencies, and comparison tools.
+* [Clinical Data Analysis](clinical-data-analysis.md) - Review integrated clinical data, visualize outcomes, and correlate findings with genomic features.
+* [Cohort Comparison](cohort-comparison.md) - Compare two or more cohorts side-by-side to assess differences across key variables.
 
 ---
 
