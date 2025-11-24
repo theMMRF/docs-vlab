@@ -706,6 +706,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -744,6 +748,52 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mmrf-commpass/about-commpass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About the CoMMpass Study
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mmrf-commpass/clinical-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CoMMpass Clinical Data Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -989,7 +1039,7 @@
 <li>Select or create a cohort to analyze.  </li>
 <li>Under <strong>Analysis Tools</strong>, click the <strong>Clinical Data Analysis</strong> card.  </li>
 </ol>
-<p><img alt="Analysis Center Overview Placeholder — replace with screenshot" src="../images/analysis-center.png"></p>
+<p><img alt="Clinical Data Analysis Center Overview" src="../img/clinical-data-analysis-navigation.png"></p>
 <p>The page will display all available clinical attributes for your cohort along with interactive visualization options.</p>
 <hr>
 <h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">¶</a></h2>
@@ -1006,7 +1056,7 @@
 <hr>
 <h2 id="enabling-clinical-variable-cards">Enabling Clinical Variable Cards<a class="headerlink" href="#enabling-clinical-variable-cards" title="Permanent link">¶</a></h2>
 <p>Use the control panel on the left to choose which clinical variables to visualize. Click the toggle switches next to each variable to enable or disable its display. Each enabled variable appears as a <strong>card</strong> in the workspace with selectable plot types.</p>
-<p><img alt="Clinical Variable Toggle Placeholder — replace with screenshot" src="../images/clinical-data-toggles.png"></p>
+<p><img alt="Clinical Data Analysis Variable Toggle" src="../img/clinical-data-toggles.png"></p>
 <p>Clinical fields are grouped into the following categories:</p>
 <ul>
 <li><strong>Demographic:</strong> Patient characterization data (e.g., age, sex, race, ethnicity).  </li>
@@ -1017,26 +1067,32 @@
 <p>Each clinical variable card supports one or more visualization types. Use the icons in the upper-right corner of the card to switch between plot types.</p>
 <h3 id="histogram">Histogram<a class="headerlink" href="#histogram" title="Permanent link">¶</a></h3>
 <p>Displays the distribution of cases across a selected clinical field as a bar chart. This plot supports both <strong>categorical</strong> and <strong>continuous</strong> variables.</p>
-<p>Features:
-- View frequency and percentage of cases in each category.<br>
-- View the data in tabular format.<br>
-- Select specific bars to define new cohorts or modify existing ones.<br>
-- Download plots in <strong>SVG</strong> or <strong>PNG</strong>.<br>
-- Export data in <strong>JSON</strong> or <strong>TSV</strong> formats.</p>
-<p><img alt="Histogram Placeholder — replace with screenshot" src="../images/clinical-histogram.png"></p>
+<p>Features:</p>
+<ul>
+<li>View frequency and percentage of cases in each category.  </li>
+<li>View the data in tabular format.  </li>
+<li>Select specific bars to define new cohorts or modify existing ones.  </li>
+<li>Download plots in <strong>SVG</strong> or <strong>PNG</strong>.  </li>
+<li>Export data in <strong>JSON</strong> or <strong>TSV</strong> formats.</li>
+</ul>
+<p><img alt="Clinical Data Analysis Histogram" src="../img/clinical-data-analysis-histogram.png"></p>
 <hr>
 <h3 id="survival-plot">Survival Plot<a class="headerlink" href="#survival-plot" title="Permanent link">¶</a></h3>
 <p>Displays survival outcomes over time for one or more patient categories (e.g., gender or treatment type). The MMRF Virtual Lab uses the <strong>Kaplan–Meier estimator</strong> to calculate survival probability over time.</p>
-<p>Required fields:
-- <strong>Days to death</strong> or <strong>days to last follow-up</strong><br>
-- <strong>Vital status (alive/deceased)</strong><br>
-- <strong>Category field</strong> to separate cases (e.g., gender or treatment group)</p>
-<p>Features:
-- Select up to 5 categories to include in the plot.<br>
-- View counts and survival percentages in the accompanying data table.<br>
-- Download survival curves in <strong>SVG</strong> or <strong>PNG</strong>.<br>
-- Export underlying data as <strong>JSON</strong> or <strong>TSV</strong>.</p>
-<p><img alt="Survival Plot Placeholder — replace with screenshot" src="../images/clinical-survival.png"></p>
+<p>Required fields:</p>
+<ul>
+<li><strong>Days to death</strong> or <strong>days to last follow-up</strong>  </li>
+<li><strong>Vital status (alive/deceased)</strong>  </li>
+<li><strong>Category field</strong> to separate cases (e.g., gender or treatment group)</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Select up to 5 categories to include in the plot.  </li>
+<li>View counts and survival percentages in the accompanying data table.  </li>
+<li>Download survival curves in <strong>SVG</strong> or <strong>PNG</strong>.  </li>
+<li>Export underlying data as <strong>JSON</strong> or <strong>TSV</strong>.</li>
+</ul>
+<p><img alt="Clinical Data Analysis Survival Plot" src="../img/clinical-data-analysis-survival-plot.png"></p>
 <hr>
 <h2 id="creating-custom-bins">Creating Custom Bins<a class="headerlink" href="#creating-custom-bins" title="Permanent link">¶</a></h2>
 <p>Custom bins allow researchers to redefine how data are grouped within visualizations. You can apply this to both <strong>categorical</strong> and <strong>continuous</strong> variables.</p>
@@ -1047,23 +1103,21 @@
 <li>Rename or hide categories.  </li>
 <li>Ungroup or restore previously hidden values.  </li>
 </ul>
-<p><img alt="Categorical Binning Placeholder — replace with screenshot" src="../images/clinical-binning-categorical.png"></p>
+<p><img alt="Clinical Data Analysis Categorical Binning" src="../img/clinical-data-analysis-binning-categorical.png"></p>
 <hr>
 <h3 id="continuous-binning">Continuous Binning<a class="headerlink" href="#continuous-binning" title="Permanent link">¶</a></h3>
 <p>Two binning methods are supported:</p>
-<ol>
-<li><strong>Equidistant Bins</strong>  </li>
+<p><strong>1. Equidistant Bins</strong>  </p>
+<ul>
 <li>Define interval sizes (e.g., 10 years, 1,000 days).  </li>
-<li>
-<p>Optionally set start and end values.  </p>
-</li>
-<li>
-<p><strong>Custom Range Bins</strong>  </p>
-</li>
+<li>Optionally set start and end values.  </li>
+</ul>
+<p><strong>2. Custom Range Bins</strong>  </p>
+<ul>
 <li>Manually create bins with user-defined ranges.  </li>
 <li>Name each range and specify min/max values.</li>
-</ol>
-<p><img alt="Continuous Binning Placeholder — replace with screenshot" src="../images/clinical-binning-continuous.png"></p>
+</ul>
+<p><img alt="Clinical Data Analysis Continuous Binning Placeholder" src="../img/clinical-data-analysis-binning-continuous.png"></p>
 <p>You can reset any custom binning to default values at any time by selecting <strong>Reset to Default</strong>.</p>
 <hr>
 <h2 id="exporting-and-downloading">Exporting and Downloading<a class="headerlink" href="#exporting-and-downloading" title="Permanent link">¶</a></h2>

@@ -581,15 +581,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cohort-summary-panel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cohort Summary Panel
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#results-panel" class="md-nav__link">
     <span class="md-ellipsis">
       Results Panel
@@ -636,9 +627,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-race-and-ethnicity-future-update" class="md-nav__link">
+  <a href="#5-race-and-ethnicity" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Race and Ethnicity (Future Update)
+      5. Race and Ethnicity
     </span>
   </a>
   
@@ -718,6 +709,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -756,6 +751,52 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mmrf-commpass/about-commpass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About the CoMMpass Study
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mmrf-commpass/clinical-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CoMMpass Clinical Data Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -878,15 +919,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cohort-summary-panel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cohort Summary Panel
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#results-panel" class="md-nav__link">
     <span class="md-ellipsis">
       Results Panel
@@ -933,9 +965,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-race-and-ethnicity-future-update" class="md-nav__link">
+  <a href="#5-race-and-ethnicity" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Race and Ethnicity (Future Update)
+      5. Race and Ethnicity
     </span>
   </a>
   
@@ -1005,28 +1037,30 @@
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
 <p>The <strong>Cohort Comparison</strong> tool allows researchers to compare two saved cohorts within the MMRF Virtual Lab. This feature displays side-by-side visual and tabular summaries that highlight similarities and differences between cohorts based on clinical and demographic variables.</p>
 <p>Before accessing this tool, users must first have at least <strong>two saved cohorts</strong>. You can create and save cohorts using the <strong>Cohort Builder</strong> in the Analysis Center.</p>
-<p><img alt="Cohort Comparison Overview Placeholder — replace with screenshot" src="../images/cohort-comparison-overview.png"></p>
+<p><img alt="Cohort Builder entry point run app" src="../img/cohort-builder-entry-point-app.png"></p>
 <hr>
 <h2 id="accessing-the-cohort-comparison-tool">Accessing the Cohort Comparison Tool<a class="headerlink" href="#accessing-the-cohort-comparison-tool" title="Permanent link">¶</a></h2>
 <p>To access the Cohort Comparison:</p>
 <ol>
-<li>Navigate to the <strong>Analysis Center</strong> from the top navigation menu.  </li>
+<li>Navigate to the <strong>Cohort Comparison</strong> tool from the Core Tools menu.  </li>
 <li>Select a <strong>primary cohort</strong> to compare from the drop-down list.  </li>
 <li>Click the <strong>Cohort Comparison</strong> tab or icon.  </li>
 <li>Choose a <strong>second cohort</strong> from your list of saved cohorts.  </li>
 <li>Click <strong>Run</strong> to generate comparison visualizations.</li>
 </ol>
+<p><img alt="Cohort Comparison Run" src="../img/cohort-comparison-run.gif"></p>
 <p>The top of the page displays your selected cohorts and the <strong>total number of cases</strong> included in each.</p>
-<p><img alt="Select Cohort Comparison Placeholder — replace with screenshot" src="../images/cohort-comparison-select.png"></p>
 <hr>
-<h2 id="cohort-summary-panel">Cohort Summary Panel<a class="headerlink" href="#cohort-summary-panel" title="Permanent link">¶</a></h2>
-<p>Once two cohorts are selected, the <strong>Cohort Summary Panel</strong> displays key metrics for each:</p>
-<ul>
-<li><strong>Cohort name</strong> and <strong>number of cases</strong> in each dataset.  </li>
-<li><strong>Venn diagram</strong> illustrating the overlap between cohorts (<em>shared and unique cases</em>).  </li>
-<li><strong>Color-coded keys</strong> to represent each cohort consistently across all visualizations.</li>
-</ul>
-<p><img alt="Cohort Comparison Summary Placeholder — replace with screenshot" src="../images/cohort-comparison-summary.png"></p>
+<!--## Cohort Summary Panel
+
+Once two cohorts are selected, the **Cohort Summary Panel** displays key metrics for each:
+
+- **Cohort name** and **number of cases** in each dataset.  
+- **Venn diagram** illustrating the overlap between cohorts (*shared and unique cases*).  
+- **Color-coded keys** to represent each cohort consistently across all visualizations.
+
+![Cohort Comparison Summary](img/cohort-comparison-summary.gif) -->
+
 <hr>
 <h2 id="results-panel">Results Panel<a class="headerlink" href="#results-panel" title="Permanent link">¶</a></h2>
 <p>After generating a comparison, the <strong>Results</strong> section presents multiple visualizations and data tables.<br>
@@ -1034,7 +1068,7 @@ Each chart and table enables researchers to examine proportional distributions a
 <p>The following features are currently available:</p>
 <h3 id="1-survival-analysis">1. Survival Analysis<a class="headerlink" href="#1-survival-analysis" title="Permanent link">¶</a></h3>
 <p>Displays Kaplan–Meier survival plots comparing the two cohorts. If survival data is unavailable, a notice will appear indicating that no data is currently available for comparison.</p>
-<p><img alt="Survival Analysis Placeholder — replace with screenshot" src="../images/cohort-comparison-survival.png"></p>
+<p><img alt="Cohort Comparison Survival Analysis" src="../img/cohort-comparison-survival-analysis.png"></p>
 <hr>
 <h3 id="2-gender">2. Gender<a class="headerlink" href="#2-gender" title="Permanent link">¶</a></h3>
 <p>Compares gender distribution between the two cohorts, displayed as a <strong>bar chart</strong> and accompanying table showing counts and percentages. Each bar’s color corresponds to one of the cohorts.</p>
@@ -1065,42 +1099,44 @@ Each chart and table enables researchers to examine proportional distributions a
 </tr>
 </tbody>
 </table>
-<p><img alt="Gender Comparison Placeholder — replace with screenshot" src="../images/cohort-comparison-gender.png"></p>
 <hr>
 <h3 id="3-vital-status">3. Vital Status<a class="headerlink" href="#3-vital-status" title="Permanent link">¶</a></h3>
 <p>Displays the proportion of patients who are <strong>alive</strong> or <strong>deceased</strong> in each cohort. The accompanying table provides absolute counts and percentages for each group.</p>
-<p><img alt="Vital Status Placeholder — replace with screenshot" src="../images/cohort-comparison-vital-status.png"></p>
+<p><img alt="Cohort Comparison Vital Status" src="../img/cohort-comparison-vital-status.png"></p>
 <hr>
 <h3 id="4-age-at-diagnosis">4. Age at Diagnosis<a class="headerlink" href="#4-age-at-diagnosis" title="Permanent link">¶</a></h3>
 <p>Illustrates the age distribution of patients at diagnosis across both cohorts. Results are binned into defined age groups (e.g., <em>20–30</em>, <em>30–40</em>, <em>40–50</em>). Tables below each chart show the count and percentage for each cohort.</p>
-<p><img alt="Age at Diagnosis Placeholder — replace with screenshot" src="../images/cohort-comparison-age.png"></p>
+<!-- ![Cohort Comparison Age at Diagnosis](img/cohort-comparison-age.png) -->
+
 <hr>
-<h3 id="5-race-and-ethnicity-future-update">5. Race and Ethnicity <em>(Future Update)</em><a class="headerlink" href="#5-race-and-ethnicity-future-update" title="Permanent link">¶</a></h3>
-<p>The Race and Ethnicity facets will allow users to compare the racial and ethnic composition of the two cohorts.<br>
-This section is under active development and will be added in a future release.</p>
+<h3 id="5-race-and-ethnicity">5. Race and Ethnicity<a class="headerlink" href="#5-race-and-ethnicity" title="Permanent link">¶</a></h3>
+<p>The Race and Ethnicity facets will allow users to compare the racial and ethnic composition of the two cohorts.  </p>
+<p><img alt="Cohort Comparison Race" src="../img/cohort-comparison-race.png"></p>
 <hr>
 <h2 id="customize-display">Customize Display<a class="headerlink" href="#customize-display" title="Permanent link">¶</a></h2>
-<p>At the bottom of the Results page, users can choose which facets to display in the comparison results.<br>
+<p>Users can choose which facets to display in the comparison results.<br>
 Toggle switches allow you to turn on or off specific visualizations such as:</p>
 <ul>
 <li>Survival  </li>
 <li>Ethnicity  </li>
-<li>Gender  </li>
+<li>Sex  </li>
 <li>Race  </li>
-<li>Vital Status  </li>
+<li>Patient Status</li>
 <li>Age at Diagnosis  </li>
 </ul>
 <p>Any changes update the visualizations in real time.</p>
-<p><img alt="Customize Display Placeholder — replace with screenshot" src="../images/cohort-comparison-toggle.png"></p>
+<p><img alt="Customize Display Placeholder" src="../img/cohort-comparison-toggle.png"></p>
 <hr>
 <h2 id="exporting-results">Exporting Results<a class="headerlink" href="#exporting-results" title="Permanent link">¶</a></h2>
-<p>For each visualization, you can export the corresponding data table by clicking the <strong>TSV</strong> button in the bottom-right corner of the panel. The exported files contain counts and percentages for both cohorts, enabling external analysis or integration with statistical software.</p>
+<p>For each visualization, you can export the corresponding data table by clicking the <strong>TSV</strong> button in the bottom-right corner of the panel. The exported files contain counts and percentages for both cohorts enabling external analysis or integration with statistical software.</p>
 <hr>
 <h2 id="creating-a-new-cohort-from-results">Creating a New Cohort from Results<a class="headerlink" href="#creating-a-new-cohort-from-results" title="Permanent link">¶</a></h2>
-<p>The <strong>Cohort Comparison</strong> tool allows users to define and save new cohorts derived from subsets of the compared groups.<br>
-For example:
-- Save only overlapping cases (intersection of both cohorts).<br>
-- Save cohort-specific subsets (unique to one cohort).  </p>
+<p>The <strong>Cohort Comparison</strong> tool allows users to define and save new cohorts derived from subsets of the compared groups.  </p>
+<p>For example:</p>
+<ul>
+<li>Save only overlapping cases (intersection of both cohorts).  </li>
+<li>Save cohort-specific subsets (unique to one cohort).  </li>
+</ul>
 <p>Use the <strong>“+” icons</strong> within each results table to add groups of interest as new saved cohorts for downstream analysis.</p>
 <hr>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">¶</a></h2>
