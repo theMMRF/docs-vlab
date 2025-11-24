@@ -6,7 +6,7 @@ The **Mutation Frequency** app within the MMRF Virtual Lab allows users to visua
 
 Access this tool from the **Analysis Center** by selecting the **Mutation Frequency** card.
 
-![Mutation Frequency Overview Placeholder — replace with screenshot](../images/mutation-frequency-overview.png)
+![Mutation Frequency Entry Point App](img/mutation-frequency-entry-point-app.png)
 
 ---
 
@@ -20,19 +20,21 @@ The Mutation Frequency tool includes multiple interactive visualizations and tab
 - **Gene Summary Page**  
 - **Mutation Summary Page**
 
+![Mutation Frequency Overview](img/mutation-frequency-overview.png)
+
 ---
 
 ## Mutated Genes Histogram
 
 This histogram displays the most frequently mutated genes within the active cohort. Each bar represents a gene, with its height corresponding to the **percentage of cases** affected.  
 
-Features:
+### Key Features:
 - Visualize the top mutated genes across the selected cohort.  
 - Hover over bars to view the exact number and percentage of affected cases.  
 - Download the histogram as an image (**SVG** or **PNG**) or as raw data (**JSON**) using the icons in the top-right corner.  
 - Use filters on the left panel to refine results by gene impact, consequence type, or biotype.
 
-![Mutated Genes Histogram Placeholder — replace with screenshot](../images/mutation-frequency-histogram.png)
+![Mutated Genes Histogram](img/mutation-frequency-histogram.png)
 
 ---
 
@@ -40,13 +42,13 @@ Features:
 
 The **survival plot** compares overall survival between patients **with** and **without** a selected gene mutation or variant. Two Kaplan–Meier curves represent these groups, helping users assess whether a specific mutation impacts survival outcomes.
 
-Features:
-- Apply additional filters (e.g., **Impact = High**) to refine which cases are included in the plot.  
+### Key Features:
+- Apply additional filters (e.g., **Biotype = IncRNA**) to refine which cases are included in the plot.  
 - View the **Log-Rank Test p-value** to assess statistical significance.  
 - Download the survival plot as an image (**SVG/PNG**) or export the data (**JSON/TSV**).  
 - Use the reset button to clear selections and return to default view.
 
-![Survival Plot Placeholder — replace with screenshot](../images/mutation-frequency-survival.png)
+![Survival Plot](img/mutation-frequency-survival.png)
 
 ---
 
@@ -59,10 +61,10 @@ The **Genes/Mutations Table** lists the most frequently mutated genes or variant
 - Filter or search by gene name, mutation type, or genomic position.  
 - Click the **Cohort** toggle to filter the current cohort by the selected gene or mutation.  
 - Select **Survival** to dynamically update the survival plot for that variant.  
-- Export the table data as a **TSV** file.  
+- Export the table data as a **JSON** or **TSV** file.  
 - Create new cohorts based on any gene or mutation using the action buttons in each row.
 
-![Mutation Frequency Table Placeholder — replace with screenshot](../images/mutation-frequency-table.png)
+![Genes Table](img/mutation-frequency-genes-table.png)
 
 ---
 
@@ -90,14 +92,16 @@ The **Gene Summary** page provides detailed information and analytics for a sele
 Links are provided to relevant external databases for additional information:  
 **Entrez**, **UniProt**, **HGNC**, **OMIM**, **Ensembl**, and **CIViC**.
 
+![Gene Summary](img/mutation-frequency-gene-summary.png)
+
 #### Cancer Distribution
 Displays how frequently the gene is altered (mutations or CNVs) across MMRF studies.
 
-Visuals include:
+#### Visuals include:
+
 - Bar charts showing the number and percentage of affected cases by project.  
 - A table summarizing **# of cases**, **percent affected**, and **unique mutations** per project.
 
-![Gene Summary Placeholder — replace with screenshot](../images/gene-summary.png)
 
 #### Most Frequent Mutations
 Lists the top 20 mutations found in the selected gene.
@@ -111,6 +115,8 @@ For each mutation, the following fields are displayed:
 - **Impact:** Severity classification (High, Moderate, Low, Modifier).  
 
 All data can be exported in TSV format for external analysis.
+
+![Mutations Table](img/mutation-frequency-mutations-table.png)
 
 ---
 
@@ -141,7 +147,7 @@ A table describes the mutation’s biological impact based on **Sequence Ontolog
 | Impact | Predicted consequence severity (from VEP, SIFT, PolyPhen) |
 | Transcript | Affected transcript ID (linked to Ensembl) |
 
-![Mutation Summary Placeholder — replace with screenshot](../images/mutation-summary.png)
+![Mutation Summary](img/mutation-frequency-mutation-summary.png)
 
 #### Cancer Distribution
 Displays how many cases across MMRF projects contain this mutation.  
@@ -151,7 +157,7 @@ A bar graph and table summarize affected case counts and percentages by project.
 
 ## Filtering Mutations and Genes
 
-### Custom Gene and Mutation Filters
+<!-- ### Custom Gene and Mutation Filters
 Users can upload or manually input lists of genes or mutations to narrow the results. Accepted formats include **CSV**, **TSV**, and **TXT** files containing:
 
 - **Gene Identifiers:** Gene symbols, Ensembl IDs, or Entrez IDs.  
@@ -159,22 +165,22 @@ Users can upload or manually input lists of genes or mutations to narrow the res
 
 Upload your custom list using the **Upload Genes** or **Upload Somatic Mutations** buttons in the left panel.
 
----
+--- -->
 
 ### Facet Filters
 Frequently used filters available on the left panel include:
 
 - **Biotype:** Gene classification (e.g., protein-coding, lincRNA, pseudogene).  
 - **Is Cancer Gene Census:** Filter for known cancer-associated genes (enabled by default).  
-- **Impact:** Predicted variant impact using VEP, PolyPhen, and SIFT.  
+- **Consequence Type:** Biological effect category (missense, frameshift, stop-gained, etc.).  
+- **Mutation Type:** High-level classification (SNV, insertion, deletion, etc.).
+<!-- - **Impact:** Predicted variant impact using VEP, PolyPhen, and SIFT.  
   - *High (H):* Likely loss-of-function  
   - *Moderate (M):* Possibly functional impact  
   - *Low (L):* Likely benign  
-  - *Modifier (MO):* Non-coding or unknown significance  
-- **Consequence Type:** Biological effect category (missense, frameshift, stop-gained, etc.).  
-- **Mutation Type:** High-level classification (SNV, insertion, deletion, etc.).
+  - *Modifier (MO):* Non-coding or unknown significance  --> 
 
----
+<!-- ---
 
 ## Saving Gene and Mutation Sets
 
@@ -183,7 +189,7 @@ Filtered results can be saved for future analyses using:
 - **Save/Edit Gene Set**  
 - **Save/Edit Mutation Set**
 
-These saved sets appear under your account and can be reloaded into the Mutation Frequency tool or used to define new cohorts.
+These saved sets appear under your account and can be reloaded into the Mutation Frequency tool or used to define new cohorts. -->
 
 ---
 
@@ -191,7 +197,7 @@ These saved sets appear under your account and can be reloaded into the Mutation
 
 - **Download Visualizations:** Save as `.svg` or `.png`.  
 - **Export Data:** Tables can be exported in `.tsv` or `.json`.  
-- **Save Subsets:** Create new cohorts or save specific gene/mutation sets from within the interface.
+- **Save Subsets:** Create new cohorts from within the interface.
 
 ---
 
