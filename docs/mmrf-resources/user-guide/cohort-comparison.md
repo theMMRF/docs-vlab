@@ -20,7 +20,7 @@ To access the Cohort Comparison:
 4. Choose a **second cohort** from your list of saved cohorts.  
 5. Click **Run** to generate comparison visualizations.
 
-![Cohort Comparison Run](img/cohort-comparison-run.mov)
+![Cohort Comparison Run](img/cohort-comparison-run.gif)
 
 The top of the page displays your selected cohorts and the **total number of cases** included in each.
 
@@ -104,7 +104,7 @@ Toggle switches allow you to turn on or off specific visualizations such as:
 
 Any changes update the visualizations in real time.
 
-![Customize Display Placeholder — replace with screenshot](img/cohort-comparison-toggle.png)
+![Customize Display Placeholder](img/cohort-comparison-toggle.png)
 
 ---
 

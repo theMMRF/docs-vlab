@@ -76,6 +76,7 @@ IA24 represents the **final, most complete** data release for both clinical and 
 The MMRF Virtual Lab provides controlled access to **project-level summary files** for all historic CoMMpass IA releases and comprehensive clinical + genomic files for IA24.
 
 Users can:
+
 - Build cohorts using clinical variables  
 - Compare clinical characteristics  
 - Analyze survival and clinical distributions  
