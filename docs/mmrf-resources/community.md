@@ -3,6 +3,7 @@
 Welcome to the **MMRF Virtual Lab Community**, a network of researchers, clinicians, and collaborators dedicated to advancing multiple myeloma research through data sharing and open collaboration.
 
 The MMRF Virtual Lab provides a secure, cloud-based environment for exploring and analyzing harmonized clinical and molecular data from MMRF research programs.  
+
 By connecting scientists across institutions, Virtual Lab fosters transparency, reproducibility, and innovation in multiple myeloma research.
 
 ---
@@ -10,6 +11,7 @@ By connecting scientists across institutions, Virtual Lab fosters transparency, 
 ## Collaborating with the MMRF
 
 The MMRF partners with academic institutions, research consortia, and industry to accelerate discovery and translation.  
+
 Community members gain access to harmonized datasets, analytic tools, and collaborative workspaces to drive impactful research.
 
 If you’re interested in becoming a collaborator or exploring data access opportunities, contact us at  

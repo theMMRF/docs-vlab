@@ -4,13 +4,15 @@
 
 
 Welcome to the **MMRF Virtual Lab**, a secure, cloud-based data platform developed by the **Multiple Myeloma Research Foundation (MMRF)** to accelerate discovery through data sharing and collaboration.  
-Virtual Lab integrates clinical, genomic, and multi-omics data from MMRF programs into one powerful environment, enabling researchers to explore, analyze, and visualize data seamlessly.
+
+Virtual Lab integrates clinical, genomic, and multi-omic data from MMRF programs into one powerful environment, enabling researchers to explore, analyze, and visualize data seamlessly.
 
 ---
 
 ## About the Platform
 
 The MMRF Virtual Lab is built on the **Gen3** open-source framework, providing the foundation for secure data management, controlled access, and scalable analysis.  
+
 The platform empowers scientists and clinicians to work with harmonized datasets without needing complex infrastructure, fostering collaboration and reproducibility across the myeloma research community.
 
 ---
