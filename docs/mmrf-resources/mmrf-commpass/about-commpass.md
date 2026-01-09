@@ -6,7 +6,7 @@ More than **1,100 patients** were enrolled at diagnosis and prospectively follow
 
 ---
 
-## Study Structure
+<!-- ## Study Structure
 
 The final CoMMpass dataset includes **1,143 total subjects**, drawn from two complementary subcohorts:
 
@@ -22,7 +22,7 @@ The final CoMMpass dataset includes **1,143 total subjects**, drawn from two com
 
 Together, these cohorts form a harmonized resource spanning broad demographic, clinical, and treatment landscapes.
 
----
+--- -->
 
 ## Data Collected
 
