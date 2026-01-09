@@ -13,10 +13,15 @@ nav:
     - Mutation Frequency: mmrf-resources/user-guide/mutation-frequency.md
     - Clinical Data Analysis: mmrf-resources/user-guide/clinical-data-analysis.md
     - Cohort Comparison: mmrf-resources/user-guide/cohort-comparison.md
+    - ProteinPaint: mmrf-resources/user-guide/proteinpaint.md
+    - Oncomatrix: mmrf-resources/user-guide/oncomatrix.md
   - MMRF CoMMpass:
     - mmrf-resources/mmrf-commpass/index.md
+    - Introduction and Study Overview: mmrf-resources/mmrf-commpass/intro-study-overview.md
+    - Study Design and Statistical Analysis Plans: mmrf-resources/mmrf-commpass/study-design-sap.md
     - About the CoMMpass Study: mmrf-resources/mmrf-commpass/about-commpass.md
     - CoMMpass Clinical Data Overview: mmrf-resources/mmrf-commpass/clinical-overview.md
+    - Site Operations, Sample Collection, and Biobanking: mmrf-resources/mmrf-commpass/site-sample-operations.md
     - Data Processing & Harmonization: mmrf-resources/mmrf-commpass/data-processing.md
     - Interim Analysis Data Access: mmrf-resources/mmrf-commpass/historic-ia.md
   #- Blog:

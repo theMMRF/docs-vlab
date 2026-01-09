@@ -99,4 +99,3 @@ Gen3 workspaces are secure data analysis environments in the cloud that can acce
 [SDK docs]: user-guide/search.md#the-gen3-sdk
 [PFB GitHub]: https://github.com/uc-cdis/pypfb
 [PFB Pub]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010944
-[workspace use]: user-guide/analyze-data.md
