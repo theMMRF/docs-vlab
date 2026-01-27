@@ -2,98 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://127.0.0.1:8000/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/contact/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/blog/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/about/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/coming-soon/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/community/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/faq/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/glossary/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/mmrf-commpass/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/mmrf-commpass/about-commpass/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/mmrf-commpass/clinical-overview/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/mmrf-commpass/data-processing/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/mmrf-commpass/historic-ia/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/mmrf-commpass/intro-study-overview/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/mmrf-resources/mmrf-commpass/major-publications/</loc>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/mmrf-commpass/site-sample-operations/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/mmrf-commpass/study-design-sap/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/mmrf-resources/mmrf-commpass/data-dictionaries/</loc>
+         <lastmod>2026-01-27</lastmod>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/mmrf-resources/mmrf-commpass/data-dictionaries/commpass-data-dictionary-v25/</loc>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/user-guide/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/user-guide/clinical-data-analysis/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/user-guide/cohort-builder/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/user-guide/cohort-comparison/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/user-guide/mutation-frequency/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/user-guide/oncomatrix/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/user-guide/proteinpaint/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/mmrf-resources/user-guide/repository/</loc>
-         <lastmod>2026-01-09</lastmod>
+         <lastmod>2026-01-27</lastmod>
     </url>
 </urlset>

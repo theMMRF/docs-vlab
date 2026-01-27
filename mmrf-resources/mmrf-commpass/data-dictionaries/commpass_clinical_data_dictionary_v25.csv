@@ -1,0 +1,1080 @@
+﻿Variable,Table,Key,Dataset,MMRF Variable Name,Description,HIPAA or Other Identified Data,Data Type,MMRF Values,CoMMpass Note,caDSR,Data Standard,CoMMpass Source Table Variable,CoMMpass Subcohort,Additional Information,Constraint,GDC Variable,GDC Values,GDC Required,,
+1,project,primary,commpass,project_id,The project's source name that is used as an unique primary key for the project table.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,Not applicable; represents the MMRF CoMMpass study.,not applicable,,not null,project_id,not applicable,yes,,
+2,project,no,commpass,dbgap_accession_number,The dbgap accession number for the project.,no,string,For CoMMpass: phs000748,The unique identifier assigned for a study in the National Institutes of Health's (NIH) Database of Genotypes and Phenotypes (dbGaP) ,not applicable,not applicable,https://portal.gdc.cancer.gov/projects/MMRF-COMMPASS,not applicable,,not null,dbgap_accession_number,not applicable,yes,,
+3,project,no,commpass,project_full_name,The project's full name as specified by the protocol. ,no,string,For CoMMpass: Relating Clinical Outcomes in Multiple Myeloma to Personal Assessment of Genetic Profile,"The MMRF CoMMpass project will use ""Relating Clinical Outcomes in Multiple Myeloma to Personal Assessment of Genetic Profile"" as the project's full name.",,,,not applicable,,not null,name,,,,
+4,project,no,commpass,center_full_name,The project's sponsor's full name,no,string,Multiple Myeloma Research Foundation,"The MMRF CoMMpass project will use ""Multiple Myeloma Research Foundation"" as the sponsor's name.",,,,not applicable,,not null,,,yes,,
+5,project,no,commpass,disease_type,"Body site in which the multiple myeloma originated; data field part of GDC model. All MMRF CoMMpass subjects have ""multiple_myeloma"" included as  disease_type rather than  the more general term ""plasma cell tumor"" as specified by the GDC.",no,enum,multiple_myeloma,"Due to the specific nature of the interests in multiple myeloma and its precursor conditions, the MMRF will use more specific disease types than those specified from the GDC.",6161017,World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O),"Applied to conform to GDC. All MMRF CoMMpass subjects have ""multiple_myeloma"" included as  disease_type.",not applicable,MMRF created for final dataset; every patient has the same value.,not null,disease_type,plasma_cell_tumor,yes,,
+6,project,no,commpass,protocol_number,The number given to the protocol by the Internal Review Board.,no,string,mmrf-11-001,"For the CoMMpass study, the project information referenced for  the overall project will correspond to this protocol rather than the ancillary FORTE study. ",,ClinicalTrials.gov | https://clinicaltrials.gov/study/NCT01454297,,not applicable,,not null,,,not_applicable,,
+7,project,no,commpass,protocol_approval_date,The date that the first version of the protocol was approved by an Internal Review Board.,no,date,5/3/2011,,,,,not applicable,,not null,,,not_applicable,,
+8,project,no,commpass,protocol_approval_year,The year component of the Informed Consent approval date [protocol_approval_date].,no,numeric,2011,,,,,not applicable,,,,,not_applicable,,
+9,project,no,commpass,sub_cohorts,Indicator that the project had more than one cohort contributing data. CoMMpass had two cohorts that were combined into the final cohort.,no,boolean,yes no,"For the CoMMpass study, there were two cohorts.",not applicable,,,not applicable,MMRF created for final dataset; every patient has the same value.,not null,,,not_applicable,,
+10,project,no,commpass,clinicaltrials.gov_id,"The unique identification code given to each clinical study upon registration at ClinicalTrials.gov. The format is ""NCT"" followed by an 8-digit number.",no,string,nct01454297,"It is important to note that this project including a  subcohort of patient data from FORTE, the project is filed under the CoMMpass NCT number.",not applicable,ClinicalTrials.gov,ClinicalTrials.gov | https://clinicaltrials.gov/study/NCT01454297,not applicable,Data element from ClinicalTrials.gov for the NCT01454297 since it is the major study responsible for data and data management.,,,,not_applicable,,
+11,project,no,commpass,study_start_date,Date recorded in ClinicalTrials.gov as the project's start date.,no,date,7/1/2011,,not applicable,ClinicalTrials.gov,ClinicalTrials.gov | https://clinicaltrials.gov/study/NCT01454297,not applicable,Data element from ClinicalTrials.gov for the NCT01454297 since it is the major study responsible for data and data management.,,,,not_applicable,,
+12,project,no,commpass,study_start_year,Year component of the date recorded in ClinicalTrials.gov  as the project's start date.,no,integer four digit,2011,,not applicable,ClinicalTrials.gov,ClinicalTrials.gov | https://clinicaltrials.gov/study/NCT01454297,not applicable,Data element from ClinicalTrials.gov for the NCT01454297 since it is the major study responsible for data and data management.,,,,not_applicable,,
+13,project,no,commpass,study_completion_date,Date recorded in ClinicalTrials.gov as the project's actual completion date.,no,date,12/31/2023,,not applicable,ClinicalTrials.gov,ClinicalTrials.gov | https://clinicaltrials.gov/study/NCT01454297,not applicable,Data element from ClinicalTrials.gov for the NCT01454297 since it is the major study responsible for data and data management.,,,,not_applicable,,
+14,project,no,yes,study_completion_year,Year component of the date recorded in ClinicalTrials.gov as the project's actual completion date.,no,integer four digit,2023,,not applicable,ClinicalTrials.gov,ClinicalTrials.gov | https://clinicaltrials.gov/study/NCT01454297,not applicable,Data element from ClinicalTrials.gov for the NCT01454297 since it is the major study responsible for data and data management.,,,,not_applicable,,
+1,subject,primary,commpass,public_id,MMRF unique subject identifier,no,string lowercase,,"Each value has the the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_1111. ",not applicable,not applicable,Subcohorts One and Two: Table: D_PT.csv variable: subject_id,"one,two",MMRF created for this dataset,not null,submitter_id,not applicable,yes,,
+2,subject,yes,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project. This is the primary key for the project table.",not applicable,not applicable,,one,"MMRF created for this dataset 
+",,project_id,not applicable,no,,
+3,subject,foreign,commpass,institution_id,Identifier of the institution through which the subject was enrolled.,no,integer,,Numeric identifier for the institution enrolling the subject. This is the primary key for the institution table.,not applicable,not applicable,Not applicable; represents the MMRF CoMMpass study.,"one,two",MMRF created for this dataset,not null,not applicable,not applicable,not applicable,,
+4,subject,no,commpass,institution_subject_id,Identifier of the subject and institution through which the subject was enrolled.,no,string ,,"A combination identifier with the institution identifier with the subject identifier separated by a ""-"". Example 100-104.",not applicable,not applicable,Not applicable; represents the MMRF CoMMpass study.,"one,two",MMRF created for this dataset,not null,not applicable,not applicable,not applicable,,
+5,subject,no,commpass,alt_subject_id,Subject identifer used in the project.,no,integer,,"In a complex study with different data providers, a subject may have more than one identifier. This field is meant to record an additional identifier.",not applicable,not applicable,Not applicable; represents the MMRF CoMMpass study.,"one,two",MMRF created for this dataset,not null,not applicable,not applicable,not applicable,,
+6,subject,no,commpass,disease_type,"Body site in which the multiple myeloma originated; data field part of GDC model. All MMRF CoMMpass subjects have ""multiple_myeloma"" included as  disease_type.",no,enum,multiple_myeloma,"GDC does not have the ""multiple myeloma"" disease type, will need to add",6161017,World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O),"Applied to conform to GDC. All MMRF CoMMpass subjects have ""multiple_myeloma"" included as  disease_type.","one,two",MMRF created for final dataset; every patient has the same value.,not null,disease_type [table case],multiple_myeloma,yes,,
+7,subject,no,commpass,primary_site,"Body site in which the multiple myeloma originated; data field part of GDC model. All MMRF CoMMpass subjects have ""bone_marrow"" included as  the primary site.",no,enum,bone_marrow,"GDC does not have the ""bone marrow"" primary site, will need to add",6161019,World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O),"Applied to conform to GDC. All MMRF CoMMpass subjects have ""bone_marrow"" included as  disease_type.","one,two",MMRF created for final dataset; every patient has the same value.,not null,primary_site [table case],bone_marrow,yes,,
+8,subject,no,commpass,index_date,"The date used in the calculation of the days interval for every subject date for the primary purpose of date obfuscation since dates cannot be used in deidentified datasets. Using this method,  a single event/date for each subject is used in calculations for all other subject dates in dataset, with the index date subtracted from each date that results in the number of days from the index to the date of interest.",no,enum,"diagnosis
+first_patient_visit
+first_treatment
+initial_genomic sequencing
+recurrence
+sample_procurement
+study-enrollment","As a requirement of the CoMMpass study, each patient entered at the time of first treatment. As such, each patient has the same value, ""first_treatment"", recorded as the index_date.",6154722,not applicable,"Applied based on eligibility requirements. In MMRF CoMMpass, all subjects were enrolled at the time of first treatment following diagnosis of active multiple myeloma.","one,two",MMRF created for final dataset; every patient has the same value.,not null,index_date [table case],"Diagnosis
+First Patient Visit
+First Treatment
+Initial Genomic Sequencing
+Recurrence
+Sample Procurement
+Study Enrollment",no,,
+9,subject,no,commpass,year_of_index_date,"The year component of the actual reference date used for date obfuscation, where a single date is used in a calculation for all dates in dataset that results in the number of days from the index to the date of interest. This date should be used internally at the MMRF and never shared.",no,integer four digit,,,not applicable,not applicable,"Subcohort One: Table: D_PT.csv variable: trtstdt
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: ind_start_date","one,two",MMRF created for final dataset; every patient has the same value.,,not applicable,not applicable,not applicable,,
+11,subject,no,commpass,consent_type,The type of consent obtained from the subject for participation in the study.,no,enum,"consent_by_death
+consent_exemption
+consent_waiver
+informed_consent","All subjects provided signed written consent, so ""informed_consent"" is recorded for each subject.",not applicable,DC|Genomic Data Commons,Applied to conform to GDC. All MMRF CoMMpass as all subjects have provided written consent for participation.,"one,two",MMRF created for final dataset; every patient has the same value.,,consent_type [table case],"Consent by Death
+Consent Exemption
+Consent Waiver
+Informed Consent",no,,
+12,subject,no,commpass,days_to_consent,Number of days between the date used for index and the date the subject provided consent was obtained for participation in the study.,no,integer,,,not applicable,not applicable,Subcohort One and Two: Table: D_PT.csv | Variable: ic_date ic_date,"one,two",,,days_to_consent,integer,no,,
+13,subject,no,commpass,year_of_consent,The year in which the subject's consent was obtained for participation in the study.,no,integer four digit,,,not applicable,not applicable,Subcohort One and Two: Table: D_PT.csv | Variable: ic_date ic_date,"one,two",,,not applicable,not applicable,not applicable,,
+15,subject,no,commpass,lost_to_followup,Indicator that the subject was lost to follow-up during the study period.,no,enum,"yes
+no
+unknown",,6161018,,Subcohort One and Two: Table: D_PT.csv | Variable: ic_date ic_date,"one,two",,,lost_to_followup [table case],"Yes
+No
+Unknown",no,,
+16,subject,no,commpass,days_to_lost_to_followup,"Number of days between the index_date (date used for index and the date that the subject was last known to be alive prior to being  lost to follow-up if the subject had ""yes"" for lost_to_followup.",no,integer,,,6154721,GDC|Genomic Data Commons,Subcohort One: Table: D_PT.csv variable: based on lastdt SE_PRIMARYREASON=Patient is lost to follow-up,"one,two",,,days_to_lost_to_followup [table case],,no,,
+17,subject,no,commpass,year_of_lost_to_followup,"The year component of the date that the subject was last known to be alive, prior to being lost to follow-up during the study period if the subject had ""yes"" for lost_to_followup.",no,integer,,,not applicable,not applicable,Subcohort One: Table: D_PT.csv variable: based on lastdt SE_PRIMARYREASON=Patient is lost to follow-up,"one,two",,,not applicable,not applicable,not applicable,,
+19,subject,no,commpass,subcohort,Indicator of sub study under which subjects were enrolled to MMRF CoMMpass project.,no,enum,"one
+two","The two subcohorts contributing data to MMRF CoMMpass project had different data collection strategies, and for some clinical tables, data availability may be limited one subcohort. The data dictionary will annotate the subcohorts contributing data to each variable. The base CoMMpass cohort is ""one"" and the Italian cohort is ""two"".",not applicable,not applicable,Subcohort One and Two: Table: D_PT.csv | Variable:PR_REGID,"one,two",MMRF created for this dataset,,not applicable,not applicable,not applicable,,
+20,subject,no,commpass,race,"Subject's race that was collected at baseline, study enrollment,  for the US cohort only.",no,enum,"american_indian_or_alaska_native
+asian_nos
+black_or_african_american
+native_hawaiian_or_other_pacific_islander
+white
+other
+not_reported
+not_allowed_to_collect","This variable is applicable to US-based subjects only; subjects from other countries will be coded as ""not_allowed_to_collect"".",2192199,NCIP|NCI Programs,"Subcohort One and Two: Table: D_PT.csv | Variable: race
+",one,,not null,race [demographic],"american indian or alaska native
+asian
+black or african american
+native hawaiian or other pacific islander
+white
+other
+unknown
+not reported
+not allowed to collect",yes,,
+21,subject,no,commpass,ethnicity,"Subject's ethnicity that was collected at baseline, study enrollment, for the US cohort only.",no,enum,"hispanic_or_latino
+not_hispanic_or_latino
+unknown
+not_reported
+not_allowed_to_collect","This variable is applicable to US-based subjects only; subjects from other countries will be coded as ""not_allowed_to_collect"".",2192217,NCIP|NCI Programs,Subcohort One and Two: Table: D_PT.csv | Variable: ethnic,one,,not null,ethnicity [demographic],"hispanic or latino
+not hispanic or latino
+unknown
+not reported
+not allowed to collect",yes,,
+22,subject,no,commpass,gender,"Subject's sex that was collected at baseline, study enrollment.",no,enum,"female
+male
+unspecified
+unknown
+not_reported",,2200604,NCIP|NCI Programs,Subcohort One and Two: Table: D_PT.csv | Variable: gender,"one,two",,not null,gender [demographic],"female
+male
+unspecified
+unknown
+not reported",yes,,
+23,subject,no,commpass,vital_status,"The subject's survival status at the end of the study period, at the time of lost to follow-up, or at death.",no,enum,"alive
+dead
+unknown
+not_reported",,5,CTEP|NCI Cancer Therapy Evaluation Program,derived,"one,two","MMRF will submit vital status at end of study, based on ""D_PT_complete""",not null,vital_status [demographic],"Alive
+Dead
+Unknown
+Not Reported",yes,,
+24,subject,no,commpass,days_to_birth,Number of days between the date used for index and the date from a person's date of birth represented as a calculated negative number of days.,no,integer,,,6154723,GDC|Genomic Data Commons,"Subcohort One: Table: D_PT.csv variable: brthdt
+",one,,,days_to_birth [demographic],integer,no,,
+25,subject,no,commpass,year_of_birth,"The year component of the subject's date of birth. In a de-identified dataset, this variable will help with sequencing events.",no,integer four digit,,,2896954,,"Subcohort One: Table: D_PT.csv variable: brthdt
+",one,,,year_of_birth,not applicable,no,,
+27,subject,no,commpass,age_at_index,Subject's age at the time of first therapy for multiple myeloma diagnosis.,no,integer 2 digit,,,6028530,CTEP|NCI Cancer Therapy Evaluation Program,Subcohort One and Two: Table: D_PT.csv | Variable: D_PT_age,"one,two","MMRF to use ""D_PT_trtstdys""",,age_at_index [demographic],integer,no,,
+28,subject,no,commpass,age_is_obfuscated,Indicates that the subject's age and related time variables are hidden due to HIPAA reasons.,no,enum,"yes
+no
+not_available","Data uses age_at_index to determine whether a subjects data should be limited for release due to HIPAA rules. For patients aged greater than 89 at study entry or who reach 90 at some point during the study interval, all age related data (intervals and years) will not be available in the de-identified dataset. ",not applicable,HIPAA,derived,"one,two",MMRF created for this dataset,,age_is_obfuscated [demographic],"true
+false",no,,
+29,subject,no,commpass,cause_of_death,Text term to identify the cause of death for a patient.,no,enum,see demographic data details,,2554674,,Subcohort One and Two: Table: D_PT.csv | Variable: D_PT_CAUSEOFDEATH,"one,two",MMRF harmonized data to GDC,,cause_of_death [demographic],see demographic data details,no,,
+30,subject,no,commpass,cause_of_death_detail,Additional detail for cause_of_death based on curation of text entries.,no,string harmonized,,,,,Subcohort One and Two: Table: D_PT.csv | Variable: SE_SPECIFY2,"one,two",MMRF harmonized data to GDC,,not applicable,not applicable,no,,
+31,subject,no,commpass,cause_of_death_source,The text term used to describe the source used to determine the patient's cause of death.,no,enum,not_reported,This variable was not collected in CoMMpass so every subject will have 'not_reported' recorded.,not applicable,,Applied,"one,two","MMRF created for this dataset. Since ""cause_of_death"" is part of the dataset, all  ""cause_of_death_source"" will be set to ""unknown"" for patients who have died as the cause of death for a given patient was ascertained by the insitution.",,cause_of_death_source [demographic],"Autopsy
+Death Certificate
+Medical Record
+Social Security Death Index
+Unknown
+Not Reported",no,,
+32,subject,no,commpass,days_to_death,Number of days between the date used for index and the date from a person's date of death represented as a calculated number of days.,no,integer,,,6154724,,Subcohort One and Two: Table: D_PT.csv | Variable: D_PT_deathdy,"one,two",,,days_to_death [demographic],not applicable,no,,
+33,subject,no,commpass,year_of_death,"The year component of the subject's date of death, if applicable. In a de-identified dataset, this variable will help with sequencing events.",no,integer four digit,,,2897030,,Subcohort One and Two: Table: D_PT.csv | Variable: D_PT_deathdy,"one,two",MMRF created for this dataset,,year_of_death,not applicable,no,,
+35,subject,no,commpass,country_of_residence_at_enrollment,The subject's country of residence at the time they were enrolled in the study.,no,enum,"canada
+italy
+spain
+united_states",Full country list in demographics data details tab; CoMMpass had subjects recruited from  4 countries. Countries names are lowercase.,"	
+7050286",NCI standards: non enumerated text,Subcohort One and Two: Table: D_PT.csv | Variable: derived from study_id,"one,two",,,country_of_residence_at_enrollment [demographic],"Canada
+Italy
+Spain
+United States",no,,
+36,subject,no,commpass,relatives_with_cancer_history_count,Count of relatives with malignant cancer diagnosis derived from famhx table,no,enum,"0
+1
+2
+3
+4
+none
+not_reported","For CoMMpass, subcohort=one had this variable collected. If the subject has ""1"" or more recorded, additional information for the subject's relatives will be found in the famhx table. If the subject had no relatives listed, ""none"" is recorded.
+
+Subjects in subcohort=two have ""not_reported"" as the value. 
+",not applicable,not applicable,Subcohort One: Table: FAMHX_MGC-IA16.csv | Variable: FAMMGC_RELATIONSHIPT,one,"Variable from the GDC family_history table; MMRF moved to subject table. 
+Family history of cancer not collected in cohort two.",,relatives_with_cancer_history_count,integer,no,,
+1,family_history,yes,commpass,famhx_id,Unique identifier for family_history table,no,string,example: mmrf_1013-mmrf_commpass-fh-3,"This is a composite primary key using the public_id, project_id, and count of relatives with cancer.",not applicable,not applicable,,one,Family history of cancer not collected in cohort two.,,,,no,,
+2,family_history,yes,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_1013,"Each value has the the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_1111. This is the primary key for the subject table.",not applicable,not applicable,Subcohorts One and Two: Table: D_PT.csv variable: subject_id,one,Family history of cancer not collected in cohort two.,,submitter_id,not applicable,no,,
+3,family_history,yes,commpass,project_id,The project's source name,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project. This is the primary key for the project table.",not applicable,not applicable,project table,one,"MMRF created for this dataset 
+",,project_id,not applicable,no,,
+4,family_history,yes,commpass,relationship_gender,Person's gener who is related to subject with a cancer diagnosis.,no,enum,"female
+male
+unspecified
+unknown
+not_reported","This variable was not collected in CoMMpass, so all entries are 'not_reported'.",6161021,GDC,Not available; applied,one,Family history of cancer not collected in cohort two.,,relationship_gender,"female
+male
+unspecified
+unknown
+not reported",no,,
+5,family_history,no,commpass,relationship_type,"The family relationship of the person with cancer  to the subject, which  describes the state of connectedness between members of the unit of society organized around kinship ties.",no,enum,see 'family_history data details' tab,,2690165,,Table: FAM_HX_MGC_16.csv | Variable: FAMMGC_RELATIONSHIPT,one,Family history of cancer not collected in cohort two.,,relationship_type,see 'family_history data details' tab,no,,
+6,family_history,no,commpass,relationship_primary_diagnosis,Cancer diagnosis for the person related to the subject.,no,enum,see 'family_history data details' tab,,6161022,GDC,Table: FAM_HX_MGC_16 | Variable: FAMMGC_SPECIFICTYPEO FAMMGC_SPECIFY,one,Family history of cancer not collected in cohort two.,,relationship_primary_diagnosis,see 'family_history data details' tab,no,,
+1,diagnosis,primary,commpass,dx_id,Unique row identifier for diagnosis table,no,string,example: mmrf_1007-mmrf_commpass-d10,"This is a composite primary key using the based on a combination of public_id, project_id, and cancer_diagnosis.",not applicable,not applicable,,"one,two",MMRF created for this dataset,not null,,not applicable,MMRF addition,,
+2,diagnosis,foreign,commpass,public_id,MMRF unique subject identifier,no,string,,"Each value has the the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_1111. This is the primary key for the subject table.",not applicable,not applicable,Subcohorts One and Two: Table: D_PT.csv variable: subject_id,"one,two","MMRF created for this dataset 
+",not null,submitter_id,not applicable,yes,,
+3,diagnosis,yes,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project. This is the primary key for the project table.",not applicable,not applicable,project table,"one,two","MMRF created for this dataset 
+",not null,project_id,not applicable,no,,
+4,diagnosis,no,commpass,cancer_diagnosis,Identifier for each cancer diagnosis experienced by the subject relative to the subject's myeloma diagnosis.,no,integer two digit,,"1 -- 7: prior non-myeloma cancer diagnoses compared to the cancer of interest, the myeloma-related study cancer
+8: MGUS
+9: smoldering myeloma
+10: active multiple myeloma diagnosis
+11--19: cancer diagnoses that occur following the study specific myeloma-related diagnosis
+99: No cancer, healthy control",not applicable,not applicable,"10 coding created for each subject based on MMRF CoMMpass enrollment criteria.
+Subcohort One
+1-9 coding based on Table MEDHX |Variable: MHX_SPECIFY ( harmonized)
+
+11-19 based on Table: EMERGENCY_DEPT-IA16 | Variable: ED_PRIMARYREASON (hamonization); Table: ADMISSIONS-IA16 | Variable: ADM_PRIMARYREASON (harmonized)
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable:  len_discontinuation_m_cause_revised
+
+","Each CoMMpass subject is assigned a ""10"" value for their MM diagnosis, the study cancer. Data in tables related to the study diagnosis like the treatment tables will contain the cancer_diagnosis variable so the data can be filtered to the appropriate rows.","MMRF addition to data model.
+
+Each CoMMpass subject is assigned a ""10"" value for their MM diagnosis, the study cancer. Data in tables related to the study diagnosis like the treatment tables will contain the cancer_diagnosis variable so the data can be filtered to the appropriate rows.",not null,not apllicable,not applicable,MMRF addition,,
+5,diagnosis,no,commpass,age_at_diagnosis,Subject's age at the of study entr/diagnosis,no,integer two digit,,"""Active variable for the """"multiple_myeloma"""" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.
+
+In the case of CoMMpass, the age at index is used as the subjects were newly diagnosed.",3225640,NCIP|NCI Programs,"Subohort One: Table D_PT.csv | age
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable:  Age
+","one,two",,not null,age_at_diagnosis,integer,yes,,
+6,diagnosis,no,commpass,diagnosis_is_primary_disease,"Indicator that this specific diagnosis represents the disease that was the primary focus of the study. To analyse data for the cancer of interest, use this data to subset the diagnosis data.",no,boolean,"TRUE
+FALSE","The 'true' value is recorded for the active MM diagnosis only, all other diagnoses are coded ""false."" Use this variable to subset the data to the MM diagnosis.",not applicable,Not applicable;  variable created based on MMRF CoMMpass enrollment criteria.,Not applicable;  variable created based on MMRF CoMMpass enrollment criteria.,"one,two",,not null,diagnosis_is_primary_disease,"true
+false",yes,,
+7,diagnosis,no,commpass,morphology,The site (topography) and the histology (morphology) of neoplasms.,no,enum,9732_3,"For CoMMpass ""9732_3"" is recorded for the diagnosis that made the subject eligible for the study.",3226275,"Third edition of the International Classification of Diseases for Oncology, published in 2000 used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms.",Not applicable;  variable created based on MMRF CoMMpass enrollment criteria.,"one,two",,not null,morphology,9732/3,yes,,
+8,diagnosis,no,commpass,primary_diagnosis,The subject's histologic diagnosis.,no,enum,multiple_myeloma,"For CoMMpass ""multiple_myeloma"" is recorded for the diagnosis that made the subject eligible for the study.",6161032,World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O),Not applicable;  variable created based on MMRF CoMMpass enrollment criteria.,"one,two",,not null,primary_diagnosis,Multiple myeloma,yes,,
+9,diagnosis,no,commpass,site_of_resection_or_biopsy,"The anatomic site of tissue for diagnosis confirmation, of the subject's malignant disease. ",no,enum ,bone_marrow,"For CoMMpass subjects, bone_marrow is recorded for the multiple myeloma diagnosis that made the subject eligible for the study.",6161034,World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O),Not applicable;  variable created based on MMRF CoMMpass enrollment criteria.,"one,two",,not null,site_of_resection_or_biopsy,Bone marrow,yes,,
+10,diagnosis,no,commpass,tissue_or_organ_of_origin,"The anatomic site of origin, of the subject's malignant disease. ",no,enum ,bone_marrow,"For CoMMpass subjects, bone marrow is the origin for the multiple myeloma diagnosis that made the subject eligible for the study.",6161035,World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O),Not applicable;  variable created based on MMRF CoMMpass enrollment criteria.,"one,two",,not null,tissue_or_organ_of_origin,Bone marrow,yes,,
+11,diagnosis,no,commpass,classification_of_tumor,Describes the kind of disease present in the tumor specimen at diagnosis,no,enum,"metastasis
+premalignant
+primary
+prior_primary
+progression
+recurrence
+subsequent_primary
+synchronous_primary
+other
+unknown
+not_reported
+not_allowed_to_collect","For CoMMpass subjects, this represents the timing of the cancer diagnosis compared to the multiple myeloma diagnosis that made the subject eligible for the study. For this study, all myeloma diagnoses are coded as ""primary.""",3288124,TCGA:The Cancer Genome Atlas,,"one,two",,,classification_of_tumor,"Metastasis
+Premalignant
+Primary
+Prior primary
+Progression
+Recurrence
+Subsequent Primary
+Synchronous primary
+Other
+Unknown
+Not reported
+Not Allowed To Collect",no,,
+12,diagnosis,no,commpass,days_to_diagnosis,"Number of days between the subject's multiple myeloma date of diagnosis and the index date. In a de-identified dataset, this variable will help with sequencing events. NB: The date of diagnosis was not collected for patients in subcohort one.",no,integer,,"Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.
+
+In the case of CoMMpass, this variable was not collected for subcohort=one; as such, this will be null.",6154733,,Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: Date_of_diagnosis,two,,,days_to_diagnosis,,no,,
+13,diagnosis,no,commpass,year_of_diagnosis,"Year component of the subject's multiple myeloma date of diagnosis. In a de-identified dataset, this variable will help with sequencing events. NB: The date of diagnosis was not collected for patients in subcohort one.",no,integer,,"Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.
+
+In the case of CoMMpass, this variable was not collected for subcohort=one; as such, this will be null.",2896960,,Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: Date_of_diagnosis,two,,,year_of_diagnosis,,no,,
+15,diagnosis,no,commpass,best_overall_response,The best improvement achieved throughout the entire course of study period.,no,enum,"scr
+cr
+vgpr
+pr
+sd
+pd
+ne
+unknown","Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.
+
+""Best overall response"" in the context of multiple lines of therapy provides a comprehensive picture of how well a subjects's mm responds to the sequence of treatments administered, taking into account the most favorable outcome achieved across different lines of therapy. ",2003324,CCR|NCI Center for Cancer Research,"Subcohort One: Table: D_BRESP.csv | responsec
+Subcohort Two: TABLE: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv |best_response Variable: ","one,two",Duplicate of variable in outcomes table.,,best_overall_response,see diagnosis best_overall_response tab,no,,
+16,diagnosis,no,commpass,days_to_best_overall_response,"Number of days between the subject's date of first best response to therapy for  multiple myeloma and the index date. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,"Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.
+
+Note: if best_overall_response is 'sd' 'pd' 'unknown' or 'ne' the days_to_best_overall_response will be null.",not applicable,,"Subcohort One: Table: D_BRESP.csv | assessdt
+Subcohort Two: TABLE: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: best_response_date","one,two",Duplicate of variable in outcomes table.,,days_to_best_overall_response,,no,,
+17,diagnosis,no,commpass,year_of_best_overall_response,"Year component the subject's date of first best response to therapy for  multiple myeloma. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,"Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.
+
+Note: if best_overall_response is 'sd' 'pd' 'unknown' or 'ne' the year_of_best_overall_response will be null.",not applicable,,"Subcohort One: Table: D_BRESP.csv | assessdt
+Subcohort Two: TABLE: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: best_response_date","one,two",MMRF addition to data model.,,,,MMRF addition,,
+19,diagnosis,no,commpass,days_to_last_follow_up,"Number of days between the subject's multiple myeloma index date and the date of last follow up in study. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,"Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.",3008273,,"Subcohort One: Table: D_PT |  Variable: lastdt
+Subcohort Two: TABLE: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv |Last_contact_Follow_up","one,two",,,days_to_last_follow_up,,no,,
+20,diagnosis,no,commpass,year_of_last_follow_up,"Year component of the subject's last follow-up in study. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,"Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.",not applicable,,"Subcohort One: Table: D_PT |  Variable: lastdt
+Subcohort Two: TABLE: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv |Last_contact_Follow_up","one,two",MMRF addition to data model.,,,,MMRF addition,,
+22,diagnosis,no,commpass,last_known_disease_status,Last known state or condition of an individual's neoplasm/cancer/myeloma.,no,enum,"complete_response
+responding_disease
+stable_disease
+progressive_disease
+not_evaluable
+not_reported
+not_allowed_to_collect","Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.
+
+In the absence of MRD endpoints, modified response values are used for CoMMpass.",5424231,,"Subcohort One: Table: D_BRESP.csv | assessdt, responsec
+Subcohort Two: TABLE: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: drop_out_cause, best_resp_mob, best_resp_maint, best_resp_ind","one,two",,,last_known_disease_status,"Biochemical evidence of disease without structural correlate
+Distant met recurrence/progression
+Loco-regional recurrence/progression
+Tumor free
+Unknown tumor status
+With tumor
+not reported
+Not Allowed To Collect",no,,
+23,diagnosis,no,commpass,days_to_last_known_disease_status,"Number of days between the subject's last date of disease status and the index date. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,"Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.",3008273,,"Subcohort One: Table: D_BRESP.csv | assessdt, responsec
+Subcohort Two: TABLE: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: drop_out_cause, best_resp_mob, best_resp_maint, best_resp_ind","one,two",,,days_to_last_known_disease_status,,no,,
+24,diagnosis,no,commpass,year_of_last_known_disease_status,"Year component ofthe subject's last date of disease status . In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,"Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.",not applicable,,"Subcohort One: Table: D_BRESP.csv | assessdt, responsec
+Subcohort Two: TABLE: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: drop_out_cause, best_resp_mob, best_resp_maint, best_resp_ind","one,two",MMRF addition to data model.,,,,MMRF addition,,
+26,diagnosis,no,commpass,first_progressive_disease,Indicator that the subject has progressive disease after initial treatment.,no,boolean,"yes
+no","Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.",3121376,,"Subcohort One: Table: D_BRESP.csv | assessdt, responsec
+Subcohort Two: TABLE: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: drop_out_cause, best_resp_mob, best_resp_maint, best_resp_ind","one,two",MMRF changed the variable name from progression_or_recurrence to relapse.,,progression_or_recurrence,"yes
+no
+unknown
+not reported",no,,
+27,diagnosis,no,commpass,days_to_first_progressive_disease,"Number of days between the subject's multiple myeloma date of diagnosis and the first instance of progressive disease, if applicable. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,"Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.",6154731,,"Subcohort One: Table: D_BRESP.csv | assessdt, responsec
+Subcohort Two: TABLE: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: drop_out_cause, best_resp_mob, best_resp_maint, best_resp_ind","one,two",,,days_to_recurrence,,no,,
+28,diagnosis,no,commpass,year_of_first_progressive_disease,"Year component of the subject's date of the first instance of progressive disease. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,"Active variable for the ""multiple_myeloma"" diagnosis that made the subject eligible for the study. This should be remain blank for other cancer diagnoses.",not applicable,,"Subcohort One: Table: D_BRESP.csv | assessdt, responsec
+Subcohort Two: TABLE: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: drop_out_cause, best_resp_mob, best_resp_maint, best_resp_ind","one,two",,,,,MMRF addition,,
+30,diagnosis,no,commpass,icd_10_code,Alphanumeric value used to describe the disease code from the tenth version of the International Classification of Disease (ICD-10).,no,string,c90.0,All MMRF CoMMpass subjects have active multiple myeloma at diagnosis for this study; all subjects have c90.0 recorded.,3226287,International Classification of Disease (ICD-10),Not applicable;  variable created based on MMRF CoMMpass enrollment criteria.,"one,two",,,icd_10_code,c90.0,no,,
+31,diagnosis,no,commpass,iss_stage,The multiple myeloma disease International Staging System (ISS) stage at diagnosis that prognostically categorizes the severity of multiple myeloma based on routinely obtained lab values.,no,enum,"1
+2
+3
+not reported",,2465385,,Cohort One: Table D_PT.csv | variable: iss,"one,two",,,iss_stage,"I
+II
+III
+Unknown
+Not reported",no,,
+32,diagnosis,no,commpass,r_iss_stage,The multiple myeloma disease Revised International Staging System (R-ISS) stage at diagnosis that prognostically categorizes the severity of multiple myeloma based on routinely obtained lab values and genetic risk by FISH and LDH level.,no,enum,"i
+ii
+iii
+unknown
+not reported",MMRF addition,not applicable,,Cohort One: Table D_PT.csv | variable: R_ISS,one,,,,not applicable,MMRF addition,,
+33,diagnosis,no,commpass,method_of_diagnosis,The method used to confirm the subject's malignant diagnosis.,no,enum,bone_marrow_aspirate,All MMRF CoMMpass subjects had a bone marrow biopsy/aspirate for confirmation of diagnosis for this study; all subjects have 'bone_marrow_aspirate' recorded.,6161031,,Not applicable;  variable created based on MMRF CoMMpass enrollment criteria.,"one,two",,,method_of_diagnosis,see diagnosis data details ab,no,,
+34,diagnosis,no,commpass,height_at_diagnosis_m,Subject's height (m) recorded prior to first therapy for active multiple myeloma diagnosis.,no,integer,,"Moved from GDC follow-up table, as event occurs at diagnosis. It is not longitudinally assessed at visit.",,,"Subcohort One: Table DEMOG.csv | variable: DEMOG_HEIGHT
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: heights_cm","one,two","Since CoMMpass collects this data at the time of diagnosis, variable moved to diagnosis table.",,height,,no,,
+35,diagnosis,no,commpass,weight_at_diagnosis_kg,Subject's weight (kg) recorded prior to first therapy for active multiple myeloma diagnosis.,no,integer,,"Moved from GDC follow-up table, as event occurs at diagnosis. It is not longitudinally assessed at visit.",,,"Subcohort One: Table DEMOG.csv | variable: DEMOG_WEIGHT
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: weight_at_diagnosis","one,two","Since CoMMpass collects this data at the time of diagnosis, variable moved to diagnosis table.",,weight,,no,,
+36,diagnosis,no,commpass,bmi_at_diagnosis,Subject's body mass index (BMI) calculated from height and weight recorded prior to first therapy for active multiple myeloma diagnosis. algorithm: (weight/(height*height)),no,numeric,,"Moved from GDC follow-up table, as event occurs at diagnosis. It is not longitudinally assessed at visit.",,CDC: https://www.cdc.gov/bmi/about/index.html,"Derived from height_at_diagnosis, weight_at_diagnosis","one,two","Since CoMMpass collects this data at the time of diagnosis, variable moved to diagnosis table.",,bmi,,no,,
+1,followup,primary,commpass,followup_id,Unique row identifier for followup table,no,string,example: mmrf_1007-mmrf_commpass-v10,"This is a composite primary key based on a combination of public_id, project_id, and visit.",not applicable,not applicable,,"one,two",,not null,,not applicable,,,
+2,followup,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_1111,"Each value has the the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_1111. This is the primary key for the subject table.",not applicable,not applicable,Subcohorts One and Two: Table: D_PT.csv | Variable: subject_id,"one,two",,not null,submitter_id,yes,,,
+3,followup,foreign,commpass,project_id,The project's source name,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project. This is the primary key for the project table.",not applicable,not applicable,Subcohorts One and Two: Table: project,"one,two","MMRF created for this dataset 
+",not null,project_id,not applicable,no,,
+4,followup,no,commpass,study_visit,Harmonized study visit designation across subcohorts.,no,enum,see follow-up details tab,"Subcohort=""one"", MMRF CoMMpass project, defined subject study visits numbered in months following the baseline visit. It is important to note that the study visit label will not always conform to its actual visit timing, meaning that the 3-month visit may not be timed precisely at 3 months following the baseline visit.",not applicable,not applicable,Subcohort One and Two: Table: D_VISIT.csv | Variable: VJ_INTERVAL,"one,two",,not null,,yes,,,
+5,followup,no,commpass,timepoint_category,"Category describing a specific point in the time continuum, including those established relative to an event.",no,enum,,C68568,NCIt,,Subcohort One and Two: Table: D_VISIT.csv | Variable: VJ_INTERVAL,"one,two",,not null,timepoint_category,yes,,,
+6,followup,no,commpass,days_to_visit,Number of days between the date used for index and the date of the subject's last follow-up appointment or contact.,no,integer,,,,,Subcohort One and Two: Table: D_VISIT.csv | Variable: visitdt,"one,two",,,days_to_follow_up,yes,,,
+7,followup,no,commpass,year_of_visit,The year of the subject's study or followup visit.,no,integer 4 digit,,,,,Subcohort One and Two: Table: D_VISIT.csv | Variable: visitdt,"one,two",,,year_of_follow_up,yes,,,
+10,followup,no,commpass,ecog_ps_numeric,The subject's performance status (PS) score reported in its numeric format  at the time of the visit. The ECOG PS is a determination of how well a subject is able to perform ordinary tasks and carry out daily activities.,no,enum,"0
+1
+2
+3
+4
+5
+unknown
+not_reported","Descriptions for the numeric code: 0=Fully active, able to carry on all pre-disease performance without restriction | 1=Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature | 2= Ambulatory and capable of all selfcare but unable to carry out any work activities | 3=Capable of only limited selfcare confined to bed or chair more than 50 percent of waking hours | 4=Completely disabled Cannot carry on any selfcare  Totally confined to bed or chair | 5=Dead | unknown | not_reported
+
+This variable may be more useful in analyses including PS.",88,Eastern Cooperative Oncology Group,"Subcohort One and Two: Table: ECOG.csv | Variable: ECOG_PERFORMANCEST
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: ecog_performance_status","one,two",,,ecog_performance_status,"0
+1
+2
+3
+4
+5
+Unknown
+Not Reported",no,,
+11,followup,no,commpass,days_to_ecog_ps,"Number of days between the date that the subject reported ECOG PS and the index date. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,,,,"Subcohort One and Two: Table: ECOG.csv | Variable: ECOG_ASSESSMENTDAT_RAW_
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: ecog_performance_status","one,two",,,timepoint_category,see follow-up details tab,no,,
+12,followup,no,commpass,year_of_ecog_ps,"Year component of the date that the subject reported ECOG PS. In a de-identified dataset, this variable will help with sequencing events. ",no,integer 4 digit,,,,,"Subcohort One and Two: Table: ECOG.csv | Variable: ECOG_ASSESSMENTDAT_RAW_
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: ecog_performance_status","one,two",,,not_applicable,not_applicable,not_applicable,,
+14,followup,no,commpass,disease_response,Code assigned to describe the subject's response or outcome to the disease.,no,enum,"complete_response
+stingent_complete_respones
+very_good_partial_response
+partial_response
+stable_disease
+progressive_disease
+not_evaluable
+not_reported",,,,"Subcohort One and Two: Table: D_BRESPMO.csv | Variable:AT_TREATMENTRESP 
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: best_response","one,two",,,not_applicable,not_applicable,not_applicable,,
+16,followup,no,commpass,days_to_disease_response_assessment,Number of days between the date used for index and the date the subject's disease was assessed for treatment response.,no,integer,,,,,"Subcohort One and Two: Table: D_BRESPMO.csv | Variable: assessdt
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: best_response_date","one,two",,,not_applicable,not_applicable,not_applicable,,
+17,followup,no,commpass,year_of_disease_response_assessment,The year of the followup visit.,no,integer 4 digit,,no,integer 4 digit,,"Subcohort One and Two: Table: D_BRESPMO.csv | Variable: assessdt
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv | Variable: best_response_date","one,two",,,not_applicable,not_applicable,not_applicable,,
+19,followup,no,commpass,televisit,"A flag indicating whether or not the study visit was a televisit, which was important characteristic during the COVID-19 period.",no,boolean,"yes
+no",The data element was added during COVID to track patients' visits.,not applicable,,,"one,two",,,not_applicable,not_applicable,not_applicable,,
+20,followup,no,commpass,reported_signs_symptoms,"From the time following the previous study visit to this study visit, the subject reported experiencing one or more signs/symptoms indicating myeloma. The specific signs and/or symptoms are recorded in the signs_symptoms table.",no,boolean,"yes
+no",The adverse events are in the adverse_event table.,not applicable,,derived from signs_symptoms,one,,,not_applicable,not_applicable,not_applicable,,
+21,followup,no,commpass,reported_adverse_event,"From the time following the previous study visit to this study visit, the subject reported experiencing one or more adverse event. The specific adverse event(s) are located in the adverse_event table.",no,boolean,"yes
+no",The signs/symptoms are in the signs_symptoms table.,not applicable,,derived from adverse_events,one,,,not_applicable,not_applicable,not_applicable,,
+22,followup,no,commpass,reported_clinical_event,"From the time following the previous study visit to this study visit, the subject reported one or more clinical events, including medical history, emergency department visit, or hospitalization at the time of the study visit.",no,boolean,"yes
+no",The medical events are in the other_clinical_attributes table.,not applicable,,derived from other_clinical attributes,"one,two",,,not_applicable,not_applicable,not_applicable,,
+1,adverse_event,primary,commpass,ae_id,Unique row identifier for adverse_event table.,no,string,,"This is a composite primary key based on a combination of public_id, project_id, and count of adverse_event.",not applicable,not applicable,,one,MMRF created for this dataset,not null,,not applicable,MMRF addition,,
+2,adverse_event,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_1111,"Each value has the the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_1111. This is the primary key for the subject table.",not applicable,not applicable,"Table: PERIPHERAL,GRADE3OR4AEs,  Variable: public_id",one,,not null,submitter_id,not applicable,yes,,
+3,adverse_event,foreign,commpass,project_id,The project's source name,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project. This is the primary key for the project table.",not applicable,not applicable,applied,one,"MMRF created for this dataset 
+",not null,project_id,not applicable,no,,
+4,adverse_event,no,commpass,study_visit,"Subcohort=""one"", MMRF CoMMpass project, defined subject study visits numbered in months following the baseline visit. It is important to note that the study visit label will not always conform to its actual visit timing, meaning that the 3-month visit may not be timed precisely at 3 months following the baseline visit.",no,enum,see adverse_event details tab,,,,"Table: PERIPHERAL,GRADE3OR4AEs,  Variable: VJ_INTERVAL",one,,,,,,,
+5,adverse_event,no,commpass,ae,The adverse event reported by the patient at the study visit. This event can be reported across two or more study visits.,no,string,,Text entry list of diagnoses.,,,"Table: PERIPHERAL or GRADE3OR4AEs,  Variable: PN_WASANEUROLOGI, AESMT_GRADEAE",one,,,,,,,
+6,adverse_event,no,commpass,peripheral_sensory_neuropathy_present,"If peripheral neuropathy is the adverse event, was it peripheral sensory neuropathy?",no,boolean,yes no,,,,"Table: PERIPHERAL,  Variable: PN_PERIPHERALSEN",one,,,,,,,
+7,adverse_event,no,commpass,peripheral_sensory_neuropathy_grade,CTCAE grade for  peripheral sensory neuropathy,no,string,,,,,"Table: PERIPHERAL,  Variable: PN_IFYESINDICATE",one,,,,,,,
+8,adverse_event,no,commpass,peripheral_motor_neuropathy_present,"If peripheral neuropathy is the adverse event, was it peripheral motor neuropathy?",no,boolean,yes no,,,,"Table: PERIPHERAL,  Variable: PN_PERIPHERALMOT",one,,,,,,,
+9,adverse_event,no,commpass,peripheral_motor_neuropathy_grade,CTCAE grade for  peripheral motor neuropathy,no,string,,,,,"Table: PERIPHERAL,  Variable: PN_IFYESINDICATE2",one,,,,,,,
+1,bone_assessment,primary,commpass,ba_id,Unique row identifier for bone_assessment table.,no,string,example: mmrf_1011-mmrf_commpass-ba1,"This is a composite primary key based on a combination of public_id, project_id, and count of bone assessments.",,,,"one, two",,,,,,,
+2,bone_assessment,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_1111,"Each value has the the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_1111. This is the primary key for the subject table.",not applicable,not applicable,Subcohort One and Two: Table: D_PT.csv | Variable: subject_id,"one, two",,,,,,,
+3,bone_assessment,foreign,commpass,project_id,The project's source name,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project. This is the primary key for the project table.",not applicable,not applicable,project table,"one, two","MMRF created for this dataset 
+",,project_id,not applicable,no,,
+4,bone_assessment,no,commpass,baseline_assessment,"Indicator that the bone assessment was performed prior to or within 7 days of the baseline visit for the study, which for CoMMpass subjects was before the patient received first treatment for multiple myeloma.",no,boolean,"yes
+no",,,,,"one, two",,,,,,,
+5,bone_assessment,no,commpass,days_to_bone_assessment,"Number of days between the date of imaging test and the index date. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,,,,Cohort One: Table BONE_ASSESS | Variable BA_DATEOFASSESSM_RAW_,one,"Variable moved from GDC follow-up table. Since imaging is not routinely collected at follow-up visits, it is moved to own table.",,days_to_imaging,,yes,,
+6,bone_assessment,no,commpass,year_of_bone_assessment,"Year component the date imaging scan during the course of the study. In a de-identified dataset, this variable will help with sequencing events. ",no,integer 4 digit,,,,,Cohort One: Table BONE_ASSESS | Variable BA_DATEOFASSESSM_YYYY,one,,,year_of_image,,no,,
+8,bone_assessment,no,commpass,bone_assessment_type,The type of clinical review of the subject's bones.,no,enum,"biopsy
+imaging
+physical_exam",,not applicable,NCIt,Cohort One: Table BONE_ASSESS | Variable BA_TYPEOFBONEASS,one,,,,,,,
+9,bone_assessment,no,commpass,imaging_scan_type,"For subjects with imaging used as bone assessment technique, the specification of the imaging modality used to evaluate myeloma involvement.",no,enum,"bone_density
+bone_scan
+ct_scan
+mri
+pet_ct
+pet
+skeletal_survey_xray
+ultrasound
+xray_imaging
+not_applicable
+not_reported","If bone_assessment_type=""imaging"" this variable will be populated with the image modality; otherwise, ""not_applicable"" is recorded.
+",,NCIt,Cohort One: Table BONE_ASSESS | Variable BA_TYPEOFBONEASS,,"variable moved from GDC follow-up table. Since imaging is not routinely collected at follow-up visits, it is moved to own table.",,imaging_type,"99mTc Bone Scintigraphy
+Bone Scan, NOS
+CT Scan
+MRI
+PET
+Ultrasound
+Unknown
+Not Reported",no,,
+10,bone_assessment,no,commpass,imaging_anatomic_site,"	
+The named location(s) within the body where an image was taken.",no,array,"abdomen
+abdomen_pelvis
+chest
+head
+neck
+pelvis
+lower_extremity
+upper_extremity
+shoulder
+spine
+whole_body
+not_reported",,,,Cohort One: Table BONE_ASSESS | Variable BA_TYPEOFBONEASS,one,"variable moved from GDC follow-up table. Since imaging is not routinely collected at follow-up visits, it is moved to own table.",,imaging_anatomic_site,"Abdomen
+Cervix Uteri
+Lymph Node
+Pelvis
+Pleura
+Unknown
+Not Reported",no,,
+11,bone_assessment,no,commpass,interpretation,Indication of whether cancer was found on scan or exam.,no,enum,clinically_significant_abnormality_related_to_mm |  clinically_significant_abnormality_unrelated_to_mm |normal_or_clinically_insignificant_abnormality,,,,Cohort One: Table BONE_ASSESS | Variable BA_IMAGEINTERPRE,one,"variable moved from GDC follow-up table. Since imaging is not routinely collected at follow-up visits, it is moved to own table.",,imaging_result,"Indeterminate
+Negative
+Not Performed
+Positive
+Unknown
+Not Reported",no,,
+12,bone_assessment,no,commpass,lytic_bone_lesion_present,"Indication and number of  lytic bone lesions found on scan if imaging_result=""positive."" If imaging_result was not ""positive"" then ""not_applicable"" is recorded.",no,enum,"yes
+no",,,,Cohort One: Table BONE_ASSESS | Variable BA_OFLYTICLESION,"one, two",,,not_applicable,,not applicable,,
+13,bone_assessment,no,commpass,number_of_lytic_lesions,Number of lytic bone lesions found in exam.,no,enum,"none
+one
+two
+greater_than_equal_to_three
+not_reported",,,,,"one, two",,,,,,,
+14,bone_assessment,no,commpass,osteopenia_osteoporosis,Indication that the exam found evidence of osteopenia or osteoporosis,no,enum,"yes
+no
+not_reported",,,,,"one, two",,,,,,,
+15,bone_assessment,no,commpass,pathologic_fracture,,no,enum,"yes
+no
+not_reported",,,,,"one, two",,,,,,,
+16,bone_assessment,no,commpass,multiple_mm_disseminated_lesions,Indication that the exam found evidence of multiple disseminated bone lesions.,no,enum,"yes
+no
+not_applicable","The value ""not_applicable"" is used when the interpretation of the exam is noted to be either ""clinically_significant_abnormality_unrelated_to_mm"" or  ""normal_or_clinically_insignificant_abnormality"".",,,,,,,,,,,
+17,bone_assessment,no,commpass,mm_bone_lesion_skull,Indication that the exam found evidence of myeloma-related bone lesion(s) on skull.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+18,bone_assessment,no,commpass,mm_bone_lesion_spine,Indication that the exam found evidence of myeloma-related bone lesion(s) on spine.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+19,bone_assessment,no,commpass,mm_bone_lesion_cervical_spine,Indication that the exam found evidence of myeloma-related bone lesion(s) on cervical spine.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+20,bone_assessment,no,commpass,mm_bone_lesion_thoracic_spine,Indication that the exam found evidence of myeloma-related bone lesion(s) on thoracic spine.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+21,bone_assessment,no,commpass,mm_bone_lesion_lumbar_spine,Indication that the exam found evidence of myeloma-related bone lesion(s) on lumbar spine.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+22,bone_assessment,no,commpass,mm_bone_lesion_sacral_spine,Indication that the exam found evidence of myeloma-related bone lesion(s) on sacral spine.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+23,bone_assessment,no,commpass,mm_bone_lesion_pelvis,Indication that the exam found evidence of myeloma-related bone lesion(s) on pelvis.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+24,bone_assessment,no,commpass,mm_bone_lesion_pelvis_r,Indication that the exam found evidence of myeloma-related bone lesion(s) on the right pelvis.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+25,bone_assessment,no,commpass,mm_bone_lesion_pelvis_l,Indication that the exam found evidence of myeloma-related bone lesion(s) on left pelvis.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+26,bone_assessment,no,commpass,mm_bone_lesion_femur,Indication that the exam found evidence of myeloma-related bone lesion(s) on femur.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+27,bone_assessment,no,commpass,mm_bone_lesion_femur_r,Indication that the exam found evidence of myeloma-related bone lesion(s) on the right femur.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+28,bone_assessment,no,commpass,mm_bone_lesion_femur_l,Indication that the exam found evidence of myeloma-related bone lesion(s) on left femur.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+29,bone_assessment,no,commpass,mm_bone_lesion_humerus,Indication that the exam found evidence of myeloma-related bone lesion(s) on humerus.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+30,bone_assessment,no,commpass,mm_bone_lesion_humerus_r,Indication that the exam found evidence of myeloma-related bone lesion(s) on the right humerus.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+31,bone_assessment,no,commpass,mm_bone_lesion_humerus_l,Indication that the exam found evidence of myeloma-related bone lesion(s) on left humerus.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+32,bone_assessment,no,commpass,mm_bone_lesion_ribs,Indication that the exam found evidence of myeloma-related bone lesion(s) on ,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+33,bone_assessment,no,commpass,mm_bone_lesion_ribs_r,Indication that the exam found evidence of myeloma-related bone lesion(s) on right-sided ribs.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+34,bone_assessment,no,commpass,mm_bone_lesion_ribs_r_number,Number of bone lesions on right-sided ribs found on exam.,no,integer,,"""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+35,bone_assessment,no,commpass,mm_bone_lesion_ribs_l,Indication that the exam found evidence of myeloma-related bone lesion(s) on left-sided ribs.,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+36,bone_assessment,no,commpass,mm_bone_lesion_ribs_l_number,Number of bone lesions on left-sided ribs found on exam.,no,integer,,"""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+37,bone_assessment,no,commpass,mm_other_lesions,Indication that the exam found evidence of other myeloma-related bone lesion(s).,no,enum,"yes
+no
+not_reported","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+38,bone_assessment,no,commpass,mm_other_lesion_specify,Text listing of other locations of myeloma-related bone lesions.,no,string,,,,,,,,,,,,,
+39,bone_assessment,no,commpass,bone_lytic_lesion_by_xray,Derived data element indicating xray imaging used to evaluate lytic bone lesions.,no,enum,"yes
+not_reported
+not_applicable","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+40,bone_assessment,no,commpass,bone_lytic_lesion_by_ct,Derived data element indicating ct imaging used to evaluate lytic bone lesions.,no,enum,"yes
+not_reported
+not_applicable","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+41,bone_assessment,no,commpass,bone_lytic_lesion_by_mri,Derived data element indicating mri imaging used to evaluate lytic bone lesions.,no,enum,"yes
+not_reported
+not_applicable","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+42,bone_assessment,no,commpass,bone_lytic_lesion_by_petct,Derived data element indicating petct imaging used to evaluate lytic bone lesions.,no,enum,"yes
+not_reported
+not_applicable","""not_reported"" used for subcohort=""two""",,,,,,,,,,,
+1,signs_symptoms,primary,commpass,ss_id,The unique identifier for signs_symptoms table.,no,string text,,"This is a composite primary key based on a combination of public_id, project_id, and count of the visit for subjects to create a unique identifier for table.",,,,,,not null,not applicable,not applicable,not applicable,,
+2,signs_symptoms,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_1111,"Each value has the the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_1111. This is the primary key for the subject table.",not applicable,not applicable,SYMPTOMS.csv,one,,not null,not applicable,not applicable,not applicable,,
+3,signs_symptoms,yes,commpass,project_id,The project's source name,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project. This is the primary key for the project table.",not applicable,not applicable,project table,one,"MMRF created for this dataset 
+",not null,project_id,not applicable,no,,
+4,signs_symptoms,no,commpass,study_visit,"MMRF CoMMpass project defined subject study visits. NB the study visit label will not always conform to its actual timing, meaning that the 3-month visit may not be timed precisely at 3 months. The study_visit defined the data collected for the visit.",no,string,see signs_smptoms details tab,"MMRF CoMMpass project defined subject study visits. NB the study visit label will not always conform to its actual timing, meaning that the 3-month visit may not be timed precisely at 3 months. The study_visit defined the data collected for the visit.",not applicable,not applicable,Table: SYMPTOMS.csv| Variable ,one,,,not applicable,not applicable,not applicable,,
+5,signs_symptoms,no,commpass,days_to_signs_symptoms,"Number of days between the date of of the reported sign/symptom and the index date. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,,,,,,,,,,,,
+6,signs_symptoms,no,commpass,year_of_signs_symptoms,"Year component the date of of the reported sign/symptom. In a de-identified dataset, this variable will help with sequencing events. ",no,integer four digit,,,,,,,,,,,,,
+8,signs_symptoms,no,commpass,subject_had_signs_symptoms,Indicator that the subject reported one or more signs and/or symptoms at the study visit.,no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable  SS_DOESTHEPATIEN,one,,,,,,,
+9,signs_symptoms,no,commpass,spinal_cord_compression,"The subject has evidence of a sign or symptom related to myeloma, specifically, spinal cord compression.",no,enum,yes no not_reported,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable  SS_SPINALCORDCOM,one,,,not applicable,not applicable,not applicable,,
+10,signs_symptoms,no,commpass,bone_pain,"The subject has evidence of a sign or symptom related to myeloma, specifically,  bone pain.",no,enum,yes no not_reported,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable SS_BONEPAIN,one,,,not applicable,not applicable,not applicable,,
+11,signs_symptoms,no,commpass,fatigue,"The subject has evidence of a sign or symptom related to myeloma, specifically, fatigue.",no,enum,yes no not_reported,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable SS_FATIGUE,one,,,not applicable,not applicable,not applicable,,
+12,signs_symptoms,no,commpass,hypercalcemia,"The subject has evidence of a sign or symptom related to myeloma, specifically, hypercalcemia with a corrected calcium > 11.5 mg/dl.",no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable SS_HYPERCALCEMIA,one,,,not applicable,not applicable,not applicable,,
+13,signs_symptoms,no,commpass,renal_insufficiency,"The subject has evidence of a sign or symptom related to myeloma, specifically, renal insufficiency.",no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable SS_RENALINSUFFIC,one,,,not applicable,not applicable,not applicable,,
+14,signs_symptoms,no,commpass,anemia,"The subject has evidence of a sign or symptom related to myeloma, specifically, anemia.",no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable SS_ANEMIAHEMOGLO,one,,,not applicable,not applicable,not applicable,,
+15,signs_symptoms,no,commpass,lytic_bone_lesion,"The subject has evidence of a sign or symptom related to myeloma, specifically, lytic bone lesion(s).",no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable SS_BONELESIONSLY,one,,,not applicable,not applicable,not applicable,,
+16,signs_symptoms,no,commpass,bone_lesion,"The subject has evidence of a sign or symptom related to myeloma, specifically,  bone lesions with osteoporosis with compression fractures.",no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable SS_BONELESIONSOS,one,,,not applicable,not applicable,not applicable,,
+17,signs_symptoms,no,commpass,soft_tissue_plasmacytoma_single,"The subject has evidence of a sign or symptom related to myeloma, specifically, a single soft tissue plasmacytoma.",no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv | Variable SS_SOFTTISSUEPLA,one,,,not applicable,not applicable,not applicable,,
+18,signs_symptoms,no,commpass,soft_tissue_plasmacytoma_multi,"The subject has evidence of a sign or symptom related to myeloma, specifically, multiple soft tissue plasmacytomas.",no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv | Variable SS_OFTTISSUEPLAS,one,,,not applicable,not applicable,not applicable,,
+19,signs_symptoms,no,commpass,soft_tissue_plasmacytoma_found_ct_mri,Indication that a soft tissue plasmacytomas was found by CT or MRI since the prior study visit.,no,boolean,yes no,,not applicable,not applicable,Table SOFT_TISSUE.csv | Variable ST_WEREANYSOFTTI,,,,,,,,
+20,signs_symptoms,no,commpass,days_to_assessment_by_ct_mri,"Number of days between the date of imaging test and the index date. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,,,,,,,,,,,,
+21,signs_symptoms,no,commpass,year_of_assessment_by_ct_mri,"Year component the date imaging scan during the course of the study. In a de-identified dataset, this variable will help with sequencing events. ",no,integer four digit,,,,,,,,,,,,,
+23,signs_symptoms,no,commpass,plasmacytoma_number,By mri/ct the number of plasmacytoma noted.,no,boolean,yes no,,not applicable,not applicable,Table SOFT_TISSUE.csv | Variable ST_INCREASEINNUM ,,,,,,,,
+24,signs_symptoms,no,commpass,plasmacytoma_change,By mri/ct the existing plasmacytoma a change was noted from prior assessment.,no,boolean,yes no,,not applicable,not applicable,,,,,,,,,
+25,signs_symptoms,no,commpass,plasmacytoma_size_increase,By mri/ct the existing plasmacytoma increased in number from prior assessment.,no,boolean,yes no,,not applicable,not applicable,,,,,,,,,
+26,signs_symptoms,no,commpass,plasmacytoma_number_increase,By mri/ct the existing plasmacytoma increased in size from prior assessment.,no,boolean,yes no,,not applicable,not applicable,,,,,,,,,
+27,signs_symptoms,no,commpass,recurrent_bacteria_infection,"The subject has evidence of a sign or symptom related to myeloma, specifically, recurrent bacteria infection at the time of the visit.",no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable SS_RECURRENTBACT,one,,not applicable,not applicable,not applicable,,,
+28,signs_symptoms,no,commpass,symptomatic_hyperviscosity,"The subject has evidence of a sign or symptom related to myeloma, specifically, symptomatic hyperviscosity at the time of the visit.",no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable  SS_SYMPTOMATICHY,one,,not applicable,not applicable,not applicable,,,
+29,signs_symptoms,no,commpass,amyloidosis,"The subject has evidence of a sign or symptom related to myeloma, specifically, amyloidosis.",no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable  SS_AMYLOIDOSIS,one,,not applicable,not applicable,not applicable,,,
+30,signs_symptoms,no,commpass,other_diagnosis,"The subject has evidence of a sign or symptom related to myeloma, another condition not mentioned.",no,boolean,yes no,,not applicable,not applicable,Table: SYMPTOMS.csv| Variable  SS_OTHER,one,,not applicable,not applicable,not applicable,,,
+31,signs_symptoms,no,commpass,other_specify,"Additional information for other variables, if available, especially, ss_other.",no,string text,,Text entries were harmonized across project.,not applicable,not applicable,Table: SYMPTOMS.csv| Variable  SS_SPECIFY,one,,,,,,,
+1,labs,primary,yes,labs_id,Unique id for labs table,no,string,example: mmrf_1007-mmrf_commpass-l1,"This is a composite primary key based on a combination of public_id, project_id, and lab count.",not applicable,,derived for dataset,"one,two","MMRF created for this dataset 
+",not null,,not applicable,not applicable,,
+2,labs,foreign,yes,public_id,MMRF subject identifier,no,string,example: mmrf_0001,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_0001",not applicable,,center,"one,two","MMRF created for this dataset 
+",not null,project_id,not applicable,yes,,
+3,labs,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,applied,"one, two","MMRF created for this dataset 
+",not null,project_id,not applicable,no,,
+4,labs,no,yes,lab_group,Category of laboratory test.,no,enum,"cbc_labs
+serum_chemistry
+serum_mm_labs
+urine_immunology_labs",,,,"cbc_labs
+serum_chemistry
+serum_mm_labs
+urine_immunology_labs","one,two",,,,not applicable,not applicable,,
+5,labs,no,yes,days_to_specimen_collection,"Number of days between the subject's lab specimen collection date and the index date. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,,,,"cbc_labs
+serum_chemistry
+serum_mm_labs
+urine_immunology_labs","one,two",,,,not applicable,not applicable,,
+6,labs,no,yes,year_of_specimen_collection,"Year component of the subject's specimen collection  date. In a de-identified dataset, this variable will help with sequencing events. ",no,integer 4 digit,,range 2010 - 2023,,,"cbc_labs
+serum_chemistry
+serum_mm_labs
+urine_immunology_labs","one,two",,,,not applicable,not applicable,,
+7,labs,no,yes,date_of_specimen_collection,The subject's specimen collection  date. This date should be used internally at the MMRF and never shared.,yes,date,,The lab test collection date is derived from the from a study date prior to the receipt of drug therapy and following informed consent data.,,,"cbc_labs
+serum_chemistry
+serum_mm_labs
+urine_immunology_labs","one,two",,,,not applicable,not applicable,,
+8,labs,no,yes,baseline_lab,Indicator that the specimen was collected prior to the first therapy for NDMM.,no,boolean,"yes
+no",All subcohort=2 have baseline values only.,,,"cbc_labs
+serum_chemistry
+serum_mm_labs
+urine_immunology_labs",,,,,,,,
+9,labs,no,yes,lab_test_specimen,,no,enum,"peripheral_blood
+urine",,,,"cbc_labs
+serum_chemistry
+serum_mm_labs
+urine_immunology_labs",,,,,,,,
+10,labs,no,yes,lab_test,,no,enum,"24hr_serum_m_protein
+24hr_tot_protein
+abs_neut
+albumin
+beta_2_microglobulin
+bun
+c_reactive_protein
+calcium
+creatinine
+creatinine_clearanc
+glucose
+hemoglobin
+iga
+igd
+ige
+igg
+igm
+lactate_dehydrogenase_ldh
+platelet
+serum_kappa_free_light_chains
+serum_lambda_free_light_chains
+serum_protein_electrophoresis_m_protein
+total_protein
+wbc",,,LOINC,"cbc_labs
+serum_chemistry
+serum_mm_labs
+urine_immunology_labs","one,two",,,,not applicable,not applicable,,
+11,labs,no,yes,lab_test_result,Numeric lab result value,no,numeric,,,,,"cbc_labs
+serum_chemistry
+serum_mm_labs
+urine_immunology_labs","one,two",,,not applicable,not applicable,not applicable,,
+12,labs,no,yes,lab_result_test_unit,,no,enum,"/mcl | /nl | 24hrcells/mcl  | d/l | g/24hr | g/dl | g/l | g/v | gl/l | u/dl | u/l | iu/ml | iu/nl | ku/l | l | mcg/dl | mcg/l | mcg/ml | mg/100ml | mg/24hr | mg/dL | mg/dl_24 | mg/g | mg/interval | mg/l | mg/ml | mg/tv | ml | mmol/l | ng/ml | not_applicable | not_reported | percent | u/l | umol/l
+x10^12/mcl
+x10^3/mcl
+x10^3/mm
+x10^3/mm2
+x10^3/mm3
+x10^9/l",See lab_units tab for specification of values.,,,"cbc_labs
+serum_chemistry
+serum_mm_labs
+urine_immunology_labs","one,two",,,not applicable,not applicable,not applicable,,
+1,sample,primary,commpass,sample_id,Unique id for sample table,no,string,example: mmrf_1007-mmrf_commpass-sam1,"This is a composite primary key based on a combination of public_id, project_id, and sample count.",not applicable,not applicable,derived,"one,two","MMRF created for this dataset 
+",not null,not applicable,not applicable,not applicable,,
+2,sample,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_0001,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_0001",not applicable,not applicable,Subcohorts One and Two: Table: D_PT.csv variable: subject_id,"one,two","MMRF created for this dataset 
+",not null,submitter_id,string,yes,,
+3,sample,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,applied,"one, two","MMRF created for this dataset 
+",not null,project_id,not applicable,no,,
+4,sample,no,commpass,institution_subject_id,Identifier of the subject and institution through which the subject was enrolled.,no,string ,,"A combination identifier with the institution identifier with the subject identifier separated by a ""-"".",not applicable,not applicable,Not applicable; represents the MMRF CoMMpass study.,"one, two",,not null,not applicable,not applicable,not applicable,,
+5,sample,no,commpass,sample_visit_id,A number describing the sequence in which the samplewas collected.,no,string,example: mmrf_0001_1,"An ""_"" and a number is appended to the public_id with the baseline visit for the study having an  ""_1"". The appended number increases with each subsequent visit resulting in a biospecimen collected from the subject. As such, subsequent visits with samples do not have the same type of visit [restaging, relapse, response]",not applicable,not applicable,applied,"one, two",,not null,sample_ordinal,integer,no,,
+6,sample,no,commpass,sample_visit_type,Identifier of based on the combination of sample_visit_id and specimen_type.,no,string,example: mmrf_1017_1_bma,A combination identifier with the institution identifier with sample_visit_id and specimen_type .,not applicable,not applicable,Not applicable; represents the MMRF CoMMpass study.,"one, two",,not null,not applicable,not applicable,not applicable,,
+7,sample,no,commpass,cancer_diagnosis,The identifier for the subject level cancer diagnosis corresponding to the diagnosis_is_primary_disease=1  found in the diagnosis table.,no,integer,10,10: active multiple myeloma diagnosis,,,,"one, two",,not null,not applicable,not applicable,not applicable,,
+8,sample,no,commpass,preservation_method,Text term that represents the method used to preserve the sample.,no,enum,"cryopreserved
+edta
+ffpe
+fresh
+frozen
+oct
+snap_frozen
+unknown
+not_reported","Since this data was not collected, ""not_reported"" is saved for this field.",,,,"one, two",,,preservation_method,"Cryopreserved
+EDTA
+FFPE
+Fresh
+Frozen
+OCT
+Snap Frozen
+Unknown
+Not Reported",yes,,
+9,sample,no,commpass,freezing_method,"The method used for freezing the sample, includes -20C, -80C, dry ice, liquid nitrogen vapor.",no,string ,not_reported,"Since this data was not collected, ""not_reported"" is saved for this field.",5432607,GDC,,,,,freezing_method,string,no,,
+10,sample,no,commpass,specimen_type,"The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes. This includes particular types of cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory substances.",no,enum,see sample details tab,,C70713,NCIt,,"one, two",,,specimen_type,see sample details tab,yes,,
+11,sample,no,commpass,tissue_type,Text term that represents a description of the kind of tissue collected with respect to disease status or proximity to tumor tissue.,no,enum,not_applicable,,,,,"one, two",,,tissue_type,"Abnormal
+Normal
+Peritumoral
+Tumor
+Unknown
+Not Reported",yes,,
+,sample,no,commpass,tumor_descriptor,Text term that represents the name of the organ or tissue site of the submitted sample.,no,enum,not_applicable,,,,,"one, two",,,tumor_descriptor,"Metastatic
+New Primary
+NOS
+Premalignant
+Primary
+Recurrence
+Xenograft
+Unknown
+Not Reported
+Not Applicable",yes,,
+12,sample,no,commpass,biospecimen_anatomic_site,Text that describes the kind of disease present in the tumor specimen as related to a specific timepoint.,no,enum,not_applicable,,,,,"one, two",,,biospecimen_anatomic_site,see sample details tab,no,,
+13,sample,no,commpass,days_to_sample_procurement,The number of days from the index date to the date a patient underwent a procedure (e.g. surgical resection) to yield or remove from the patient a sample that was eventually used for research.,no,integer,,,,,,"one, two",,,days_to_sample_procurement,integer,no,,
+14,sample,no,commpass,year_sample_procurement,The year component of the date that a subject underwent a procedure (e.g. surgical resection) to yield or remove from the patient a sample that was eventually used for research.,no,integer 4 digit,,,,,,"one, two",,,not applicable,not applicable,not applicable,,
+16,sample,no,commpass,days_to_collection,The number of days to the date that the sample was received by the lab facility for processing from the the index date.,no,integer,,,,,,"one, two",,,days_to_collection,integer,no,,
+17,sample,no,commpass,year_of_collection,The year component of the date that the sample was received by the lab facility for processing.,no,integer 4 digit,,,,,,"one, two",,,not applicable,not applicable,not applicable,,
+19,sample,no,commpass,method_of_sample_procurement,The method used to procure the sample used to extract analyte(s).,no,enum,"bone_marrow_aspirate
+peripheral_blood_draw","Note: MMRF added ""peripheral_blood_draw"" to GDC list as it is more specific.",,,,"one, two",,,method_of_sample_procurement,see sample details tab,no,,
+1,sample_aliquots,primary,commpass,aliquot_id,Unique id for sample_aliquot  table,no,string,,,not applicable,not applicable,derived,"one,two","MMRF created for this dataset 
+",not null,not applicable,not applicable,not applicable,,
+2,sample_aliquots,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_0001,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_0001",not applicable,not applicable,Subcohorts One and Two: Table: D_PT.csv variable: subject_id,"one,two","MMRF created for this dataset 
+",not null,submitter_id,string,yes,,
+3,sample_aliquots,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,applied,"one, two","MMRF created for this dataset 
+",not null,project_id,not applicable,no,,
+4,sample_aliquots,no,commpass,sample_visit_id,A number describing the sequence in which the samplewas collected.,no,string,example: mmrf_0001_1,"An ""_"" and a number is appended to the public_id with the baseline visit for the study having an  ""_1"". The appended number increases with each subsequent visit resulting in a biospecimen collected from the subject. As such, subsequent visits with samples do not have the same type of visit [restaging, relapse, response]",not applicable,,,"one, two",,not null,sample_ordinal,integer,no,,
+5,sample_aliquots,no,commpass,sample_visit_type,Identifier of based on the combination of sample_visit_id and specimen_type.,no,string,example: mmrf_1017_1_bma,A combination identifier with the institution identifier with sample_visit_id and specimen_type .,not applicable,not applicable,Not applicable; represents the MMRF CoMMpass study.,"one, two",,not null,not applicable,not applicable,not applicable,,
+6,sample_aliquots,no,commpass,sample collection_event_name,The point in the subject's care that the sample was collected.,no,string,,,,,,,,,not applicable,not applicable,not applicable,,
+8,sample_aliquots,no,commpass,aliquot_id_alt,An alternative identifier for the aliquot applied by the central laboratory.,no,string,,,,,,,,,,,,,
+9,sample_aliquots,no,commpass,anatomic_site,"The type of a material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes. This includes particular types of cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory substances.",no,enum,"bone_ arrow
+peripheral_blood",Data from TGEN,C70713,NCIt,,"one, two",,,specimen_type,see sample details tab,yes,,
+10,sample_aliquots,no,commpass,tissue_type,Text term that represents a description of the kind of tissue collected with respect to disease status or proximity to tumor tissue.,no,enum,"constitutional
+tumor
+not_recorded",Data from TGEN,,,,"one, two",,,tissue_type,"Abnormal
+Normal
+Peritumoral
+Tumor
+Unknown
+Not Reported",yes,,
+11,sample_aliquots,no,commpass,purification,Text term that represents the name of the organ or tissue site of the submitted sample.,no,string,,Data from TGEN/Van Andel,,,,"one, two",,,tumor_descriptor,"Metastatic
+New Primary
+NOS
+Premalignant
+Primary
+Recurrence
+Xenograft
+Unknown
+Not Reported
+Not Applicable",yes,,
+12,sample_aliquots,no,commpass,material_type,Text that describes the kind of disease present in the tumor specimen as related to a specific timepoint.,no,enum,"cells
+cfdna
+dna
+dry_pellet
+plasma
+rna",,,,,"one, two",,,biospecimen_anatomic_site,see sample details tab,no,,
+13,sample_aliquots,no,commpass,aliquot_label,Text label describing aliquot,no,string,,,,,,,,,not applicable,not applicable,not applicable,,
+14,sample_aliquots,no,commpass,aliquot_label_2,Text label describing aliquot,no,string,,,,,,,,,not applicable,not applicable,not applicable,,
+1,sample_features,primary,commpass,sample_visit_id,Unique id for sample table.,no,string,example: mmrf_0001_1,"An ""_"" and a number is appended to the public_id with the baseline visit for the study having an  ""_1"". The appended number increases with each subsequent visit resulting in a biospecimen collected from the subject. ",not applicable,not applicable,,derived,"one,two",,,not_applicable,not_applicable,not_applicable,
+2,sample_features,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_0001,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_0001",not applicable,not applicable,,Subcohorts One and Two: Table: D_PT.csv variable: subject_id,"one,two","MMRF created for this dataset 
+",,not_applicable,not_applicable,not_applicable,
+3,sample_features,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,,applied,"one, two","MMRF created for this dataset 
+",,not_applicable,not_applicable,not_applicable,
+4,sample_features,no,commpass,institution_subject_id,Identifier of the subject and institution through which the subject was enrolled.,no,string ,,"A combination identifier with the institution identifier with the subject identifier separated by a ""-"". Example 100-104.",not applicable,not applicable,Not applicable; represents the MMRF CoMMpass study.,"one,two",MMRF created for this dataset,not null,not applicable,not applicable,not applicable,,
+5,sample_features,no,commpass,visit_name,The type of visit as identified by the institution on the CRF form.,no,enum,"baseline
+confirm_progression_relapse
+confirm_response_scr
+other
+pre_transplant
+post_transplant
+restaging_disease_status
+not_recorded","An ""_"" and a number is appended to the public_id with the baseline visit for the study having an  ""_1"". The appended number increases with each subsequent visit resulting in a biospecimen collected from the subject. As such, subsequent visits with samples do not have the same type of visit [restaging, relapse, response]",not applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+6,sample_features,no,commpass,ig_heavy_institution,The immunoglobulin heavy chain (IgH) that was reported by the subject's institution at the time of sample collection. Data sourced from processing lab lims system.,no,enum,"iga
+ige
+igg
+igm
+iga_igg
+igg_igm
+iga_ige_igm
+not_recorded",Data analyses run by sample processing lab. Samples with blank entries for this variable were recoded to not_reported.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+7,sample_features,no,commpass,ig_light_institution,The immunoglobulin light chain (IgL) that was reported by the subject's institution at the time of sample collection. Data sourced from processing lab lims system.,no,enum,"bi_clonal
+kappa
+lambda
+not_recorded
+unknown",Data analyses run by sample processing lab. Samples with blank entries for this variable were recoded to not_reported.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+8,sample_features,no,commpass,morphology_plasma_cells_percent_in_bm,Percent plasma cells in bone marrow from morphology. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+9,sample_features,no,commpass,flowcyt_plasma_cells_percent_in_bm_low,Percent plasma cells in bone marrow using flow cytology - Low. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+10,sample_features,no,commpass,flowcyt_plasma_cells_percent_in_bm_high,Percent plasma cells in bone marrow using flow cytology - High. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+11,sample_features,no,commpass,morphology_plasma_cells_percent_in_pb,Percent plasma cells in peripheral blood from morphology. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+12,sample_features,no,commpass,flowcyt_plasma_cells_percent_in_pb_low,Percent plasma cells in peripheral blood using flow cytology - Low. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+13,sample_features,no,commpass,flowcyt_plasma_cells_percent_in_pb_high,Percent plasma cells in peripheral blood using flow cytology - High. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+14,sample_features,no,commpass,flowcyt_cd38_detected,Flow cytometry antigen profile: CD38 detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+15,sample_features,no,commpass,flowcyt_cd38_plasma_cells_percent,Flow cytometry antigen profile: CD38 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+16,sample_features,no,commpass,flowcyt_cd38_description,Flow cytometry antigen profile: CD38 Description. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+17,sample_features,no,commpass,flowcyt_cd138_detected,Flow cytometry antigen profile: CD138 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+18,sample_features,no,commpass,flowcyt_cd138_plasma_cells_percent,Flow cytometry antigen profile: CD138 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+19,sample_features,no,commpass,flowcyt_cd138_description,Flow cytometry antigen profile: CD138 Description. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+20,sample_features,no,commpass,flowcyt_cd45_plasma_cells_typical_detected,Flow cytometry antigen profile: CD45 Typical Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+21,sample_features,no,commpass,flowcyt_cd45_plasma_cells_percent,Flow cytometry antigen profile: CD45 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+22,sample_features,no,commpass,flowcyt_cd45_description,Flow cytometry antigen profile: CD45 Description. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+23,sample_features,no,commpass,flowcyt_cd56_detected,Flow cytometry antigen profile: CD56 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+24,sample_features,no,commpass,flowcyt_cd56_plasma_cells_percent,Flow cytometry antigen profile: CD56 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+25,sample_features,no,commpass,flowcyt_cd56_description,Flow cytometry antigen profile: CD56 Description. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+26,sample_features,no,commpass,flowcyt_cd13_detected,Flow cytometry antigen profile: CD13 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+27,sample_features,no,commpass,flowcyt_cd13_plasma_cells_percent,Flow cytometry antigen profile: CD13 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+28,sample_features,no,commpass,flowcyt_cd19_detected,Flow cytometry antigen profile: CD19 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+29,sample_features,no,commpass,flowcyt_cd19_plasma_cells_percent,Flow cytometry antigen profile: CD19 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+30,sample_features,no,commpass,flowcyt_cd20_detected,Flow cytometry antigen profile: CD20 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+31,sample_features,no,commpass,flowcyt_cd20_plasma_cells_percent,Flow cytometry antigen profile: CD20 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+32,sample_features,no,commpass,flowcyt_cd27_detected,Flow cytometry antigen profile: CD27 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+33,sample_features,no,commpass,flowcyt_cd27_plasma_cells_percent,Flow cytometry antigen profile: CD27 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+34,sample_features,no,commpass,flowcyt_cd28_detected,Flow cytometry antigen profile: CD28 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+35,sample_features,no,commpass,flowcyt_cd28_plasma_cells_percent,Flow cytometry antigen profile: CD28 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+36,sample_features,no,commpass,flowcyt_cd33_detected,Flow cytometry antigen profile: CD33 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+37,sample_features,no,commpass,flowcyt_cd33_plasma_cells_percent,Flow cytometry antigen profile: CD33 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+38,sample_features,no,commpass,flowcyt_cd52_detected,Flow cytometry antigen profile: CD52 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+39,sample_features,no,commpass,flowcyt_cd52_plasma_cells_percent,Flow cytometry antigen profile: CD52 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+40,sample_features,no,commpass,flowcyt_cd81_detected,Flow cytometry antigen profile: CD81 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+41,sample_features,no,commpass,flowcyt_cd81_plasma_cells_percent,Flow cytometry antigen profile: CD81 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+42,sample_features,no,commpass,flowcyt_cd117_detected,Flow cytometry antigen profile: CD117 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+43,sample_features,no,commpass,flowcyt_cd117_plasma_cells_percent,Flow cytometry antigen profile: CD117 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+44,sample_features,no,commpass,flowcyt_cd319_detected,Flow cytometry antigen profile: CD319 Detected. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+45,sample_features,no,commpass,flowcyt_cd319_plasma_cells_percent,Flow cytometry antigen profile: CD319 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+46,sample_features,no,commpass,flowcyt_fgfr3_char,Flow cytometry antigen profile: FGFR3 (character). Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+47,sample_features,no,commpass,flowcyt_fgfr3_plasma_cells_percent,Flow cytometry antigen profile: FGFR3 Percent plasma cells. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+48,sample_features,no,commpass,flowcyt_light_ chain,Flow cytometry antigen profile: immunoglobulin light chain. Data sourced from processing lab lims system.,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+49,sample_features,no,commpass,flowcyt_pct_aneuploid_population,Flow cytometry antigen profile: Percent aneuploidy population. Data sourced from processing lab lims system.,no,numeric,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+50,sample_features,no,commpass,flowcyt_dna_index,Flow cytometry antigen profile: DNA Index,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+51,sample_features,no,commpass,braf_status,BRAF Status,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+52,sample_features,no,commpass,braf_cdna_variant,BRAF CDNA Variant,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+53,sample_features,no,commpass,braf_protein_variant,Flow cytometry antigen profile: BRAF Protein Variant,no,string,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+1,sample_cmmc,primary,commpass,cmmc_id,Unique id for sample_cmmc table,no,string,example: mmrf_1007-mmrf_commpass-cmmc1,"The id is a composite primary key of public_id, project_id, and sample count.",not applicable,not applicable,,derived,"one,two",,,not_applicable,not_applicable,not_applicable,
+2,sample_cmmc,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_0001,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_0001",not applicable,not applicable,,Subcohorts One and Two: Table: D_PT.csv variable: subject_id,"one,two","MMRF created for this dataset 
+",,not_applicable,not_applicable,not_applicable,
+3,sample_cmmc,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,,applied,"one, two","MMRF created for this dataset 
+",,not_applicable,not_applicable,not_applicable,
+4,sample_cmmc,no,commpass,study_visit,Harmonized study visit designation across subcohorts. This variable aligns with the followup table.,no,enum,see follow-up details tab,"Subcohort=""one"", MMRF CoMMpass project, defined subject study visits numbered in months following the baseline visit. It is important to note that the study visit label will not always conform to its actual visit timing, meaning that the 3-month visit may not be timed precisely at 3 months following the baseline visit.",not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+5,sample_cmmc,no,commpass,days_to_cmmc_procurement,The number of days to the date that the peripheral blood sample was collected from the subject from the the index date.,no,integer,,Data analyses run by sample processing lab.,not_applicable,not_applicable,,,,,,not_applicable,not_applicable,not_applicable,
+6,sample_features,no,commpass,cmmc_visit_name,The visit intention during which the circulating multiple myeloma cells sample was drawn. ,no,enum,,,not_applicable,Supplemetary Table S1,,,"one,two",,,not_applicable,not_applicable,not_applicable,
+7,sample_features,no,commpass,cmmc_reason_for_sample,The reason stated on the CRF at the institution for the peripheral blood draw.,no,enum,,,not_applicable,Supplemetary Table S1,,,"one,two",,,not_applicable,not_applicable,not_applicable,
+8,sample_features,no,commpass,cmmc_number,The number of circulating multiple myeloma cells found in the sample (4 ml).,no,numeric,,,not_applicable,Supplemetary Table S1,,,"one,two",,,not_applicable,not_applicable,not_applicable,
+1,other_clinical_attributes,primary,commpass,clinical_id,Unique identifier for followup table.,no,string,example: mmrf_1011-mmrf_commpass-ca1,"This is a composite primary key based on a combination of public_id, project_id, and event count.",not applicable,not applicable,derived,one,,,,,not applicable,,
+2,other_clinical_attributes,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_0001,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_0001",not applicable,not applicable,Subcohort One: Tables: MEDHX_MCG-IA16.csv; ADMISSIONS-IA16.csv; EMERGENCY_DEPT-IA16.csv |Variable: public_id,one,,,submitter_id,not applicable,yes,,
+3,other_clinical_attributes,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,applied,one,"MMRF created for this dataset 
+",,project_id,not applicable,no,,
+4,other_clinical_attributes,no,commpass,study_visit,Harmonized study visit designation across subcohort.,no,string,,"Subcohort=""one"", MMRF CoMMpass project, defined subject study visits numbered in months following the baseline visit. It is important to note that the study visit label will not always conform to its actual visit timing, meaning that the 3-month visit may not be timed precisely at 3 months following the baseline visit.",not applicable,not applicable,Subcohort One: Tables: MEDHX_MCG-IA16.csv; ADMISSIONS-IA16.csv; EMERGENCY_DEPT-IA16.csv |Variable: VJ_INTERVAL,one,,,not applicable,not applicable,not applicable,,
+5,other_clinical_attributes,no,commpass,timepoint_category,Indicator describing when the event occurred in relationship to the study.,no,enum,"intial_diagnosis
+followup","For the CoMMpass study two options of the values are used; however, other options are available. Please see the other_clinical_details tab.",,,Subcohort One: Tables: MEDHX_MCG-IA16.csv; ADMISSIONS-IA16.csv; EMERGENCY_DEPT-IA16.csv |Variable: VJ_INTERVAL,one,,,timepoint_category,no,,,
+6,other_clinical_attributes,no,commpass,clinical_event_diagnosis,The medical diagnosis reported by the subject at a study visit. The baseline visit collected information on the subject's medical history prior to the study. Subsequent visits collected information on resource use that included hospitalizations and emergency department (ED) visits.,no,string,see the other_clinical_details tab,,C68568,NCI-t,,one,,,not applicable,not applicable,not applicable,,
+7,other_clinical_attributes,no,commpass,nci_comorbidty_item,"Relevant for patient's medical history at initial diagnosis, so data should be filtered for timepoint_category=initial_diagnosis to identify rows for comorbidity analysis. MMRF uses the current NCI version of the Charlson Comorbidity index that creates an idex for non-cancer disease diagnoses [https://healthcaredelivery.cancer.gov/seermedicare/considerations/comorbidity.html]. ",no,enum,"chd [congestive heart failure]
+copd (chronic obstructive pulmonary disease]
+cva [cerebrovascular disease]
+diabetes
+dmendorgan [diabetes with complications]
+dementia
+mi [myocardial infarction]
+mildliver [mild liver]
+paralysis [hemiplegia, paraplegia]
+peptic [peptic ulcer disease]
+pvd [peripheral vascular disease]
+renal [renal disease]
+rheumatic [rheumatic disease]
+aids","Using the NCI Comorbidity index, the clinical events were sorted into the index categories. Of note, very few patients had clinical_events that were associated with the Comorbidity Index.",,NCI,Derived based on clinical_event_diagnosis based on https://healthcaredelivery.cancer.gov/seermedicare/considerations/comorbidity-table.html,one,,,not applicable,not applicable,not applicable,,
+8,other_clinical_attributes,no,commpass,clinical_event_type,"The medical event during which the clinical diagnosis was made. The ""med_hx"" diagnoses/events were collected at the baseline of the study. The ""ed"" diagnoses were made during a visit to the emergency department. The ""hosp_admission"" diagnoses were made at the time of a hospital admission.",no,enum,"ed
+hosp_admission
+med_hx","Flag indicating the source of the clinical event. med_hx is assessed at baseline, and the event could have occurred at any point prior to the index_date. ed and hosp_admission are events that occur on or after the index_date; these events relate to either hospital admission [hosp_admission] or emergency room visit [ed]. These events will have overlap.",,,applied based on source table,one,,,not applicable,not applicable,not applicable,,
+1,qol,primary,commpass,qol_id,Unique identifier for the qol table.,no,string,example: mmrf_1021-mmrf_commpass-qol3,"This is a composite primary key based on a combination of public_id, project_id, and instance.",not applicable,not applicable,derived,one,,,not applicable,not applicable,not applicable,,
+2,qol,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_0001,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_0001",not applicable,not applicable,Subcohort One: Table Subcohort One: Table D_QOL.csv| Variable: public_id,one,,,submitter_id,not applicable,yes,,
+3,qol,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,applied,one,"MMRF created for this dataset 
+",,project_id,not applicable,no,,
+4,qol,no,commpass,study_visit,Harmonized study visit designation across subcohort.,no,string,,"Subcohort=""one"", MMRF CoMMpass project, defined subject study visits numbered in months following the baseline visit. It is important to note that the study visit label will not always conform to its actual visit timing, meaning that the 3-month visit may not be timed precisely at 3 months following the baseline visit.",not applicable,not applicable,Subcohort One: Table Subcohort One: Table D_QOL.csv| Variable: VJ_INTERVAL,one,,,not applicable,not applicable,not applicable,,
+5,qol,no,commpass,days_to_study_administration,The number of days from the index_date to the subject's survey administration date.,no,integer,,,,,Subcohort One: Table Subcohort One: Table D_QOL.csv| Variable: VJ_INTERVAL,,,,,,,,
+5,qol,no,commpass,year_of_survey_administration,"Year component of the subject's survey administration date. In a de-identified dataset, this variable will help with sequencing events. ",no,integer,,,not applicable,not applicable,,one,,,not applicable,not applicable,not applicable,,
+7,qol,no,commpass,qlq_c30_administration,Flag indicating that the subject initiated the QLQ-30 Quality of Life survey.,no,boolean,"yes
+no",,not applicable,not applicable,,one,,,not applicable,not applicable,not applicable,,
+8,qol,no,commpass,qlq_c30_completion,Flag indicating that the subject completed the QLQ-30 Quality of Life survey or had some missing items.,no,enum,"missing_items
+-null-",,not applicable,not applicable,,one,,,not applicable,not applicable,not applicable,,
+9,qol,no,commpass,qlq_c30_1,Item from the physical functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing","Survey Question: Do you have any trouble doing strenuous activities, like carrying a heavy shopping bag or a suitcase?",not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table Subcohort One: Table D_QOL.csv Q1,one,,,not applicable,not applicable,not applicable,,
+10,qol,no,commpass,qlq_c30_2,Item from the physical functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Do you have any trouble taking a long walk?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table Subcohort One: Table D_QOL.csv Q2,one,,,not applicable,not applicable,not applicable,,
+11,qol,no,commpass,qlq_c30_3,Item from the physical functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Survey Question: Do you have any trouble taking a short walk outside of the house?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table Subcohort One: Table D_QOL.csv Q3,one,,,not applicable,not applicable,not applicable,,
+12,qol,no,commpass,qlq_c30_4,Item from the physical functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Do you need to stay in bed or a chair during the day?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table Subcohort One: Table D_QOL.csv Q4,one,,,not applicable,not applicable,not applicable,,
+13,qol,no,commpass,qlq_c30_5,Item from the physical functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing","Survey Question: Do you need help with eating, dressing, washing yourself or using the toilet?",not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q5,one,,,not applicable,not applicable,not applicable,,
+14,qol,no,commpass,qlq_c30_6,Item from the role functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Were you limited in doing either your work or other daily activities?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q6,one,,,not applicable,not applicable,not applicable,,
+15,qol,no,commpass,qlq_c30_7,Item from the role functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Were you limited in pursuing your hobbies or other leisure time activities?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q7,one,,,not applicable,not applicable,not applicable,,
+16,qol,no,commpass,qlq_c30_8,Item the dyspnea item of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Were you short of breath?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q8,one,,,not applicable,not applicable,not applicable,,
+17,qol,no,commpass,qlq_c30_9,Item from the pain symptom scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had pain?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q9,one,,,not applicable,not applicable,not applicable,,
+18,qol,no,commpass,qlq_c30_10,Item from the fatigue symptom scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Did you need to rest?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q10,one,,,not applicable,not applicable,not applicable,,
+19,qol,no,commpass,qlq_c30_11,Item the insomnia item of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had trouble sleeping?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q11,one,,,not applicable,not applicable,not applicable,,
+20,qol,no,commpass,qlq_c30_12,Item from the fatigue symptom scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you felt weak?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q12,one,,,not applicable,not applicable,not applicable,,
+21,qol,no,commpass,qlq_c30_13,Item the appetite loss item of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you lacked appetite?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q13,one,,,not applicable,not applicable,not applicable,,
+22,qol,no,commpass,qlq_c30_14,Item from the nausea/vomiting symptom scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you felt nauseated?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q14,one,,,not applicable,not applicable,not applicable,,
+23,qol,no,commpass,qlq_c30_15,Item from the nausea/vomiting symptom scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you vomited?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q15,one,,,not applicable,not applicable,not applicable,,
+24,qol,no,commpass,qlq_c30_16,Item the constipation item of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you been constipated?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q16,one,,,not applicable,not applicable,not applicable,,
+25,qol,no,commpass,qlq_c30_17,Item the diarrhea item of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had diarrhea?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q17,one,,,not applicable,not applicable,not applicable,,
+26,qol,no,commpass,qlq_c30_18,Item from the fatigue symptom scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Were you tired?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q18,one,,,not applicable,not applicable,not applicable,,
+27,qol,no,commpass,qlq_c30_19,Item from the pain symptom scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Did pain interfere with your daily activities?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q19,one,,,not applicable,not applicable,not applicable,,
+28,qol,no,commpass,qlq_c30_20,Item from the role cognitive functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing","Survey Question: Have you had difficulty in concentrating on things, like reading a newspaper or watching television?",not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q20,one,,,not applicable,not applicable,not applicable,,
+29,qol,no,commpass,qlq_c30_21,Item from the role emotional functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Did you feel tense?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q21,one,,,not applicable,not applicable,not applicable,,
+30,qol,no,commpass,qlq_c30_22,Item from the role emotional functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Did you worry?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q22,one,,,not applicable,not applicable,not applicable,,
+31,qol,no,commpass,qlq_c30_23,Item from the role emotional functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Did you feel irritable?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q23,one,,,not applicable,not applicable,not applicable,,
+32,qol,no,commpass,qlq_c30_24,Item from the role emotional functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Did you feel depressed?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q24,one,,,not applicable,not applicable,not applicable,,
+33,qol,no,commpass,qlq_c30_25,Item from the role cognitive functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had difficulty remembering things?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q25,one,,,not applicable,not applicable,not applicable,,
+34,qol,no,commpass,qlq_c30_26,Item from the role social functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Has your physical condition or medical treatment interfered with your family life?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q26,one,,,not applicable,not applicable,not applicable,,
+35,qol,no,commpass,qlq_c30_27,Item from the role social functioning scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Has your physical condition or medical treatment interfered with your social activities?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q27,one,,,not applicable,not applicable,not applicable,,
+36,qol,no,commpass,qlq_c30_28,Item the financial difficulty item of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Has your physical condition or medical treatment caused you financial difficulties?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q28,one,,,not applicable,not applicable,not applicable,,
+37,qol,no,commpass,qlq_c30_29,Item the Global Health status scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,very poor=1 2 3 4 5 6 7=excellent,Survey Question: How would you rate your overall health during the past week?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q29,one,,,not applicable,not applicable,not applicable,,
+38,qol,no,commpass,qlq_c30_30,Item the Global Health status scale of the QLQ-30 Quality of Life survey administered to the patient periodically. ,no,enum,very poor=1 2 3 4 5 6 7=excellent,Survey Question: How would you rate your overall quality of life during the past week?,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv Q30,one,,,not applicable,not applicable,not applicable,,
+39,qol,no,commpass,qlq_my20_administration,Flag indicating that the subject initiated the QLQ-MY20 Quality of Life survey.,no,boolean,"yes
+no",,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv,one,,,not applicable,not applicable,not applicable,,
+40,qol,no,commpass,qlq_my20_completion,Flag indicating that the subject completed the QLQ-MY20 Quality of Life survey or had some missing items.,no,enum,"missing_items
+-null-",,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv,one,,,not applicable,not applicable,not applicable,,
+41,qol,no,commpass,qlq_my20_1,Item from the Disease Symptoms scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had bone aches or pain?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q31,one,,,not applicable,not applicable,not applicable,,
+42,qol,no,commpass,qlq_my20_2,Item from the Disease Symptoms scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had pain in your back?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q32,one,,,not applicable,not applicable,not applicable,,
+43,qol,no,commpass,qlq_my20_3,Item from the Disease Symptoms scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had pain in your hip?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q33,one,,,not applicable,not applicable,not applicable,,
+44,qol,no,commpass,qlq_my20_4,Item from the Disease Symptoms scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had pain in your arm or shoulder?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q34,one,,,not applicable,not applicable,not applicable,,
+45,qol,no,commpass,qlq_my20_5,Item from the Disease Symptoms scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had pain in your chest?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q35,one,,,not applicable,not applicable,not applicable,,
+46,qol,no,commpass,qlq_my20_6,Item from the Disease Symptoms scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: If you had pain did it increase with activity?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q36,one,,,not applicable,not applicable,not applicable,,
+47,qol,no,commpass,qlq_my20_7,Item from the Side Effects scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Did you feel drowsy?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q37,one,,,not applicable,not applicable,not applicable,,
+48,qol,no,commpass,qlq_my20_8,Item from the Side Effects scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Did you feel thirsty?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q38,one,,,not applicable,not applicable,not applicable,,
+49,qol,no,commpass,qlq_my20_9,Item from the Side Effects scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you felt ill?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q39,one,,,not applicable,not applicable,not applicable,,
+50,qol,no,commpass,qlq_my20_10,Item from the Side Effects scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had a dry mouth?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q40,one,,,not applicable,not applicable,not applicable,,
+51,qol,no,commpass,qlq_my20_11,Item from the Side Effects scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you lost any hair?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q41,one,,,not applicable,not applicable,not applicable,,
+52,qol,no,commpass,qlq_my20_12,Item from the Side Effects scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Answer this question only if you lost any hair: Were you upset by the loss of your hair?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q42,one,,,not applicable,not applicable,not applicable,,
+53,qol,no,commpass,qlq_my20_13,Item from the Side Effects scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Did you have tingling hands or feet?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q43,one,,,not applicable,not applicable,not applicable,,
+54,qol,no,commpass,qlq_my20_14,Item from the Side Effects scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Did you feel restless or agitated?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q44,one,,,not applicable,not applicable,not applicable,,
+55,qol,no,commpass,qlq_my20_15,Item from the Side Effects scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had acid indigestion or heartburn?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q45,one,,,not applicable,not applicable,not applicable,,
+56,qol,no,commpass,qlq_my20_16,Item from the Side Effects scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you had burning or sore eyes?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q46,one,,,not applicable,not applicable,not applicable,,
+57,qol,no,commpass,qlq_my20_17,Item from the Body Image item of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you felt physically less attractive as a result of your disease or treatment?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q47,one,,,not applicable,not applicable,not applicable,,
+58,qol,no,commpass,qlq_my20_18,Item from the Future Perspective scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you been thinking about your illness?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q48,one,,,not applicable,not applicable,not applicable,,
+59,qol,no,commpass,qlq_my20_19,Item from the Future Perspective scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you been worried about dying?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q49,one,,,not applicable,not applicable,not applicable,,
+60,qol,no,commpass,qlq_my20_20,Item from the Future Perspective Scale of the QLQ-MY20 Quality of Life survey administered to the patient periodically. ,no,enum,"1=not at all, 2=a little, 3=quite a bit, 4=very much, missing",Survey Question: Have you worried about your health in the future?,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv Q50,one,,,not applicable,not applicable,not applicable,,
+61,qol,no,commpass,mean_physical_functioning,Derived data: Mean of Physical Functioning Questions using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mPF2,one,,,not applicable,not applicable,not applicable,,
+62,qol,no,commpass,physical_functioning,Derived data: Physical Functioning using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_PF2,one,,,not applicable,not applicable,not applicable,,
+63,qol,no,commpass,mean_role_functioning,Derived data: Mean of Role Functioning using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mRF2,one,,,not applicable,not applicable,not applicable,,
+64,qol,no,commpass,role_functioning,Derived data: Role Functioning using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_RF2,one,,,not applicable,not applicable,not applicable,,
+65,qol,no,commpass,mean_emotional_functioning,Derived data: Mean of Emotional Functioning using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mEF,one,,,not applicable,not applicable,not applicable,,
+66,qol,no,commpass,emotional_functioning,Derived data: Emotional Functioning using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_EF,one,,,not applicable,not applicable,not applicable,,
+67,qol,no,commpass,mean_cognitive_functioning,Derived data: Mean of Cognitive Functioning using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mCF,one,,,not applicable,not applicable,not applicable,,
+68,qol,no,commpass,cognitive_functioning,Derived data: Cognitive Functioning using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_CF,one,,,not applicable,not applicable,not applicable,,
+69,qol,no,commpass,mean_social_functioning,Derived data: Mean of Social Functioning  using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mSF,one,,,not applicable,not applicable,not applicable,,
+70,qol,no,commpass,social_functioning,Derived data: Social Functioning using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_SF,one,,,not applicable,not applicable,not applicable,,
+71,qol,no,commpass,mean_future_perspective,Derived data: Mean of Future Perspective  using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mMYFP,one,,,not applicable,not applicable,not applicable,,
+72,qol,no,commpass,future_perspective,Derived data: Future Perspective using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_MYFP,one,,,not applicable,not applicable,not applicable,,
+73,qol,no,commpass,mean_body_image,Derived data: Mean of Body image  using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mMYBI,one,,,not applicable,not applicable,not applicable,,
+74,qol,no,commpass,body_image,Derived data: Body Image using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_MYBI,one,,,not applicable,not applicable,not applicable,,
+75,qol,no,commpass,mean_ql2,Derived data: Mean of QL2  using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mQL2,one,,,not applicable,not applicable,not applicable,,
+76,qol,no,commpass,global_health_status_qol,Derived data: Global Health Status - QOL using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_QL2,one,,,not applicable,not applicable,not applicable,,
+77,qol,no,commpass,mean_fatigue,Derived data: Mean of Fatigue  using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mFA,one,,,not applicable,not applicable,not applicable,,
+78,qol,no,commpass,fatigue,Derived data: Fatigue using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_FA,one,,,not applicable,not applicable,not applicable,,
+79,qol,no,commpass,mean_nausea_and_vomiting,Derived data: Mean of Nausea and Vomiting  using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mNV,one,,,not applicable,not applicable,not applicable,,
+80,qol,no,commpass,nausea_and_vomiting,Derived data: Nausea and vomiting using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_NV,one,,,not applicable,not applicable,not applicable,,
+81,qol,no,commpass,mean_pain,Derived data: Mean of Pain  using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mPA,one,,,not applicable,not applicable,not applicable,,
+82,qol,no,commpass,pain,Derived data: Pain using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_PA,one,,,not applicable,not applicable,not applicable,,
+83,qol,no,commpass,mean_dyspnea,Derived data: Mean of Dyspnea using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mDY,one,,,not applicable,not applicable,not applicable,,
+84,qol,no,commpass,dyspnea,Derived data: Dyspnea using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_DY,one,,,not applicable,not applicable,not applicable,,
+85,qol,no,commpass,mean_insomnia,Derived data: Mean of Insomnia using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mSL,one,,,not applicable,not applicable,not applicable,,
+86,qol,no,commpass,insomnia,Derived data: Insomnia using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_SL,one,,,not applicable,not applicable,not applicable,,
+87,qol,no,commpass,mean_appetite_loss,Derived data: Mean of Appetite Loss using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mAP,one,,,not applicable,not applicable,not applicable,,
+88,qol,no,commpass,appetite_loss,Derived data: Appetite Loss using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_AP,one,,,not applicable,not applicable,not applicable,,
+89,qol,no,commpass,mean_appetite_loss,Derived data: Mean of Constipation Questions,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mCO,one,,,not applicable,not applicable,not applicable,,
+90,qol,no,commpass,constipation,Derived data: Constipation using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_CO,one,,,not applicable,not applicable,not applicable,,
+91,qol,no,commpass,mean_diarrhea,Derived data: Mean of Diarrhea using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mDI,one,,,not applicable,not applicable,not applicable,,
+92,qol,no,commpass,diarrhea,Derived data: Diarrhea using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_DI,one,,,not applicable,not applicable,not applicable,,
+93,qol,no,commpass,mean_financial_difficulties,Derived data: Mean of Financial Difficulties using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mFI,one,,,not applicable,not applicable,not applicable,,
+94,qol,no,commpass,financial_difficulties,Derived data: Financial Difficulties using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_FI,one,,,not applicable,not applicable,not applicable,,
+95,qol,no,commpass,mean_disease_symptoms,Derived data: Mean of Disease Symptoms using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mMYDS,one,,,not applicable,not applicable,not applicable,,
+96,qol,no,commpass,disease_symptoms,Derived data: Disease Symptoms using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-30 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_MYDS,one,,,not applicable,not applicable,not applicable,,
+97,qol,no,commpass,mean_side_effects_treatment,Derived data: Mean of Side Effects of Treatment  using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_mMYSE,one,,,not applicable,not applicable,not applicable,,
+98,qol,no,commpass,side_effects_treatment,Derived data: Side effects of treatment using subcomponent items; see quality_of_life key tab.,no,numeric,,Values calculated by CRO.,not applicable,QLQ-MY20 Quality of Life survey,Subcohort One: Table D_QOL.csv D_QOL_MYSE,one,,,not applicable,not applicable,not applicable,,
+1,administered_agent,primary,commpass,agent_id,Unique identifier for the administered_agent table. ,no,string,example: ,"This is a composite primary key based on a combination of public_id, project_id, diagnosis, line, agent_count_line",,,derived,one,,not null,,,,,
+2,administered_agent,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_0001,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_0001",not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable ,one,,not null,submitter_id,not applicable,yes,,
+3,administered_agent,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,project table,one,"MMRF created for this dataset 
+",not null,project_id,not applicable,no,,
+4,administered_agent,no,commpass,cancer_diagnosis,The cancer diagnosis related tto the therapeutic agent. ,no,integer,10,"As CoMMpass exclusively collected data on the treatments a subject received for the active multiple myeloma diagnosis, all rows have ""10"" as the value. ",not applicable,not applicable,Applied for CoMMpass,one,,not null,,,,,
+5,administered_agent,no,commpass,line,The line of therapy received by the patient for a given cancer diagnosis detailed in the cancer table. ,no,integer,1 --16,,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_TYPE,one,,,,,,,
+6,administered_agent,no,commpass,agent_count,The count of agents contributing to the line of therapy.,no,enum,,,not applicable,not applicable,applied based on # rows per subject,one,,,,,,,
+7,administered_agent,no,commpass,regimen_intent,"The type of agent, which may include the mechanism of action.",no,string,,Data was collected as free text from institution with multiple values.,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_ISTHISLINEOFT_1,one,,,,,,,
+8,administered_agent,no,commpass,agent,The name of the agent consistent with the NCIt.,no,enum,,,not applicable,NCIt - see agents_regiment NCIt tab,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_THERAPY,one,,,,,,,
+9,administered_agent,no,commpass,agent_category,"The type of agent, which may include the mechanism of action.",no,enum,"anti-viral
+antibiotic
+bcl2
+bcma
+braf
+btk
+cd20
+cd38
+cd46
+cd47
+cd52
+cd74
+cdk
+cells
+checkpoint_inhibitor
+chemo
+dhodh
+drd2 clpp
+gls1
+gprc5d
+hdac
+her2
+imid
+jak
+ksp
+mdm2
+mek
+nedd8
+not_specified
+p97
+proteasome-inhibitor
+slamf7
+stem_cell_mobilizer
+steroid
+tigit
+vaccine
+vgfr2
+xpo1",,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_THERAPY,one,,,,,,,
+10,administered_agent,no,commpass,agent_as_investigational,Flag from the institution that the agent was administered as an investigational agent.,no,enum,"yes
+null",,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_ENTERCLINICAL,one,,,,,,,
+11,administered_agent,no,commpass,days_to_agent_start,The number of days from the index date to the start date of the agent.,no,integer,,,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_STARTDATE,one,,,,,,,
+12,administered_agent,no,commpass,year_of_agent_start,"Year component of the date that the n this line. In a de-identified dataset, this variable will help with sequencing events. ",no,integer 4 digit,,,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_STARTDATE,one,,,,,,,
+14,administered_agent,no,commpass,days_to_agent_start,The number of days from the index date to the end date of the agent.,no,integer,,,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_STOPDATE,one,,,,,,,
+15,administered_agent,no,commpass,year_of_agent_end,"Year component of the date that the agent was last administered in this line. In a de-identified dataset, this variable will help with sequencing events. ",no,integer 4 digit,,,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_STOPDATE,one,,,,,,,
+17,administered_agent,no,commpass,agent_duration,The length of time that an individual is exposed to the agent within the line of therapy.,no,numeric,,,not applicable,not applicable,calculated,one,,,,,,,
+18,administered_agent,no,commpass,regimen_reason_for_discontinuation,Harmonized reason the drug was discontinued.,no,enum,"admission
+adverse-event_comorbidity_toxicity
+bridge
+death
+disease_progression_relapse
+done in attempt to prolong patient survival
+induction
+insurance
+lack_of_response
+lack_of_response hospice
+lost_to_followup
+md_investigator_decision
+mm_labs
+noncompliant
+not_reported
+not_tolerating_therapy
+other_cancer
+other_condition
+palliative_care_hospice
+patient_decision
+planned_therapy
+pt became to ill
+response
+response transplant
+stem_cell_mobilization_collection
+taspe
+transplant
+treatment_modification",,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_REASONFORTREA,one,,,,,,,
+19,administered_agent,no,commpass,agent_dose,Numeric dose of the agent.,no,numeric,,,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_DOSE_1 ,one,,,,,,,
+21,administered_agent,no,commpass,agent_route,Route of administration. Data was collected as free text from institution with multiple values.,no,string,,Data was collected as free text from institution with multiple values.,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_ROUTE,one,,,,,,,
+22,administered_agent,no,commpass,agent_frequency,Frequency that the dose was administered over the course of a cycle. Data was collected as free text from institution with multiple values.,no,string,,Data was collected as free text from institution with multiple values.,not applicable,not applicable,Subcohort One: Table: TREATMENT_REGIMEN.csv | Variable MMTX_FREQUENCY_1,one,,,,,,,
+1,administered_sc_transplant,primary,commpass,sct_id,Unique identifier for the table.,no,string,example: mmrf_0001-mmrf_commpass-sct-10-1,"This is a composite primary key based on a combination of public_id, project_id, diagnosis, line, sct_count.",,,,"one, two",,not null,not_applicable,not_applicable,not_applicable,,
+2,administered_sc_transplant,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_0001,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_0001",not applicable,not applicable,,"one, two",,not null,not_applicable,not_applicable,not_applicable,,
+3,administered_sc_transplant,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,Applied for CoMMpass,"one, two","MMRF created for this dataset 
+",not null,not_applicable,not_applicable,not_applicable,,
+4,administered_sc_transplant,no,no,cancer_diagnosis,The cancer diagnosis related to which the therapeutic agent is targeted. ,no,integer,10,"As CoMMpass exclusively collected data on the treatments a subject received for the active multiple myeloma diagnosis, all rows have ""10"" as the value. ",not applicable,not applicable,Applied for CoMMpass,"one, two",,not null,not_applicable,not_applicable,not_applicable,,
+5,administered_sc_transplant,no,no,sct_count,"The count, based on date with the earliest transplant receiving ""1""  of transplants  received by a the subject.",no,integer,,,not applicable,not applicable,"Subcohort One: Table: BONE_MARROW_TX
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021","one, two",,not null,not_applicable,not_applicable,not_applicable,,
+7,administered_sc_transplant,no,no,year_of_sct,"Year component of the date of the stem cell transplant. In a de-identified dataset, this variable will help with sequencing events. ",no,integer 4 digit,,,not applicable,not applicable,"Subcohort One: Table: BONE_MARROW_TX
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021","one, two",,,not_applicable,not_applicable,not_applicable,,
+9,administered_sc_transplant,no,no,type_of_sct,Additional specificity for the allo transplants,no,enum,"auto_transplant
+auto_stem_cell_transplant
+allo_stem_cell_transplant_transplant_relative
+allo_stem_cell_transplant_transplant_synogenic
+allo_stem_cell_transplant_transplant_unrelated
+",,not applicable,not applicable,"Subcohort One: Table: BONE_MARROW_TX
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021","one, two",,,not_applicable,not_applicable,not_applicable,,
+1,regimen_line,primary,commpass,regline_id,Unique identifier for the table. ,no,string,example: ,"This is a composite primary key based on a combination of public_id, project_id, diagnosis, line, agent_count_line",,,derived,"one, two",,,not_applicable,not_applicable,not_applicable,,
+2,regimen_line,foreign,commpass,public_id,MMRF subject identifier,no,string,example: mmrf_0001,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_0001",not applicable,not applicable,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+3,regimen_line,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,applied,"one, two","MMRF created for this dataset 
+",,not_applicable,not_applicable,not_applicable,,
+4,regimen_line,no,no,cancer_diagnosis,The cancer diagnosis related tto the therapeutic regimen. ,no,integer,10,"As CoMMpass exclusively collected data on the treatments a subject received for the active multiple myeloma diagnosis, all rows have ""10"" as the value. ",,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+5,regimen_line,no,no,line,The line of therapy. It is important to note that multiple regimens may create one line.,no,integer,1 --16,,,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+6,regimen_line,no,no,first_line,The first regimen received by the patient for the treatment of this cancer.,no,string,,,,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+7,,no,no,regimen_type,Category of regimen as applied by the institutions.,no,string,,,NCIt - see agents_regiment NCIt tab,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+8,regimen_line,no,no,regimen_name,"The concatenated names of the drugs in the regimen; these are ordered alphabetically, though the steroids are last in the list. The drug names and regimen names are consistent with NCIt.",no,string,,,NCIt - see agents_regiment NCIt tab,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+9,regimen_line,no,no,regimen_short_name,Abbreviated drug names.,no,string,,,,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+10,regimen_line,no,no,regimen_categories,"The concatenated list of the type of agents within the regimen, which may include the mechanism of action.",no,string,,,,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+11,regimen_line,no,no,days_to_regimen_start,The number of days from the index date to the start date of the regimen.,no,integer,,,,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+12,regimen_line,,,year_of_regiment_start_date,"Year component of the date that the regimen was first administered in this line. In a de-identified dataset, this variable will help with sequencing events. ",no,integer 4 digit,,,,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+13,regimen_line,no,no,days_to_regimen_end,The number of days from the index date to the end date of the regimen.,no,integer,,,,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+14,regimen_line,,,year_of_regimen_end_date,"Year component of the date that the regimen was last administered in this line. In a de-identified dataset, this variable will help with sequencing events. ",no,integer 4 digit,,,,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+16,regimen_line,no,no,regimen_duration,The length of time of the regimen/regimen component.,no,integer,,,,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+17,regimen_line,no,no,reason_for_discontinuation,Harmonized reason that the regimen was discontinued.,no,string,,,,,"Subcohort One and Two: Table: .csv  
+Subcohort Two: Table: FileUNITO-MM-FORTE-30OctMMRF_created_22JUL2021.csv ","one, two",,,not_applicable,not_applicable,not_applicable,,
+1,administered_line,primary,commpass,line_id,Unique identifier for the table. ,no,string,,,,,,"one, two",,not null,,,,,
+2,administered_line,foreign,commpass,public_id,MMRF subject identifier,no,string,,,not applicable,not applicable,D_PT,"one, two",,not null,submitter_id,not applicable,yes,,
+3,administered_line,foreign,commpass,regline_id,Primary key for administered_regimen_line table,no,string,,,,,,,,,,,,,
+4,administered_line,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,,,not applicable,not applicable,project table,"one, two","MMRF created for this dataset 
+",not null,project_id,not applicable,no,,
+5,administered_line,no,commpass,cancer_diagnosis,The cancer diagnosis related to the therapeutic line of therapy. ,no,integer,10,"As CoMMpass exclusively collected data on the treatments a subject received for the active multiple myeloma diagnosis, all rows have ""10"" as the value. ",,,Applied for CoMMpass,"one, two",,not null,,,,,
+6,administered_line,no,commpass,line,The line of therapy of a given patient.,no,integer 2 digit,,,,,,"one, two",,,,,,,
+7,administered_line,no,commpass,days_to_line_start,"Year component of the date that the regimen was first administered in this line. In a de-identified dataset, this variable will help with sequencing events. ",no,integer 4 digit,,,,,,"one, two",,,,,,,
+8,administered_line,no,commpass,year_of_line_start,The first day that the first drug in the combination was adminstered.,no,date,,,,,,"one, two",,,,,,,
+9,administered_line,no,commpass,date_of_line_start,The number of days from the index date to the end date of the regimen.,no,integer,,,,NCIt - see agents_regiment NCIt tab,,"one, two",,,,,,,
+10,administered_line,no,commpass,days_to_line_end,"Year component of the date that the regimen was last administered in this line. In a de-identified dataset, this variable will help with sequencing events. ",no,integer 4 digit,,,,NCIt - see agents_regiment NCIt tab,,"one, two",,,,,,,
+11,administered_line,no,commpass,year_of_line_end,The last day that the last drug in the combination was administered.,no,date,,,,,,"one, two",,,,,,,
+12,administered_line,no,commpass,date_of_line_end,The length of time of the regimen/regimen component.,no,integer,,,,,,"one, two",,,,,,,
+13,administered_line,no,commpass,line_duration,The number of days from the index date to the start date of the regimen.,no,integer,,,,,,"one, two",,,,,,,
+1,supportive_care,primary,commpass,sc_id,"Combination id based on public_id, project_id, and supportive care count to provide a unique value for each row in the table.",no,string,,"The identifier is a combination of public_id, project_id, diagnosis, visit_count.",not applicable,not applicable,Derived for project,one,,not null,not applicable,not applicable,not applicable,,
+2,supportive_care,foreign,commpass,public_id,MMRF subject identifier,no,string,,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_1111",not applicable,not applicable,Cohort One: Table: D_PT.csv Attribute: subject_id,one,,not null,not applicable,not applicable,not applicable,,
+3,supportive_care,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,project table,one,"MMRF created for this dataset 
+",not null,project_id,not applicable,no,,
+4,supportive_care,no,commpass,study_visit,"MMRF CoMMpass project defined subject study visits. NB the study visit label will not always conform to its actual timing, meaning that the 3-month visit may not be timed precisely at 3 months. The study_visit defined the data collected for the visit.",no,enum,see supportive_care details tab,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: VJ_INTERVAL,one,,not null,not applicable,not applicable,not applicable,,
+5,supportive_care,no,commpass,supportive_care_reported,Indicator that supportive care was reported by the subject at the time of the study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_NONE,one,,not null,not applicable,not applicable,not applicable,,
+6,supportive_care,no,commpass,transfusion,Subject received a transfusion in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_TRANSFUSION,one,,not null,not applicable,not applicable,not applicable,,
+7,supportive_care,no,commpass,packed_red_blood_cells,Subject received packed red blood cells in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_PACKEDREDBLOO,one,,not null,not applicable,not applicable,not applicable,,
+8,supportive_care,no,commpass,platelets,Subject received platelets in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_PLATELETS,one,,not null,not applicable,not applicable,not applicable,,
+9,supportive_care,no,commpass,other_therapy_received,Subject received another type of therapy in the time between the prior and the current  study_visit.,no,enum,no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_OTHER,one,,,not applicable,not applicable,not applicable,,
+10,supportive_care,no,commpass,radiation_therapy,Subject received in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_RADIOTHERAPY,one,,,not applicable,not applicable,not applicable,,
+11,supportive_care,no,commpass,radiation_therapy_site,Subject received in the time between the prior and the current  study_visit.,no,enumm,,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_SPECIFYSITE,one,,,not applicable,not applicable,not applicable,,
+12,supportive_care,no,commpass,dialysis,Subject received in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_DIALYSIS,one,,not null,not applicable,not applicable,not applicable,,
+13,supportive_care,no,commpass,bisphosphonate_bone_directed,Subject received in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_BISPHOSPHONAT,one,,not null,not applicable,not applicable,not applicable,,
+14,supportive_care,no,commpass,wbc_growth_factor,Subject received in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_WBCGROWTHFACT,one,,not null,not applicable,not applicable,not applicable,,
+15,supportive_care,no,commpass,erythropoiesis_stimulating_agent,Subject received in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_ERYTHROPOIESI,one,,not null,not applicable,not applicable,not applicable,,
+16,supportive_care,no,commpass,antiemetic,Subject received in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_ANTIEMETIC,one,,not null,not applicable,not applicable,not applicable,,
+17,supportive_care,no,commpass,analgesic_for_bone_pain,Subject received in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_ANALGESICSFOR,one,,not null,not applicable,not applicable,not applicable,,
+18,supportive_care,no,commpass,opioid,Subject received in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_OPIOID,one,,not null,not applicable,not applicable,not applicable,,
+19,supportive_care,no,commpass,medications_specify,Subject received cancer-related medication in the time between the prior and the current  study_visit.,no,string text,,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_MEDICATIONSFO,one,,,not applicable,not applicable,not applicable,,
+21,supportive_care,no,commpass,antiviral,Subject received antiviral therapy in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_ANTIVIRAL,one,,not null,not applicable,not applicable,not applicable,,
+22,supportive_care,no,commpass,meds_neuropathic_pain,Subject received therapy for neuropathic pain  in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_MEDICATIONSFO_RAW,one,,not null,not applicable,not applicable,not applicable,,
+23,supportive_care,no,commpass,meds_tumor_lysis_syndrome,Subject received therapy for tumor lysis syndrome  in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_MEDICATIONSFO2_RAW,one,,not null,not applicable,not applicable,not applicable,,
+24,supportive_care,no,commpass,anticoagulation,Subject received anticoagulation therapy in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: SUPPORTIVE  | Variable: SUPP_ANTICOAGULATI,one,,not null,not applicable,not applicable,not applicable,,
+25,supportive_care,no,commpass,mm_surgery,Subject received mm-related surgical procedure in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: MULTI_MYELOMA  | Variable: ,,,not null,not applicable,not applicable,not applicable,,
+26,supportive_care,no,commpass,vertebroplasty,Subject received vertebroplasty in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: MULTI_MYELOMA  | Variable: MMSURG_VERTEBROPLAST_1,one,,not null,not applicable,not applicable,not applicable,,
+27,supportive_care,no,commpass,kyphoplasty,Subject received anticoagulation therapy in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: MULTI_MYELOMA  | Variable: MMSURG_KYPHOPLASTY_1,one,,not null,not applicable,not applicable,not applicable,,
+28,supportive_care,no,commpass,other_mm_surgical_procedure,Subject received anticoagulation therapy in the time between the prior and the current  study_visit.,no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: MULTI_MYELOMA  | Variable: MMSURG_OTHER_1,one,,not null,not applicable,not applicable,not applicable,,
+29,supportive_care,no,commpass,other_mm_surgical_procedure_specify,"For a subject receiving another type of surgical procedure since the last study_visit, the text name of the procedure.",no,boolean,yes no,,not applicable,not applicable,Subcohort One: Table: MULTI_MYELOMA  | Variable: MMSURG_OTHER_1,one,,,not applicable,not applicable,not applicable,,
+1,survival_pfs_response,foreign,commpass,public_id,MMRF subject identifier that is a unique identifier for the row.,no,string lowercase,,"in the format: ""mmrf_"" followed by a four digit integer. Example: mmrf_1111",not applicable,not applicable,Subcohorts One and Two: Table: D_PT.csv variable: subject_id,"one,two",MMRF created for this dataset,not null,not applicable,not applicable,not applicable,,
+2,survival_pfs_response,foreign,commpass,project_id,The project's source name that is used as a primary key for the project table and as a foreign key for other tables.,no,string,mmrf_commpass,"The MMRF CoMMpass project will use ""mmrf_commpass"" to designate the project.",not applicable,not applicable,applied,"one,two","MMRF created for this dataset 
+",not null,not applicable,not applicable,not applicable,,
+3,survival_pfs_response,no,commpass,cancer_diagnosis,The cancer diagnosis from the diagnosis table corresponding the the outcome variables.,no,numeric,10,10 indicates active multiple myeloma,not applicable,not applicable,diagnosis table: cancer_diagnosis,"one,two",MMRF created for this dataset,not null,not applicable,not applicable,not applicable,,
+4,survival_pfs_response,no,commpass,surivival_time_os,"For Overall Survival (OS) analyses, the time from the index date to the patient's death or censoring.",no,integer,,Presented as days,not applicable,not applicable,based on days_to_death in diagnosis table,"one,two",,not null,not applicable,not applicable,not applicable,,
+5,survival_pfs_response,no,commpass,censor_os,A numeric (0/1) flag indicating whether the death has occurred (1=TRUE) or the subject was censored (0=FALSE),no,boolean,0 1,,not applicable,not applicable,based on days_to_death in diagnosis table,"one,two",,not null,not applicable,not applicable,not applicable,,
+6,survival_pfs_response,no,commpass,survival_time_pfs,"For Progression Free Survival (PFS) analyses, the time from the index date to the patient's death or censoring.",no,integer,,Presented as days,not applicable,not applicable,based on days_to_first_progressive_disease and days_to_death in diagnosis table,"one,two",,not null,not applicable,not applicable,not applicable,,
+7,survival_pfs_response,no,commpass,censor_pfs,A numeric (0/1) flag indicating whether the progressive disease has  occurred (1=TRUE) or the subject was censored (0=FALSE),no,boolean,0 1,,not applicable,not applicable,based on days_to_first_progressive_disease and days_to_death in diagnosis table,"one,two",,not null,not applicable,not applicable,not applicable,,
