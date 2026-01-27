@@ -77,6 +77,7 @@ The **JSON** and **TSV** buttons allow you to download metadata summaries for al
 ## File Summary Page
 
 Clicking on any file name within the Repository opens the **File Summary Page**, which provides:
+
 - File name, size, and format
 - MD5 checksum
 - Access level (*Open* or *Controlled*)
@@ -84,6 +85,7 @@ Clicking on any file name within the Repository opens the **File Summary Page**,
 - Analysis pipeline and data provenance
 
 From this page, you can:
+
 - Download individual files (if authorized)
 - Add the file to your Cart
 - Review linked metadata and related files

@@ -52,19 +52,4 @@ Insights generated from CoMMpass have directly influenced clinical trial develop
 ## Data Accessibility and Legacy  
 All harmonized CoMMpass data are available through the **MMRF Virtual Lab**, an integrated data-sharing and analysis environment that provides secure access to genomic, clinical, and molecular datasets. The Virtual Lab ensures the long-term sustainability and accessibility of the CoMMpass dataset, supporting continued research and innovation in multiple myeloma.  
 
----
-
-## Major Results and Key Publications  
-Over the past decade, CoMMpass has produced foundational insights that have reshaped the understanding of multiple myeloma biology.  
-
-Key findings include:  
-
-- Identification of **12 molecular subtypes** of myeloma defined by RNA sequencing.  
-- Discovery of actionable genetic alterations and novel high-risk categories (e.g., **IgL translocation**, **TP53 loss**, **t(4;14)+FGFR3 mutation**).  
-- Development of **NGS-based classifiers** that outperform conventional FISH tests for identifying high-risk disease.  
-
-**Select Publications:**  
-
-- Bolli N, et al. *Nature Genetics* (2018). *Genomic patterns of progression in multiple myeloma.*  
-- Walker BA, et al. *Leukemia* (2018). *Clonal evolution and heterogeneity in multiple myeloma.*  
-- Szalat R, et al. *Blood Cancer Discovery* (2021). *Genomic classification and outcomes in the MMRF CoMMpass study.*  
+--- 
