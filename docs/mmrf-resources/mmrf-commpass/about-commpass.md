@@ -23,7 +23,7 @@ The study was intentionally designed to reflect **real-world medical practice**,
 
   <div style="flex: 1; min-width: 300px;">
     <figure>
-      <img src="/img/commpass-overview.png" alt="CoMMpass Study Overview" style="width: 100%;">
+      <img src="img/commpass-overview.png" alt="CoMMpass Study Overview" style="width: 100%;">
       <figcaption style="text-align: center; font-size: 0.9em;">
         Overview of the MMRF CoMMpass Study design and data generation
       </figcaption>
@@ -32,7 +32,7 @@ The study was intentionally designed to reflect **real-world medical practice**,
 
   <div style="flex: 1; min-width: 300px;">
     <figure>
-      <img src="/img/overall-survival-commpass.png" alt="Overall Survival in CoMMpass" style="width: 100%;">
+      <img src="img/overall-survival-commpass.png" alt="Overall Survival in CoMMpass" style="width: 100%;">
       <figcaption style="text-align: center; font-size: 0.9em;">
         Overall survival outcomes observed in the CoMMpass cohort
       </figcaption>
