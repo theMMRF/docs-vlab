@@ -17,13 +17,14 @@ nav:
     - Oncomatrix: mmrf-resources/user-guide/oncomatrix.md
   - MMRF CoMMpass:
     - mmrf-resources/mmrf-commpass/index.md
-    - Introduction and Study Overview: mmrf-resources/mmrf-commpass/intro-study-overview.md
-    - Study Design and Statistical Analysis Plans: mmrf-resources/mmrf-commpass/study-design-sap.md
     - About the CoMMpass Study: mmrf-resources/mmrf-commpass/about-commpass.md
+    - Impact & Major Publications: mmrf-resources/mmrf-commpass/major-publications.md
+    - Study Design and Statistical Analysis Plans: mmrf-resources/mmrf-commpass/study-design-sap.md
     - CoMMpass Clinical Data Overview: mmrf-resources/mmrf-commpass/clinical-overview.md
     - Site Operations, Sample Collection, and Biobanking: mmrf-resources/mmrf-commpass/site-sample-operations.md
     - Data Processing & Harmonization: mmrf-resources/mmrf-commpass/data-processing.md
     - Interim Analysis Data Access: mmrf-resources/mmrf-commpass/historic-ia.md
+    - Clinical Data Dictionary: mmrf-resources/mmrf-commpass/data-dictionaries/commpass-data-dictionary-v25.md
   #- Blog:
   #  - blog/index.md
   #- Frequently Asked Questions: gen3-resources/faq.md
@@ -60,8 +61,13 @@ theme:
         name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
+  - https://cdn.jsdelivr.net/npm/datatables.net@2.1.8/css/dataTables.dataTables.min.css
+
 extra_javascript:
   - js/dd.js
+  - https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js
+  - https://cdn.jsdelivr.net/npm/datatables.net@2.1.8/js/dataTables.min.js
+  - js/commpass-data-dictionary.js
 use_directory_urls: true
 markdown_extensions:
   - admonition
