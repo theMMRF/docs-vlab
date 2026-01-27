@@ -19,25 +19,31 @@ The central goal of CoMMpass is to **understand how a patient’s molecular prof
 
 The study was intentionally designed to reflect **real-world medical practice**, enabling insights that translate directly to patient care and clinical trial design.
 
-<div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start;">
+<div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start;" markdown="1">
 
-  <div style="flex: 1; min-width: 300px;">
-    <figure>
-      <img src="img/commpass-overview.png" alt="CoMMpass Study Overview" style="width: 100%;">
-      <figcaption style="text-align: center; font-size: 0.9em;">
-        Overview of the MMRF CoMMpass Study design and data generation
-      </figcaption>
-    </figure>
-  </div>
+<div style="flex: 1; min-width: 300px;" markdown="1">
+<figure markdown="1">
 
-  <div style="flex: 1; min-width: 300px;">
-    <figure>
-      <img src="img/overall-survival-commpass.png" alt="Overall Survival in CoMMpass" style="width: 100%;">
-      <figcaption style="text-align: center; font-size: 0.9em;">
-        Overall survival outcomes observed in the CoMMpass cohort
-      </figcaption>
-    </figure>
-  </div>
+![CoMMpass Study Overview](../../img/commpass-overview.png){ width="100%" }
+
+<figcaption style="text-align: center; font-size: 0.9em;">
+Overview of the MMRF CoMMpass Study design and data generation
+</figcaption>
+
+</figure>
+</div>
+
+<div style="flex: 1; min-width: 300px;" markdown="1">
+<figure markdown="1">
+
+![Overall Survival in CoMMpass](../../img/overall-survival-commpass.png){ width="100%" }
+
+<figcaption style="text-align: center; font-size: 0.9em;">
+Overall survival outcomes observed in the CoMMpass cohort
+</figcaption>
+
+</figure>
+</div>
 
 </div>
 ---
