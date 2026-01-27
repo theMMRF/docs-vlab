@@ -1,38 +1,140 @@
-#Impact: Major Publications 
+# Impact & Major Publications
+
+Over more than a decade of longitudinal data collection and analysis, the MMRF CoMMpass Study has generated foundational insights that have reshaped the understanding of multiple myeloma biology, risk stratification, immune dynamics, and therapeutic resistance.
+
+CoMMpass-derived discoveries have directly influenced:
+
+- Clinical trial design and patient stratification
+- Identification of novel therapeutic targets
+- Development of genomic and immune-based risk classifiers
+- Translation of molecular findings into precision medicine strategies
+
+Below we highlight selected **case studies** where CoMMpass findings have directly informed clinical or therapeutic approaches, followed by **additional key publications** that collectively define the scientific impact of the study.
+
+---
 
 ## Case Studies
-Numerous coMMpass derived reports have significantly shifted the understanding of myeloma subtypes, therapeutic targets, immune status or risk stratification sufficiently to enabling incorporation to drug development or therapeutic strategies.  
 
-These include:
+Numerous CoMMpass-derived reports have significantly advanced the understanding of myeloma subtypes, therapeutic targets, immune states, and risk stratification—enabling incorporation into drug development pipelines and clinical trial strategies.
 
-### 1. CGS High risk provides an improved strategy to identify patients with a poor prognosis despite receipt of modern triplet or quadruplet therapies. This integrates clinical, cytogenetic and genomics characteristics and forms the basis of new and ongoing High Risk focused clinical trials.  
+### 1. Defining High-Risk Multiple Myeloma
 
-International Myeloma Society/International Myeloma Working Group Consensus Recommendations on the Definition of High-Risk Multiple Myeloma.
+CoMMpass data enabled the development of an integrated high-risk classification that combines clinical, cytogenetic, and genomic features. This approach improves identification of patients with poor prognosis despite modern triplet or quadruplet therapies and forms the basis for ongoing high-risk–focused clinical trials.
 
-Avet-Loiseau H, Davies FE, Samur MK, Corre J, D'Agostino M, Kaiser MF, Raab MS, Weinhold N, Gutierrez NC, Paiva B, Neri P, Weisel K, Maura F, Walker BA, Bustoros M, Stewart AK, Usmani SZ, Hillengass J, Chng WJ, Keats JJ, Martinez-Lopez J, Sperling AS, Touzeau C, Zhan F, Raje NS, Cavo M, Bolli N, Ghobrial IM, Dhodapkar MV, Jagannath S, Spencer A, Parekh S, Bahlis NJ, Lonial S, Sonneveld P, Bergsagel L, Orlowski RZ, Morgan G, Mateos MV, Rajkumar SV, San Miguel JF, Anderson KC, Moreau P, Kumar S, Prósper F, Munshi NC.J Clin Oncol. 2025 Aug 20;43(24):2739-2751. doi: 10.1200/JCO-24-01893. Epub 2025 Jun 9.PMID: 40489728
+**International Myeloma Society / International Myeloma Working Group Consensus Recommendations on the Definition of High-Risk Multiple Myeloma**  
+Avet-Loiseau H, Davies FE, Samur MK, *et al.*  
+*Journal of Clinical Oncology*. 2025 Aug 20;43(24):2739–2751.  
+DOI: 10.1200/JCO-24-01893
 
-### 2. Disease transitions and therapeutic targets in the tumor and immune compartments J&J report describes immune disease transitions for smoldering myeloma and simmune disease transitions for smoldering myeloma and multiple myeloma integrating coMMpass tumor and single cell immune data, including the clinical outcomes across rapid and slow progression disease subtypes. 
+---
 
-Immunophenotypic changes in the tumor and tumor microenvironment during progression to multiple myeloma.
+### 2. Disease Transitions and Immune Evolution
 
-- Bergiers I, Köse MC, Skerget S, Malfait M, Fourneau N, Ellis JC, Vanhoof G, Smets T, Verbist B, De Maeyer D, Van Houdt J, Van der Borght K, Verona R, Heidrich B, Kurth W, Delforge M, Meuleman N, Van Droogenbroeck J, Vlummens P, Heuck CJ, Beguin Y, Bahlis N, Casneuf T, Caers J.
-- PLoS Genet. 2025 Oct 7;21(10):e1011848. doi: 10.1371/journal.pgen.1011848. PMCID: PMC12558612
+Integrated analysis of CoMMpass tumor genomics and single-cell immune profiling revealed immune and tumor state transitions during progression from smoldering myeloma to multiple myeloma, linking immune phenotypes to clinical outcomes across rapid and slow progression subtypes.
 
-### 3. Defining resistance to frontline quad therapies / immunotherapy Genomic and immune signatures predict clinical outcome in newly diagnosed multiple myeloma treated with immunotherapy regimens.
+**Immunophenotypic changes in the tumor and tumor microenvironment during progression to multiple myeloma**  
+Bergiers I, Köse MC, Skerget S, *et al.*  
+*PLoS Genetics*. 2025 Oct 7;21(10):e1011848.  
+DOI: 10.1371/journal.pgen.1011848
 
-- Maura F, Boyle EM, Coffey D, Maclachlan K, Gagler D, Diamond B, Ghamlouch H, Blaney P, Ziccheddu B, Cirrincione A, Chojnacka M, Wang Y, Siegel A, Hoffman JE, Kazandjian D, Hassoun H, Guzman E, Mailankody S, Shah UA, Tan C, Hultcrantz M, Scordo M, Shah GL, Landau H, Chung DJ, Giralt S, Zhang Y, Arbini A, Gao Q, Roshal M, Dogan A, Lesokhin AM, Davies FE, Usmani SZ, Korde N, Morgan GJ, Landgren O.
-- Nat Cancer. Author manuscript. 2023 Nov 9;4(12):1660-1674. doi: 10.1038/s43018-023-00657-1.  PMCID: PMC12065606
+---
 
+### 3. Predicting Resistance to Frontline Immunotherapy
 
-### 4. Targeting high-risk multiple myeloma genotypes with optimized anti-CD70 CAR-T cells.
+Genomic and immune signatures derived from CoMMpass were shown to predict outcomes in newly diagnosed patients treated with immunotherapy-based regimens, providing early markers of resistance to frontline quad therapies.
 
-- Kasap C, Izgutdina A, Patiño-Escobar B, Kang A, Chilakapati N, Akagi N, Johnson H, Rashid T, Werner J, Barpanda A, Geng H, Lin YT, Rampersaud S, Gil-Alós D, Sobh A, Dupéré-Richer D, Wicaksono G, Kawehi Kelii KM, Dalal R, Ramos E, Vijayanarayanan A, Salangsang F, Phojanakong P, Serrano JAC, Zakraoui O, Tariq I, Steri V, Shanmugam M, Boise LH, Kortemme T, Stieglitz E, Licht JD, Karlon WJ, Barwick BG, Wiita AP.
-- bioRxiv [Preprint]. 2024 Feb 28:2024.02.24.581875. doi: 10.1101/2024.02.24.581875. PMCID: PMC10925123
+**Genomic and immune signatures predict clinical outcome in newly diagnosed multiple myeloma treated with immunotherapy regimens**  
+Maura F, Boyle EM, Coffey D, *et al.*  
+*Nature Cancer*. 2023 Nov 9;4(12):1660–1674.  
+DOI: 10.1038/s43018-023-00657-1
 
-### 5. Characterization of TP53 loss and outcome Multi-hit TP53 confers the poorest survival in multiple myeloma in the era of novel therapies.
+---
 
-- Nesnadna R, Petrackova A, Minarik J, Latal V, Manakova J, Papajik T, Kriegova E. Mol Med. 2025 Nov 29;32(1):3. doi: 10.1186/s10020-025-01392-2. PMCID: PMC12771809
-- Multiple myeloma (MM) with high-risk (HR) genetic abnormalities has poor prognosis, despite the use of novel therapeutic agents. 
-- atients with multi-hit TP53 (10.4%) had the shortest PFS and OS compared with those with single HR abnormalities (p 0.011)
+### 4. Targeting High-Risk Genotypes
 
-## Additional Publications 
+CoMMpass-informed genomic analyses identified high-risk disease subsets amenable to targeted immunotherapies, including optimized CAR-T strategies.
+
+**Targeting high-risk multiple myeloma genotypes with optimized anti-CD70 CAR-T cells**  
+Kasap C, Izgutdina A, Patiño-Escobar B, *et al.*  
+*bioRxiv*. 2024 Feb 28.  
+DOI: 10.1101/2024.02.24.581875
+
+---
+
+### 5. TP53 Loss and Clinical Outcomes
+
+Comprehensive genomic profiling revealed that multi-hit TP53 alterations confer the poorest survival outcomes in the era of novel therapies, refining prognostic stratification for high-risk disease.
+
+**Multi-hit TP53 confers the poorest survival in multiple myeloma in the era of novel therapies**  
+Nesnadna R, Petrackova A, Minarik J, *et al.*  
+*Molecular Medicine*. 2025 Nov 29;32(1):3.  
+DOI: 10.1186/s10020-025-01392-2
+
+---
+
+### 6. Therapeutic Targets and Resistance Mechanisms
+
+CoMMpass data uncovered mechanisms of resistance to T-cell–redirecting therapies and identified novel surface targets for immunotherapy.
+
+- **Plasma cell identity escape drives resistance to anti-BCMA T-cell–redirecting therapy in multiple myeloma**  
+  Maura F, Freeman CL, *et al.*  
+  *bioRxiv*. 2025 Dec 11.
+
+- **GPRC5D is a target for the immunotherapy of multiple myeloma with rationally designed CAR T cells**  
+  Smith EL, Harrington K, *et al.*  
+  *Science Translational Medicine*. 2019 Mar 27;11(485).
+
+- **Targeting CD74 in multiple myeloma with the antibody-drug conjugate STRO-001**  
+  Abrahams CL, Li X, *et al.*  
+  *Oncotarget*. 2018 Dec 28;9(102):37700–37714.
+
+---
+
+### 7. Structural Variants in Myeloma
+
+Large-scale analysis of structural variants revealed their critical role in disease progression and risk stratification.
+
+**Revealing the impact of structural variants in multiple myeloma**  
+Rustad EH, Yellapantula VD, *et al.*  
+*Blood Cancer Discovery*. 2020 Sep 15;1(3):258–273.
+
+---
+
+### 8. Outcomes Linked to Precursor Disease
+
+Transcriptional and clonal features associated with precursor disease states were shown to predict exceptionally favorable or adverse clinical outcomes.
+
+- **Specific transcriptional profiles predict favorable prognosis in multiple myeloma**  
+  Yan W, Qiu C, *et al.*  
+  *Haematologica*. 2025 Apr 24.
+
+- **Genomic profiling to contextualize intervention in smoldering multiple myeloma**  
+  Kazandjian D, Diamond B, *et al.*  
+  *Clinical Cancer Research*. 2024 Oct 1.
+
+---
+
+## Additional Key Publications
+
+Beyond these case studies, CoMMpass has produced a broad body of work that has fundamentally reshaped the understanding of multiple myeloma biology.
+
+Key contributions include:
+- Identification of RNA-based molecular subtypes of myeloma
+- Discovery of actionable genetic alterations and novel high-risk categories
+- Development of NGS-based classifiers that outperform conventional cytogenetics
+- Mapping oncogenic dependencies and disease drivers
+- Comprehensive immune profiling and circulating tumor cell analyses
+
+### Selected Publications
+
+- Bolli N, *et al.* **Genomic patterns of progression in multiple myeloma**. *Nature Genetics*. 2018.  
+- Walker BA, *et al.* **Clonal evolution and heterogeneity in multiple myeloma**. *Leukemia*. 2018.  
+- Szalat R, *et al.* **Genomic classification and outcomes in the MMRF CoMMpass study**. *Blood Cancer Discovery*. 2021.  
+- Skerget S, *et al.* **Comprehensive molecular profiling of multiple myeloma identifies refined copy number and expression subtypes**. *Nature Genetics*. 2024.  
+- Pilcher J, *et al.* **Immune Atlas of multiple myeloma**. *Nature Cancer*. *(reference forthcoming)*  
+- Garces JJ, *et al.* **Elevated circulating tumor cells reflect high proliferation and genomic complexity**. *HemaSphere*. 2025.  
+- Walker BA, *et al.* **Identification of novel mutational drivers reveals oncogene dependencies**. *Blood*. 2018.  
+- Maura F, *et al.* **Genomic landscape and reconstruction of driver events in multiple myeloma**. *Nature Communications*. 2019.
+
+---
+
