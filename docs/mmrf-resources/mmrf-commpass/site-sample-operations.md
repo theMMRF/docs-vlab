@@ -12,10 +12,10 @@ All sites operated under a centralized protocol (MMRF-11-001) with harmonized re
 ### Sample Acquisition Workflow  
 Biospecimen collection occurred at defined clinical milestones, including:
 
-- **Baseline (pre-treatment)**  
-- **On-study follow-up visits**  
-- **Disease progression or relapse**  
-- **Study discontinuation (when applicable)**  
+- Baseline (pre-treatment) 
+- On-study follow-up visits 
+- Disease progression or relapse
+- Study discontinuation (when applicable)
 
 At each collection timepoint, samples were obtained according to protocol-defined workflows designed to minimize variability across sites. Clinical metadata (e.g., visit date, disease status, treatment context) were captured concurrently and linked to each biospecimen via a unique MMRF subject and sample identifier.
 
@@ -26,17 +26,17 @@ The CoMMpass study collected a broad range of biospecimens to support comprehens
 
 - **Bone marrow aspirates**
 
-  - CD138+ plasma cell–enriched fractions
-  - Unsorted bone marrow mononuclear cells  
+    - CD138+ plasma cell–enriched fractions
+    - Unsorted bone marrow mononuclear cells  
 
 - **Peripheral blood**
 
-  - Germline DNA (normal comparator)
-  - Plasma and serum  
+    - Germline DNA (normal comparator)
+    - Plasma and serum  
 
 - **Derived materials**
 
-  - DNA and RNA extracted from tumor and normal samples  
+    - DNA and RNA extracted from tumor and normal samples  
 
 These specimens enabled whole genome sequencing (WGS), whole exome sequencing (WES), RNA sequencing (RNA-seq), flow cytometry, cytogenetics/FISH, and downstream translational assays.
 
@@ -54,8 +54,7 @@ All participating sites followed standardized SOPs provided by the study sponsor
 Standardization across sites was critical to ensure consistency, reproducibility, and downstream comparability of molecular data.
 
 ---
-
-### On-Site Processing  
+<!-- ### On-Site Processing  
 Where applicable, sites performed limited on-site processing prior to shipment, including:
 
 - Plasma separation  
@@ -65,16 +64,16 @@ Where applicable, sites performed limited on-site processing prior to shipment, 
 
 All processed materials were frozen according to protocol-defined conditions and prepared for shipment using validated containers and temperature-controlled methods.
 
----
+--- --> 
 
 ## Sample Shipment, Biobanking, and Processing
 
 ### Shipping Logistics  
 Biospecimens were shipped from collection sites to centralized receiving and biobanking facilities using:
 
-- **Temperature-controlled shippers** (dry ice or liquid nitrogen dry shippers)  
-- **Predefined courier services** approved by the study sponsor  
-- **Shipment documentation** including sample manifests and temperature logs  
+- Temperature-controlled shippers (dry ice or liquid nitrogen dry shippers)  
+- Predefined courier services approved by the study sponsor  
+- Shipment documentation including sample manifests and temperature logs  
 
 Chain-of-custody was maintained throughout shipment to ensure sample integrity and traceability.
 
@@ -94,8 +93,8 @@ Samples failing predefined acceptance criteria were flagged, documented, and exc
 ### Long-Term Storage  
 Accepted biospecimens were stored under controlled, long-term conditions appropriate to sample type, including:
 
-- **Liquid nitrogen vapor phase** storage  
-- **–80°C freezers** for nucleic acids and plasma  
+- Liquid nitrogen vapor phase storage  
+- –80°C freezers for nucleic acids and plasma  
 
 All samples were tracked using digital inventory systems that recorded storage location, freeze-thaw history, and downstream distribution events.
 

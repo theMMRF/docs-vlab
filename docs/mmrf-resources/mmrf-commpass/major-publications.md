@@ -9,6 +9,13 @@ CoMMpass-derived discoveries have directly influenced:
 - Development of genomic and immune-based risk classifiers
 - Translation of molecular findings into precision medicine strategies
 
+<div style="text-align: center;">
+  <img src="/img/commpass_reports.png"
+       alt="CoMMpass Reports"
+       style="max-width: 100%; height: auto;">
+</div>
+
+
 Below we highlight selected **case studies** where CoMMpass findings have directly informed clinical or therapeutic approaches, followed by **additional key publications** that collectively define the scientific impact of the study.
 
 ---
@@ -30,7 +37,7 @@ DOI: 10.1200/JCO-24-01893
 
 ### 2. Disease Transitions and Immune Evolution
 
-Integrated analysis of CoMMpass tumor genomics and single-cell immune profiling revealed immune and tumor state transitions during progression from smoldering myeloma to multiple myeloma, linking immune phenotypes to clinical outcomes across rapid and slow progression subtypes.
+J&J led analyses of CoMMpass tumor genomics and single-cell immune profiling combined with tumor genomics revealed immune and tumor state transitions during progression from smoldering myeloma to multiple myeloma, linking immune phenotypes to clinical outcomes across rapid and slow progression subtypes.
 
 **Immunophenotypic changes in the tumor and tumor microenvironment during progression to multiple myeloma**  
 Bergiers I, Köse MC, Skerget S, *et al.*  
@@ -74,7 +81,7 @@ DOI: 10.1186/s10020-025-01392-2
 
 ### 6. Therapeutic Targets and Resistance Mechanisms
 
-CoMMpass data uncovered mechanisms of resistance to T-cell–redirecting therapies and identified novel surface targets for immunotherapy.
+CoMMpass data revealed mechanisms of resistance that impact T-cell–redirecting therapies and identified novel surface targets for immunotherapy.
 
 - **Plasma cell identity escape drives resistance to anti-BCMA T-cell–redirecting therapy in multiple myeloma**  
   Maura F, Freeman CL, *et al.*  
@@ -119,13 +126,14 @@ Transcriptional and clonal features associated with precursor disease states wer
 Beyond these case studies, CoMMpass has produced a broad body of work that has fundamentally reshaped the understanding of multiple myeloma biology.
 
 Key contributions include:
+
 - Identification of RNA-based molecular subtypes of myeloma
 - Discovery of actionable genetic alterations and novel high-risk categories
 - Development of NGS-based classifiers that outperform conventional cytogenetics
 - Mapping oncogenic dependencies and disease drivers
 - Comprehensive immune profiling and circulating tumor cell analyses
 
-### Selected Publications
+**Selected Publications**
 
 - Bolli N, *et al.* **Genomic patterns of progression in multiple myeloma**. *Nature Genetics*. 2018.  
 - Walker BA, *et al.* **Clonal evolution and heterogeneity in multiple myeloma**. *Leukemia*. 2018.  
