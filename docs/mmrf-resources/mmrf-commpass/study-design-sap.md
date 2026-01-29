@@ -27,15 +27,14 @@ To identify the **molecular profiles** and **clinical characteristics** that def
 
 - Evaluate the utility of molecular profiles and baseline characteristics as predictors of **clinical benefit**, including:
 
-  - Response rates
-  - Progression-free survival (PFS)
-  - Overall survival (OS)
+    - Response rates
+    - Progression-free survival (PFS)
+    - Overall survival (OS)
 
 - Assess the utility of **biomarkers** derived from blood and bone marrow in predicting response and relapse.  
 - Identify potential **targets for novel therapeutics** within molecularly defined patient subsets
 - Characterize **bone disease** and response to bone-directed therapies across genomic subtypes.
 - Analyze **health-related quality of life (HRQoL)** and resource utilization across the cohort.
-- Track the frequency and patterns of **severe (CTCAE grade ≥3) adverse events** across molecularly defined subgroups.
 
 These objectives evolved over time, with each interim analysis building upon discoveries from earlier data cuts, allowing the study to adapt and refine its analytic priorities.
 
@@ -64,7 +63,7 @@ The study enrolled **newly diagnosed, symptomatic multiple myeloma patients** wh
 ### **Follow-up**
 Patients were followed **prospectively for at least 5 years**, with the study later amended to extend follow-up to **8 years**.  
 
-Clinical and molecular assessments were collected:
+Clinical and molecular assessments were scheduled:
 
 - At screening
 - At baseline (pre-treatment)  
@@ -76,33 +75,33 @@ Active data collection concluded at the end of 2023, marking the transition to f
 ### **Data Collected**
 The CoMMpass protocol captured a broad spectrum of clinical and molecular data, including:
 
-- **Demographics and medical history**  
-- **Baseline disease characteristics**  
-- **Laboratory values and cytogenetics/FISH**  
-- **Bone marrow aspirates and peripheral blood samples** for:
+- Demographics and medical history
+- Baseline disease characteristics
+- Laboratory values and cytogenetics/FISH
+- Bone marrow aspirates and peripheral blood samples for:
   
-  - Whole Genome Sequencing  
-  - Whole Exome Sequencing  
-  - RNA sequencing  
-  - Flow cytometry and immunophenotyping  
+    - Whole Genome Sequencing  
+    - Whole Exome Sequencing  
+    - RNA sequencing  
+    - Flow cytometry and immunophenotyping  
 
 - **Treatment data**
 
-  - Initial regimen  
-  - Subsequent lines of therapy  
-  - Stem cell transplant status  
+    - Initial regimen  
+    - Subsequent lines of therapy  
+    - Stem cell transplant status  
 
-- **Response assessments**, disease status, and survival endpoints  
-- **Adverse events**, including documentation of severe/CTCAE grade ≥3 events  
-- **Resource utilization** (hospitalizations, ER visits)  
-- **Quality of life** measured using **EORTC QLQ-C30** questionnaires 
+- Response assessments, disease status, and survival endpoints  
+- Adverse events, including documentation of severe/CTCAE grade ≥3 events  
+- Resource utilization (hospitalizations, ER visits)  
+- Quality of life measured using EORTC QLQ-C30 questionnaires 
 
 ### **Populations for Analysis**
 SAPs defined the following analysis sets:
 
-- **Screened Population**  
-- **Enrolled Population**  
-- **Per-Protocol Population** (patients satisfying all major protocol requirements)
+- Screened Population
+- Enrolled Population
+- Per-Protocol Population (patients satisfying all major protocol requirements)
 
 These sets were used to calculate clinical outcomes, derive survival analyses, and perform molecular subgroup characterization.
 
@@ -111,6 +110,7 @@ These sets were used to calculate clinical outcomes, derive survival analyses, a
 ## Role of Interim Analyses  
 
 The Statistical Analysis Plans defined a structured series of **Interim Analyses (IA2–IA24)** that served as official “data cuts.”  
+
 Each IA included cumulative clinical data, molecular profiling, derived endpoints, and updates from the evolving sequencing and QC pipelines.
 
 Interim analyses enabled:

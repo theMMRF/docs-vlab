@@ -4,8 +4,6 @@
 
 The **MMRF CoMMpass Study** is a landmark, longitudinal, multi-center research effort designed to comprehensively map the genomic and clinical landscape of **multiple myeloma (MM)**. Launched in 2011, CoMMpass represents one of the most ambitious precision medicine initiatives in cancer and has generated the largest integrated genomic and clinical dataset ever assembled for a single cancer type.
 
-The central goal of CoMMpass is to **understand how a patient’s molecular profile influences disease progression and treatment response**, enabling the development of more precise, personalized therapeutic strategies. By integrating genomic, transcriptomic, immune, and longitudinal clinical data, CoMMpass provides a comprehensive view of myeloma biology across diagnosis, treatment, and relapse.
-
 ---
 
 ## Study Overview (At a Glance)
@@ -40,6 +38,12 @@ The study was intentionally designed to reflect **real-world medical practice**,
   </div>
 
 </div>
+
+<div style="text-align: center;">
+  <img src="/img/commpass_molecular_dataset.png"
+       alt="CoMMpass Molecular Dataset"
+       style="max-width: 100%; height: auto;">
+</div>
 ---
 
 ## Study Design & Timeline
@@ -65,14 +69,18 @@ Across the study, CoMMpass captured a broad range of harmonized clinical and mol
 - **Disease characteristics** at diagnosis
 - **Laboratory and biomarker values**
 - **Treatment details**, including:
-  - Induction regimens  
-  - Transplant status  
-  - Maintenance therapy  
-  - Subsequent lines of treatment
+
+    - Induction regimens  
+    - Transplant status  
+    - Maintenance therapy  
+    - Subsequent lines of treatment
+
 - **Longitudinal clinical outcomes**
-  - Response assessments  
-  - Progression-free survival (PFS)  
-  - Overall survival (OS)
+
+    - Response assessments  
+    - Progression-free survival (PFS)  
+    - Overall survival (OS)
+    
 - **Imaging and bone disease assessments**
 - **Pathology and cytogenetic results** (when available)
 - **Patient-reported outcomes**, including quality-of-life instruments

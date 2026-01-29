@@ -12,8 +12,7 @@ Clinical data were collected from:
 
 - Routine clinical care  
 - Structured study visits  
-- Trial-based assessments (FORTE subcohort)  
-- Patient-reported outcome instruments  
+- Patient-reported outcome instruments over time (EORTC QLQ-C30 and EORTC QLQ-MY20)
 
 Because visit schedules varied across patients and centers, clinical timing was standardized using **"days from baseline"** relative to the diagnosis date to support reproducible analyses.
 
@@ -36,7 +35,10 @@ The harmonized dataset includes variables across key clinical domains such as:
 - Bone disease assessments  
 - Imaging interpretations  
 - Pathology impressions  
-- Cytogenetics / FISH results (subset)
+- Cytogenetics/FISH
+
+    - Local pathology data available for a subset
+    - Inferred cytogenetic abnormalities from all with tumor genomics (seqFISH)
 
 ### **Treatment Details**
 
@@ -50,8 +52,7 @@ The harmonized dataset includes variables across key clinical domains such as:
 
 - Response assessments based on IMWG criteria  
 - Dates of progression, relapse, and treatment change  
-- PFS, OS, and time-to-event variables  
-- Vital status
+- Progression Free Survival, Overall Survival, and time-to-event variables  
 
 ### **Patient-Reported & Supportive Care Data**
 Where collected:
@@ -86,14 +87,14 @@ All tables underwent:
 - Cross-referencing with sequencing metadata  
 - Harmonization across sites and timepoints
 
-### **4. Final Harmonized Tables**
+<!-- ### **4. Final Harmonized Tables**
 The final CoMMpass clinical dataset includes a curated set of tables (e.g., demographics, diagnosis, outcomes, labs, administered regimens) used by:
 
-- **Cohort Builder**
-- **Cohort Comparison**
-- **Clinical Data Analysis**
+- Cohort Builder
+- Cohort Comparison
+- Clinical Data Analysis
 
-These tables form the backbone of all cohort creation and clinical analytics within the MMRF Virtual Lab.
+These tables form the backbone of all cohort creation and clinical analytics within the MMRF Virtual Lab. -->
 
 ---
 

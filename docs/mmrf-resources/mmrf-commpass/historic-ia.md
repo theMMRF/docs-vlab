@@ -19,6 +19,7 @@ Each Interim Analysis release contained multiple data layers:
 Historic **Interim Analysis (IA)** releases can be accessed directly through the **Cohort Builder** and **Repository** within the MMRF Virtual Lab. These releases contain **summary-level project files** (not individual patient-level files).
 
 Follow the steps below to view and download an IA release:
+
 **1. Select a Historic IA Release in the Cohort Builder**
 
 - Navigate to **Cohort Builder** from the top navigation bar.
