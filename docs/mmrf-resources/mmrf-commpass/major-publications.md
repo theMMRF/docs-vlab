@@ -9,11 +9,8 @@ CoMMpass-derived discoveries have directly influenced:
 - Development of genomic and immune-based risk classifiers
 - Translation of molecular findings into precision medicine strategies
 
-<div style="text-align: center;">
-  <img src="/img/commpass_reports.png"
-       alt="CoMMpass Reports"
-       style="max-width: 100%; height: auto;">
-</div>
+
+![CoMMpass Reports](../../img/commpass_reports.png){ max-width="100%", height="auto" }
 
 
 Below we highlight selected **case studies** where CoMMpass findings have directly informed clinical or therapeutic approaches, followed by **additional key publications** that collectively define the scientific impact of the study.

@@ -45,11 +45,10 @@ Overall survival outcomes observed in the CoMMpass cohort
 
 </div>
 
-<div style="text-align: center;">
-  <img src="/img/commpass_molecular_dataset.png"
-       alt="CoMMpass Molecular Dataset"
-       style="max-width: 100%; height: auto;">
-</div>
+
+![CoMMpass Molecular Dataset](../../img/commpass_molecular_dataset.png){ max-width="100%", height="auto" }
+
+
 ---
 
 ## Study Design & Timeline
