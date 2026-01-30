@@ -2,6 +2,9 @@
 
 This is the primary repository for public MMRF technical documentation.  It is designed to be easy for the MMRF community to participate in the update of this content.  
 
+# MMRF Specific Update Guide
+[How to Update VLab Docs.loop](https://mmrfinc.sharepoint.com/:fl:/r/contentstorage/CSP_8519fb8c-59f1-4f53-a5d4-a0eb9a5b6045/Document%20Library/LoopAppData/How%20to%20Update%20VLab%20Docs.loop?d=w56cb08b00c92417e808cd10814deca5b&csf=1&web=1&e=NX0BZp&nav=cz0lMkZjb250ZW50c3RvcmFnZSUyRkNTUF84NTE5ZmI4Yy01OWYxLTRmNTMtYTVkNC1hMGViOWE1YjYwNDUmZD1iJTIxalBzWmhmRlpVMC1sMUtEcm1sdGdSYVJ0X3BBWGtIaEZsNjNQdDNIQUlrb2JsWTFKVEU4bFE3WnpxRWtVanNrSiZmPTAxNVlYTEVKRlFCREZWTkVRTVBaQVlCREdSQkFLTjVTUzMmYz0lMkYmYT1Mb29wQXBwJnA9JTQwZmx1aWR4JTJGbG9vcC1wYWdlLWNvbnRhaW5lciZ4PSU3QiUyMnclMjIlM0ElMjJUMFJUVUh4dGJYSm1hVzVqTG5Ob1lYSmxjRzlwYm5RdVkyOXRmR0loYWxCeldtaG1SbHBWTUMxc01VdEVjbTFzZEdkU1lWSjBYM0JCV0d0SWFFWnNOak5RZEROSVFVbHJiMkpzV1RGS1ZFVTRiRkUzV25weFJXdFZhbk5yU253d01UVlpXRXhGU2tKTlJFWlRWMHhXUjBsWlRrVXlXRWRUV1VreVVWbzFOalkxJTIyJTJDJTIyaSUyMiUzQSUyMmYzZDQzNTcyLWNmZDQtNGVlMS04MTNlLTk2YWIzNGM1OTM1ZiUyMiU3RA%3D%3D)
+
 # Documentation Release
 MMRF docs release numbers parallel those used for the MMRF tools.  You can find old documentation releases on the [docs GitHub home page](https://github.com/uc-cdis/docs-gen3).  You can find information about the relevant MMRF software releases in the [cdis-manifest repo](https://github.com/uc-cdis/cdis-manifest/tree/master/releases).
 
