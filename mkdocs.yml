@@ -23,8 +23,9 @@ nav:
     - CoMMpass Clinical Data Overview: mmrf-resources/mmrf-commpass/clinical-overview.md
     - Site Operations, Sample Collection, and Biobanking: mmrf-resources/mmrf-commpass/site-sample-operations.md
     - Data Processing & Harmonization: mmrf-resources/mmrf-commpass/data-processing.md
+    - CoMMpass Immune Atlas: mmrf-resources/mmrf-commpass/immune-atlas.md
     - Interim Analysis Data Access: mmrf-resources/mmrf-commpass/historic-ia.md
-    - Clinical Data Dictionary: mmrf-resources/mmrf-commpass/data-dictionaries/commpass-data-dictionary-v25.md
+    #- Clinical Data Dictionary: mmrf-resources/mmrf-commpass/data-dictionaries/commpass-data-dictionary-v25.md
   #- Blog:
   #  - blog/index.md
   #- Frequently Asked Questions: gen3-resources/faq.md
