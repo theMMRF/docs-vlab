@@ -7,20 +7,8 @@ Use **Section** to filter to a specific domain (labs, symptoms, sample, survival
 
 ---
 
-## Filters
-
-<label for="dictionary-section-filter"><strong>Section:</strong></label>
-<select id="dictionary-section-filter">
-  <option value="">All</option>
-</select>
-
----
-
 ## Dictionary Table
 
-<table
-  id="commpass-dictionary-table"
-  class="display"
-  style="width: 100%;"
-  data-csv="commpass_clinical_data_dictionary_v25.csv">
-  </table>
+<div class="commpass-dictionary-wrapper">
+  <table id="commpass-datatable" class="display table table-bordered table-condensed" style="width:100%"></table>
+</div>

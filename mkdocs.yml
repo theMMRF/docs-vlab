@@ -25,7 +25,7 @@ nav:
     - Data Processing & Harmonization: mmrf-resources/mmrf-commpass/data-processing.md
     - CoMMpass Immune Atlas: mmrf-resources/mmrf-commpass/immune-atlas.md
     - Interim Analysis Data Access: mmrf-resources/mmrf-commpass/historic-ia.md
-    #- Clinical Data Dictionary: mmrf-resources/mmrf-commpass/data-dictionaries/commpass-data-dictionary-v25.md
+    - Clinical Data Dictionary: mmrf-resources/mmrf-commpass/data-dictionaries/commpass-data-dictionary-v25.md
   #- Blog:
   #  - blog/index.md
   #- Frequently Asked Questions: gen3-resources/faq.md
@@ -62,13 +62,16 @@ theme:
         name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
-  - https://cdn.jsdelivr.net/npm/datatables.net@2.1.8/css/dataTables.dataTables.min.css
+  - https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css
+  - https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css
 
 extra_javascript:
+  - https://code.jquery.com/jquery-3.7.1.min.js
+  - https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js
+  - https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js
+  - js/commpass-data-dictionary.js
   - js/dd.js
   - https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js
-  - https://cdn.jsdelivr.net/npm/datatables.net@2.1.8/js/dataTables.min.js
-  - js/commpass-data-dictionary.js
 use_directory_urls: true
 markdown_extensions:
   - admonition
