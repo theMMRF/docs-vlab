@@ -3,7 +3,8 @@
 This page provides a searchable reference for clinical variables available in the MMRF CoMMpass dataset.
 
 Use **Search** to filter by variable name, description, or other fields.  
-Use **Section** to filter to a specific domain (labs, symptoms, sample, survival, etc.).
+Use **Section** to filter to a specific domain (labs, symptoms, sample, survival, etc.).  
+Use **Columns** to show or hide columns in the table.
 
 ---
 

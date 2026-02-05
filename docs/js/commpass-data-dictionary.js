@@ -20,16 +20,28 @@
       return String(data).replace(/\n/g, "<br>");
     }
 
+    // Columns visible by default: Table, Dataset, MMRF Variable Name, Description, Data Type, Data Standard
+    var defaultVisibleDataKeys = [
+      "table",
+      "dataset",
+      "mmrf_variable_name",
+      "description",
+      "data_type",
+      "data_standard",
+    ];
+
     $.ajax({
       url: jsonUrl,
       dataType: "json",
     })
       .done(function (json) {
         var columns = json.columns.map(function (col) {
+          var visible = defaultVisibleDataKeys.indexOf(col.data) !== -1;
           return {
             title: col.title,
             data: col.data,
             render: newlineRender,
+            visible: visible,
           };
         });
 
@@ -37,7 +49,7 @@
           data: json.data,
           columns: columns,
           dom: "Bfrtip",
-          buttons: ["columns"],
+          buttons: ["colvis"],
           pageLength: 10,
           order: [],
           scrollX: false,
