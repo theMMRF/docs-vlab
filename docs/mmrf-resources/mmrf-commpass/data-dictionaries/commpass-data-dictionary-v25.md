@@ -11,5 +11,5 @@ Use **Columns** to show or hide columns in the table.
 ## Dictionary Table
 
 <div class="commpass-dictionary-wrapper">
-  <table id="commpass-datatable" class="display table table-bordered table-condensed" style="width:100%"></table>
+  <table id="commpass-datatable" class="display" style="width:100%"></table>
 </div>

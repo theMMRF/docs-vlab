@@ -62,16 +62,20 @@ theme:
         name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
-  - https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css
-  - https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css
+  - https://cdn.datatables.net/2.3.7/css/dataTables.dataTables.css
+  - https://cdn.datatables.net/buttons/3.2.6/css/buttons.dataTables.css
+  - https://cdn.datatables.net/responsive/3.0.8/css/responsive.dataTables.min.css
+  - https://cdn.datatables.net/columncontrol/1.2.0/css/columnControl.dataTables.min.css
 
 extra_javascript:
   - https://code.jquery.com/jquery-3.7.1.min.js
-  - https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js
-  - https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js
+  - https://cdn.datatables.net/2.3.7/js/dataTables.js
+  - https://cdn.datatables.net/buttons/3.2.6/js/dataTables.buttons.js
   - https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js
-  - https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js
-  - https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js
+  - https://cdn.datatables.net/buttons/3.2.6/js/buttons.html5.js
+  - https://cdn.datatables.net/buttons/3.2.6/js/buttons.colVis.js
+  - https://cdn.datatables.net/responsive/3.0.8/js/dataTables.responsive.min.js
+  - https://cdn.datatables.net/columncontrol/1.2.0/js/dataTables.columnControl.min.js
   - js/commpass-data-dictionary.js
   - js/dd.js
   - https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js

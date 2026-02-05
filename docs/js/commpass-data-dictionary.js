@@ -48,8 +48,20 @@
         $(tableEl).DataTable({
           data: json.data,
           columns: columns,
-          dom: "Bfrtip",
           buttons: ["copy", "csv", "excel", "colvis"],
+          columnControl: [
+            {
+              extend: "dropdown",
+              content: ["search"],
+            },
+          ],
+          layout: {
+            topStart: ["pageLength", "buttons"],
+            topEnd: "search",
+            bottomStart: "info",
+            bottomEnd: "paging",
+          },
+          responsive: true,
           pageLength: 10,
           order: [],
           scrollX: false,
