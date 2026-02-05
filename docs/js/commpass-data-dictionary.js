@@ -49,7 +49,7 @@
           data: json.data,
           columns: columns,
           dom: "Bfrtip",
-          buttons: ["colvis"],
+          buttons: ["copy", "csv", "excel", "colvis"],
           pageLength: 10,
           order: [],
           scrollX: false,
