@@ -1,60 +1,74 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const tableEl = document.getElementById("commpass-dictionary-table");
-  if (!tableEl) return;
+/**
+ * Initialize jQuery DataTable for CoMMpass Clinical Data Dictionary.
+ * Only runs when the table container exists on the page.
+ */
+(function () {
+  "use strict";
 
-  const csvUrl = tableEl.dataset.csv;
-  const sectionSelect = document.getElementById("dictionary-section-filter");
+  function initCommpassDataTable() {
+    var tableEl = document.getElementById("commpass-datatable");
+    if (!tableEl) return;
 
-  // Fetch CSV
-  const resp = await fetch(csvUrl);
-  const csvText = await resp.text();
+    document.documentElement.classList.add("commpass-dictionary-page");
+    document.body.classList.add("commpass-dictionary-page");
 
-  // Parse CSV (PapaParse is loaded via mkdocs.yml)
-  const parsed = Papa.parse(csvText, {
-    header: true,
-    skipEmptyLines: true,
-  });
+    // Page is at .../commpass-data-dictionary-v25/ so JSON is in parent dir
+    var jsonUrl = "../commpass_clinical_data_dictionary_v25.json";
 
-  const rows = parsed.data;
-
-  // Build columns from CSV headers
-  const headers = parsed.meta.fields;
-
-  // Populate section filter if column exists
-  const sectionCol = headers.includes("dictionary_section") ? "dictionary_section" : null;
-  if (sectionCol && sectionSelect) {
-    const sections = Array.from(new Set(rows.map(r => r[sectionCol]).filter(Boolean))).sort();
-    for (const s of sections) {
-      const opt = document.createElement("option");
-      opt.value = s;
-      opt.textContent = s;
-      sectionSelect.appendChild(opt);
+    function newlineRender(data) {
+      if (data == null || data === "") return "";
+      return String(data).replace(/\n/g, "<br>");
     }
+
+    // Columns visible by default: Table, Dataset, MMRF Variable Name, Description, Data Type, Data Standard
+    var defaultVisibleDataKeys = [
+      "table",
+      "dataset",
+      "mmrf_variable_name",
+      "description",
+      "data_type",
+      "data_standard",
+    ];
+
+    $.ajax({
+      url: jsonUrl,
+      dataType: "json",
+    })
+      .done(function (json) {
+        var columns = json.columns.map(function (col) {
+          var visible = defaultVisibleDataKeys.indexOf(col.data) !== -1;
+          return {
+            title: col.title,
+            data: col.data,
+            render: newlineRender,
+            visible: visible,
+          };
+        });
+
+        $(tableEl).DataTable({
+          data: json.data,
+          columns: columns,
+          buttons: ["copy", "csv", "excel", "colvis"],
+          columnControl: ['order', ['orderAsc', 'orderDesc', 'search']],
+          layout: {
+            topStart: ["pageLength", "buttons"],
+            topEnd: "search",
+            bottomStart: "info",
+            bottomEnd: "paging",
+          },
+          pageLength: 10,
+          order: [],
+        });
+      })
   }
 
-  // Create DataTable
-  const dt = new DataTable("#commpass-dictionary-table", {
-    data: rows,
-    columns: headers.map(h => ({ title: h, data: h })),
-    paging: true,
-    pageLength: 25,
-    searching: true,
-    fixedHeader: true,
-    scrollX: true,
-    order: [],
-  });
-
-  // Hook up section filter
-  if (sectionCol && sectionSelect) {
-    const sectionIdx = headers.indexOf(sectionCol);
-    sectionSelect.addEventListener("change", () => {
-      const val = sectionSelect.value;
-      if (!val) {
-        dt.column(sectionIdx).search("").draw();
-      } else {
-        // exact match
-        dt.column(sectionIdx).search(`^${val}$`, true, false).draw();
+  if (typeof $ !== "undefined" && typeof $.fn.DataTable !== "undefined") {
+    $(document).ready(initCommpassDataTable);
+  } else {
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof $ !== "undefined" && typeof $.fn.DataTable !== "undefined") {
+        initCommpassDataTable();
       }
     });
   }
-});
+})();
