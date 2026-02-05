@@ -49,31 +49,17 @@
           data: json.data,
           columns: columns,
           buttons: ["copy", "csv", "excel", "colvis"],
-          columnControl: [
-            {
-              extend: "dropdown",
-              content: ["search"],
-            },
-          ],
+          columnControl: ['order', ['orderAsc', 'orderDesc', 'search']],
           layout: {
             topStart: ["pageLength", "buttons"],
             topEnd: "search",
             bottomStart: "info",
             bottomEnd: "paging",
           },
-          responsive: true,
           pageLength: 10,
           order: [],
-          scrollX: false,
         });
       })
-      .fail(function () {
-        var wrapper = tableEl.closest(".commpass-dictionary-wrapper");
-        if (wrapper) {
-          wrapper.innerHTML =
-            '<p class="md-typeset">Unable to load data dictionary. Please refresh the page.</p>';
-        }
-      });
   }
 
   if (typeof $ !== "undefined" && typeof $.fn.DataTable !== "undefined") {

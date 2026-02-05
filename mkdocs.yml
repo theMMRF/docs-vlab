@@ -76,6 +76,7 @@ extra_javascript:
   - https://cdn.datatables.net/buttons/3.2.6/js/buttons.colVis.js
   - https://cdn.datatables.net/responsive/3.0.8/js/dataTables.responsive.min.js
   - https://cdn.datatables.net/columncontrol/1.2.0/js/dataTables.columnControl.min.js
+  - https://cdn.datatables.net/columncontrol/1.2.0/js/columnControl.dataTables.min.js
   - js/commpass-data-dictionary.js
   - js/dd.js
   - https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js
