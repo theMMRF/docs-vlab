@@ -55,3 +55,24 @@
     overflow-x: visible;
     min-width: min-content;
   }
+
+  /* DataTables ColumnControl: keep header icons full size */
+  table.dataTable div.dt-column-header {
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+    white-space: normal;
+  }
+  table.dataTable div.dt-column-header span.dt-column-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: normal;
+  }
+  table.dataTable span.dtcc {
+    flex: 0 0 auto;
+  }
+  table.dataTable span.dtcc span.dtcc-button-icon,
+  table.dataTable span.dtcc span.dtcc-button-icon svg {
+    flex: 0 0 auto;
+    min-width: var(--dtcc-button-icon_size);
+    min-height: var(--dtcc-button-icon_size);
+  }
