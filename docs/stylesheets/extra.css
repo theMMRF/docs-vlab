@@ -57,15 +57,18 @@
   }
 
   /* DataTables ColumnControl: keep header icons full size */
+  table.dataTable thead th,
+  table.dataTable thead td {
+    min-width: max-content;
+    white-space: nowrap;
+  }
   table.dataTable div.dt-column-header {
-    flex-wrap: wrap;
-    row-gap: 0.25rem;
-    white-space: normal;
+    flex-wrap: nowrap;
+    white-space: nowrap;
   }
   table.dataTable div.dt-column-header span.dt-column-title {
-    flex: 1 1 auto;
-    min-width: 0;
-    white-space: normal;
+    flex: 0 1 auto;
+    white-space: nowrap;
   }
   table.dataTable span.dtcc {
     flex: 0 0 auto;
