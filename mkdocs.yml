@@ -9,12 +9,14 @@ nav:
   - User Guide:
     - mmrf-resources/user-guide/index.md # user guide home page, describing the contents of the user guide and linking to sections
     - Cohort Builder: mmrf-resources/user-guide/cohort-builder.md
+    - Projects Page: mmrf-resources/user-guide/projects-page.md
     - Repository & Data Download: mmrf-resources/user-guide/repository.md
     - Mutation Frequency: mmrf-resources/user-guide/mutation-frequency.md
     - Clinical Data Analysis: mmrf-resources/user-guide/clinical-data-analysis.md
     - Cohort Comparison: mmrf-resources/user-guide/cohort-comparison.md
     - ProteinPaint: mmrf-resources/user-guide/proteinpaint.md
     - Oncomatrix: mmrf-resources/user-guide/oncomatrix.md
+    - Discovery Page: mmrf-resources/user-guide/discovery-page.md
   - MMRF CoMMpass:
     - mmrf-resources/mmrf-commpass/index.md
     - About the CoMMpass Study: mmrf-resources/mmrf-commpass/about-commpass.md

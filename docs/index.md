@@ -46,6 +46,17 @@ New datasets and tools are continually added as part of MMRF’s mission to driv
 
 ---
 
+!!! warning "Browser Compatibility"
+    The MMRF Virtual Lab is **not supported in Safari**.
+
+    For the best experience, please use:
+    
+    - Google Chrome (recommended)
+    - Microsoft Edge
+    - Firefox
+
+---
+
 ### Powered by Gen3
 
 The MMRF Virtual Lab leverages the **Gen3 data platform**, developed by the [Center for Translational Data Science (CTDS)](https://ctds.uchicago.edu/) at the University of Chicago.  

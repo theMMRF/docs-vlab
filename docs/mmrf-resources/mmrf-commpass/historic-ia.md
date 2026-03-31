@@ -14,34 +14,89 @@ Each Interim Analysis release contained multiple data layers:
 | Metadata | Sample identifiers, assay QC metrics, version tracking | Sample manifests, readme logs |
 | Documentation | README, change logs, pipeline versions | IA11_README.txt, JetStream logs |
 
-## Accessing the Data
+## Accessing CoMMpass IA Releases
 
-Historic **Interim Analysis (IA)** releases can be accessed directly through the **Cohort Builder** and **Repository** within the MMRF Virtual Lab. These releases contain **summary-level project files** (not individual patient-level files).
+All CoMMpass Interim Analysis releases are available through the **Projects Page** in Virtual Lab.
 
-Follow the steps below to view and download an IA release:
+### Step 1: Navigate to Projects
 
-**1. Select a Historic IA Release in the Cohort Builder**
+- From the Virtual Lab homepage, click **Projects** under *Core Tools*  
+- This opens the full list of available datasets
 
-- Navigate to **Cohort Builder** from the top navigation bar.
-- Expand the **General** category.
-- Open the **Project ID card**.
-- Select the IA release you wish to access (e.g., MMRF-COMMPASS-IA22, MMRF-IA11, MMRF-IA15, etc.).
+![Projects Page](../../img/projects_page.png)
 
-Selecting an IA sets your **active cohort** to that project-level data package.
+### Step 2: Select an IA Release
 
-**2. Navigate to the Repository**
+- Locate the desired project (e.g., **MMRF-IA11**, **MMRF-IA22**, **MMRF-IA24**)  
+- Click the **Project ID link** to open the project details page  
 
-- Within the IA selected, click **Repository** in the header.
-- The Repository will now display **only the files associated with the selected IA release**.
+![Select IA24](../../img/projects_page_select_IA24.png)
 
-**3. Download Summary Files**
+### Step 3: Open the Repository
 
-Historic IA releases contain **project-level summary files**. These files can be downloaded individually or added to your Cart for batch download.
+- On the project page, click **View Files** (top right)  
+- This opens the **Repository**, where all files for that IA release are stored  
 
-> **Note:** 
-Historic IA releases include *summary-level files* only.
-Sample-level genomic files (WGS/WES/RNA-seq) are available through the final IA24 release.
+![View Files](../../img/projects_page_view_files.png)
 
----
+### Step 4: Download Files
+
+Files can be downloaded in two ways:
+
+**Option A: Individual Download**
+
+- Click a file name to download directly
+
+**Option B: Cart-Based Download (Recommended)**
+
+- Add files to your cart using the cart icon  
+- Or select **Add All Files to Cart**  
+- Proceed to download via the cart interface  
+
+### Accessing IA24 (Final Release)
+**IA24 differs from historic releases** in that it includes the full set of clinical and molecular data generated across the study. As a result, the Repository contains **tens of thousands of files**, including raw and processed genomic data.
+
+### Step 1: Open IA24 Repository
+
+- Navigate to **Projects → MMRF-COMMPASS-IA24**
+- Click **View Files**
+
+### Step 2: Apply Filters to Identify Key Files
+
+To locate commonly used datasets such as summary outputs and clinical tables:
+
+- In the left-hand filter panel:
+
+  - Expand **Data Category**
+  - Select:
+    - **Summary Data Files**
+    - **Clinical Data Tables**
+
+Applying these filters will reduce the file list substantially (e.g., from ~60,000 files to a focused set of relevant datasets).
+
+![View Files](../../img/repository_IA24_filter.png)
+
+### Step 3: Review Filtered Results
+
+Filtered results may include:
+
+- Summary-level datasets (e.g., mutation summaries, expression summaries)
+- Harmonized clinical data tables (e.g., labs, treatments, outcomes)
+
+### Step 4: Download Files
+
+Files can be downloaded in two ways:
+
+**Option A: Individual Download**
+
+- Click a file name to download directly
+
+**Option B: Cart-Based Download (Recommended)**
+
+- Add files to your cart using the cart icon  
+- Or select **Add All Files to Cart**  
+- Proceed to download via the cart interface  
+
+For additional details, see the [Repository & Data Download](../user-guide/repository.md) documentation.
 
 *© The Multiple Myeloma Research Foundation. All rights reserved.*
