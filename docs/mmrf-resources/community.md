@@ -15,7 +15,7 @@ The MMRF partners with academic institutions, research consortia, and industry t
 Community members gain access to harmonized datasets, analytic tools, and collaborative workspaces to drive impactful research.
 
 If you’re interested in becoming a collaborator or exploring data access opportunities, contact us at  
-📧 **[vlab@themmrf.org](mailto:vlab@themmrf.org)**.
+📧 **[virtuallab@themmrf.org](mailto:virtuallab@themmrf.org)**.
 
 ---
 
