@@ -23,7 +23,7 @@ The full text of the Apache 2.0 license is available here (https://github.com/ap
 ## Contact Information
 
 ### MMRF Virtual Lab Support
-If you have any questions about data access, user accounts, or technical issues related to the Virtual Lab, please contact the MMRF Translational Research Team at: 
+If you have any questions about data access, user accounts, or technical issues related to the Virtual Lab, please contact the MMRF Translational Research Team at: **[virtuallab@themmrf.org](mailto:virtuallab@themmrf.org)**
 
 ### Gen3 Support
 For general questions about the Gen3 platform or open-source software, visit: 

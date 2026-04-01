@@ -42,7 +42,7 @@ New datasets and tools are continually added as part of MMRF’s mission to driv
 
 - Visit the [About page](mmrf-resources/about.md) to learn how the Virtual Lab was built and the technology behind it.  
 - Read the [User Guide](mmrf-resources/user-guide/index.md) for detailed instructions on navigating the platform, searching data, and using analysis tools.  
-- For account access or collaboration opportunities, contact the MMRF Translational Research Team at **[vlab@themmrf.org](mailto:vlab@themmrf.org)**.
+- For account access or collaboration opportunities, contact the MMRF Translational Research Team at **[virtuallab@themmrf.org](mailto:virtuallab@themmrf.org)**.
 
 ---
 
