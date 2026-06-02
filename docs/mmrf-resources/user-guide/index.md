@@ -26,6 +26,9 @@ It provides step-by-step instructions for navigating the platform, building coho
 * [Clinical Data Analysis](clinical-data-analysis.md) - Review integrated clinical data, visualize outcomes, and correlate findings with genomic features.
 * [Cohort Comparison](cohort-comparison.md) - Compare two or more cohorts side-by-side to assess differences across key variables.
 * [Discovery Page](discovery-page.md) - Provides a centralized interface for exploring publications and associated datasets derived from CoMMpass and related MMRF studies.
+* [Oncomatrix]
+* [ProteinPaint]
+* [Gene Expression Clustering] 
 
 ---
 
