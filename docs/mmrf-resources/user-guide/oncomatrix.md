@@ -39,7 +39,7 @@ __Control Panel:__
 
 The OncoMatrix plot displays the genes along the left panel with each column representing a case.
 
-#### Matrix cells
+### Matrix cells
 
 Each column in the matrix represents a case. Hovering over a cell will display the corresponding case submitter_id, gene name, copy number information, and mutation class if any are provided. Clicking on a cell also gives users the option to launch the Disco Plot.
 
@@ -49,7 +49,7 @@ The Disco Plot is a circular plot that shows all the mutations and CNVs for a gi
 
 [![Disco Plot](./images/oncomatrix/oncomatrix_disco_plot.png)](./images/oncomatrix/oncomatrix_disco_plot.png 'Click to see the full image.')
 
-#### Automatic Zoom
+### Automatic Zoom
 
 To perform an automatic zoom, users can click on and hold a case column then drag the mouse from left to right to form a zoom boundary. From the pop-up window, users can choose to zoom in to the cases, list all highlighted cases, or create a cohort of the selected cases.
 
@@ -59,7 +59,7 @@ The individual case columns are now visible with a demarcated boundary. Above th
 
 [![Zoom using input control and slider](./images/oncomatrix/oncomatrix_zoom2.png)](./images/oncomatrix/oncomatrix_zoom2.png 'Click to see the full image.')
 
-#### Genes
+### Genes
 
 In the panel of genes on the left, users can hover over a gene to view the number of mutated samples, a breakdown of consequence type, and copy number gain and loss counts.
 
@@ -69,7 +69,7 @@ Clicking on a gene opens a pop-up window where users can rename it, launch the [
 
 [![Click on a gene](./images/oncomatrix/oncomatrix_gene_click.png)](./images/oncomatrix/oncomatrix_gene_click.png 'Click to see the full image.')
 
-#### Variables
+### Variables
 
 Any variables added to the matrix appear at the bottom of the plot. Users can hover over a cell in a variable row to display the case submitter_id and their value for the given variable.
 
@@ -79,7 +79,7 @@ Clicking on a variable allows users to rename it, edit it by excluding categorie
 
 [![Click on a variable](./images/oncomatrix/oncomatrix_variable_click.png)](./images/oncomatrix/oncomatrix_variable_click.png "Click to see the full image.")
 
-#### Drag and drop genes and variables
+### Drag and drop genes and variables
 
 By default, the genes in the matrix are sorted in descending order according to which genes have the highest number of rendered cases. Users can override this by dragging and dropping gene and variable row labels to sort the rows manually.
 
