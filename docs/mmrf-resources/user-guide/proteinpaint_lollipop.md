@@ -3,7 +3,9 @@
 ## Introduction to ProteinPaint
 
 ProteinPaint visualizes cancer coding somatic mutations in an interactive lollipop plot.
-For a given gene, it displays GDC cancer mutations associated with that gene as well as genomic position, consequence, and occurrence for each mutation.
+
+For a given gene, it displays mutations associated with that gene as well as genomic position, consequence, and occurrence for each mutation.
+
 Information including disease type and demographic of the mutated cases are also accessible.
 
 ## Quick Reference Guide

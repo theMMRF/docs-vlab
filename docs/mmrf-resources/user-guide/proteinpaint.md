@@ -1,3 +1,0 @@
-#ProteinPaint
-
-Coming soon!
