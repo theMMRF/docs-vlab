@@ -19,9 +19,9 @@ On the top row are genome browser control options, including a search box that p
 
 Under the control buttons is the genomic coordinate ruler. The ruler allows zooming into a region of interest by dragging on it.
 
-Under the genomic ruler are the genome browser tracks, including GDC Genome Browser, and gene track. To pan the genome browser, users can drag on any track and pan left or right. Under the genomic tracks is the track legend.
+Under the genomic ruler are the genome browser tracks, including Genome Browser, and gene track. To pan the genome browser, users can drag on any track and pan left or right. Under the genomic tracks is the track legend.
 
-The GDC Genome Browser displays horizontal lines in different colors indicating CNV segments in the current view range from the current cohort. Each line is one CNV segment, where line start and stop positions are segment start and stop coordinates, and line color for copy number change as indicated in the legend. 
+The Genome Browser displays horizontal lines in different colors indicating CNV segments in the current view range from the current cohort. Each line is one CNV segment, where line start and stop positions are segment start and stop coordinates, and line color for copy number change as indicated in the legend. 
 
 Hovering the cursor over a CNV segment will display a tooltip as below.
 
