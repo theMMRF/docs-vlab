@@ -26,9 +26,10 @@ It provides step-by-step instructions for navigating the platform, building coho
 * [Clinical Data Analysis](clinical-data-analysis.md) - Review integrated clinical data, visualize outcomes, and correlate findings with genomic features.
 * [Cohort Comparison](cohort-comparison.md) - Compare two or more cohorts side-by-side to assess differences across key variables.
 * [Discovery Page](discovery-page.md) - Provides a centralized interface for exploring publications and associated datasets derived from CoMMpass and related MMRF studies.
-* [Oncomatrix]
-* [ProteinPaint]
-* [Gene Expression Clustering] 
+* [Oncomatrix](oncomatrix.md) - Visualize the top most mutated cases and genes affected by high impact mutations in your cohort.
+* [ProteinPaint](proteinpaint_lollipop.md) - Visualize mutations in protein-coding genes by consequence type and protein domain.
+* [Genome Browser](genome_browser.md) - Visualize mutations and copy number variations in genomic regions.
+* [Gene Expression Clustering](gene_expression_clustering.md) - Visualize the top most variably expressed genes in your cohort.
 
 ---
 
