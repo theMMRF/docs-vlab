@@ -152,7 +152,7 @@ Z scores are used to compare gene expression across samples. A Z-score of zero i
 
 User can increase or decrease the Z-score Capping. Increase the Z-score cap from 5 to 10 as shown. Samples with lower gene expression gets lighter to allow highlighting of clusters with higher expression values as shown in red in the heatmap.
 
-[![Z-score capping](./images/geneexpclust/10-zscore-capt.png)](./images/geneexpclust/10-zscore-capt.png 'Click to see the full image.')
+[![Z-score capping](./images/geneexpclust/10-zscore-cap.png)](./images/geneexpclust/10-zscore-cap.png 'Click to see the full image.')
 
 #### Color Scheme
 
