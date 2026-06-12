@@ -14,8 +14,6 @@ At the Analysis Center, click on the 'ProteinPaint' card to launch the app.
 
 [![Analysis Center](images/seq_read_vis.png)](images/seq_read_vis.png "Click to see the full image.")
 
-Users can view publicly available variants as well as login with credentials in order to access controlled data.
-
 When launched, ProteinPaint will display a search box where users can enter a gene symbol, alias, or GENCODE accession. Once a gene is entered, a lollipop frame is displayed with the name of the chart in the header.
 
 [![Lollipop Frame](images/lollipop2.png)](images/lollipop2.png "Click to see the full image.")
@@ -26,9 +24,9 @@ In addition to the search box, there are two other main panels in the ProteinPai
 
 ### Lollipop Chart Panel
 
-After entering a gene, the tool will display a Lollipop chart for the GDC variants as well as a Protein View for the default isoform.
+After entering a gene, the tool will display a Lollipop chart for the MMRF variants as well as a Protein View for the default isoform.
 
-In the Lollipop chart, the circular discs for each variant are color coded per GDC mutation classes and are proportional in size to the number of occurrences. Variants in the same position are arranged in descending order of occurrences.
+In the Lollipop chart, the circular discs for each variant are color coded and are proportional in size to the number of occurrences. Variants in the same position are arranged in descending order of occurrences.
 
 [![Lollipop Chart](images/lollipop10.png)](images/lollipop10.png "Click to see the full image.")
 
@@ -41,18 +39,16 @@ The default isoform will appear directly to the right of the gene name. Clicking
 Clicking on the number of variants link, to the left of the plot, opens a menu where users can view annotations and manipulate the Lollipop:
 
 * __List:__ Displays all variants, each of which can be selected to launch the annotation table which displays consequence, mutation, sample submitter_id, and other data related to the sample
-    * __Mutation:__ Launches the [GDC Mutation Summary Page](mutation_frequency.md#gene-and-mutation-summary-pages)
-    * __Sample:__ Launches the [GDC Case Summary Page](quick_start.md#cohort-case-table). Users also have the ability to create a new cohort or launch the [Disco plot](oncomatrix.md#disco-plot).
 * __Collapse/Expand:__ Collapses or expands all skewers in the lollipop
 * __Download:__ Downloads the mutations in a TXT file
 * __As lollipops:__ Displays variants via circular discs proportional to the number of occurrences
 * __Occurrence as Y axis:__ Sorts variants on the y-axis by number of occurrences
 
-Clicking on the number of samples opens a window to view annotations grouped by GDC case properties such as disease type and primary site. Selecting a value adds a new Lollipop subtrack that displays only the samples with the given value. This side-by-side view allows for a comparison between the mutations in the main track versus the subtrack.
+Clicking on the number of samples opens a window to view annotations grouped by MMRF case properties such as Race and Gender. Selecting a value adds a new Lollipop subtrack that displays only the samples with the given value. This side-by-side view allows for a comparison between the mutations in the main track versus the subtrack.
 
 [![Adenomas and Adenocarcinomas Example: Side-by-Side View](images/lollipop24.png)](images/lollipop24.png "Click to see the full image.")
 
-Each subtrack offers advanced filtering for users to narrow down particular features. Clicking on the value to the right of the Lollipop launches a pop-up window where users can add subsequent filters using the `+AND` or `+OR` options.
+<!-- Each subtrack offers advanced filtering for users to narrow down particular features. Clicking on the value to the right of the Lollipop launches a pop-up window where users can add subsequent filters using the `+AND` or `+OR` options.
 
 [![Advanced Filtering](images/lollipop25.png)](images/lollipop25.png "Click to see the full image.")
 
@@ -71,7 +67,7 @@ An aggregate table displaying all the samples associated with that variant is av
 The top of the table displays consequence, mutation, and occurrence count with a link to the [GDC Mutation Summary Page](mutation_frequency.md#gene-and-mutation-summary-pages).
 
 The sample table contains a number of columns for various associated features per sample such as Disease type, Mutations, and Tumor DNA Mutant Allele Frequency. Users can create a new cohort by selecting the checkboxes in the first column then clicking 'Create Cohort' in the bottom right corner of the table. The table also includes options to launch the [Disco plot](oncomatrix.md#disco-plot) and the [GDC Case Summary Page](quick_start.md#cohort-case-table) for each sample.
-
+-->
 #### Protein View
 
 The Protein View, which displays the nucleotides, codons in the exon region, introns, and protein domains, is the primary area in which a user will visualize and interact with protein coding regions.
@@ -94,11 +90,9 @@ Custom protein domains are added by clicking on the `+ add protein domain` butto
 2. Range, two integers joined by space: Codon position - start and stop
 3. Color (e.g., red, #FF0000, rgb (255,0,0)): Color to assign to the protein domain
 
-The protein domains also include links to databases of protein families such as the Conserved Domains Database (CDD), Simple Modular Architecture Research Tool (SMART), and Pfam.
+#### MMRF Mutation Class
 
-#### GDC Mutation Class
-
-The GDC mutation class color coding for the lollipop discs appears below the legend for the protein domains.
+The MMRF mutation class color coding for the lollipop discs appears below the legend for the protein domains.
 
 [![Color Coding Legend](images/lollipop40.png)](images/lollipop40.png "Click to see the full image.")
 
@@ -106,7 +100,7 @@ Clicking on a mutation class opens a pop-up menu with show/hide functionalities:
 
 * __Hide:__ Remove all of the lollipop discs for the particular mutation class
 * __Show only:__ Only show the lollipop discs for the particular mutation class
-* __Show all:__ Display the lollipop discs for all mutation classes
+* __Change shape:__ Change the shape of the lollipop discs
 
 The color selector in the pop-up menu allows users to customize consequence colors.
 
@@ -123,7 +117,7 @@ In the toolbar, the `More` button offers methods to download figures and data:
 * __Highlight:__ Highlight a region in the Lollipop by selecting it in the chart or entering it in a text box
 
 ## ProteinPaint Features
-When selected, ProteinPaint will display the search-box as illustrated below. Once a user enters a gene symbol, alias, or GENCODE accession, a lollipop frame is displayed with the name of the chart in the header. The example below is of the gene AKT1. All gene symbols are based on the HGNC guidelines.
+When selected, ProteinPaint will display the search-box as illustrated below. Once a user enters a gene symbol, alias, or GENCODE accession, a lollipop frame is displayed with the name of the chart in the header. The example below is of the gene KRAS.
 
 [![Lollipop Frame](images/lollipop2.png)](images/lollipop2.png "Click to see the full image.")
 
@@ -179,7 +173,7 @@ The pop-up window disappears and the lollipop track rerenders with the newly sel
 
 ### Lollipop Charts
 
-The lollipop chart for the GDC variants appears above the Protein View. The circular disc for each variant is proportional to the number of occurrences. Variants in the same position are arranged in descending order of magnitude. There are eight types of variants found in the lollipop chart (see legend).
+The lollipop chart for the variants appears above the Protein View. The circular disc for each variant is proportional to the number of occurrences. Variants in the same position are arranged in descending order of magnitude. There are eight types of variants found in the lollipop chart (see legend).
 
 [![Lollipop Chart](images/lollipop10.png)](images/lollipop10.png "Click to see the full image.")
 
@@ -204,12 +198,10 @@ Lollipop plot limits up to 2000 variants. When this limit is exceeded, the numbe
 
 [![Exceeds limit](images/lollipop13.5.png)](images/lollipop13.5.png "Click to see the full image.")
 
-Click on the variant of interest and a new annotation table appears. From the table, view various associated features per sample such as: Disease type, Primary site, Project id, Gender, Race, Ethnicity, and Tumor DNA Mutant Allele Frequency (MAF). In the figure below, 333 occurrences are shown for the G12D variant, which represents a missense mutation at chromosome chr12:25245350 C>T.  
+<!--Click on the variant of interest and a new annotation table appears. From the table, view various associated features per sample such as: Disease type, Primary site, Project id, Gender, Race, Ethnicity, and Tumor DNA Mutant Allele Frequency (MAF). In the figure below, 333 occurrences are shown for the G12D variant, which represents a missense mutation at chromosome chr12:25245350 C>T.  
 [![Annotation Table](images/lollipop14.png)](images/lollipop14.png "Click to see the full image.")
 
-The first sample that is highlighted in yellow is a male with ductal and lobular neoplasms with a tumor DNA MAF of 31/125. This indicates 31 mutant alleles were found out of 125 total alleles.
-
-The GDC dataset includes an 'Access' column to indicate whether the data is controlled or open. Users must obtain permission from dbGaP to view controlled data [See Obtaining Access to Controlled Data](https://gdc.cancer.gov/access-data/obtaining-access-controlled-data). Click on the sample hyperlink and the GDC's case summary for the sample will appear in a new tab.
+The first sample that is highlighted in yellow is a male with ductal and lobular neoplasms with a tumor DNA MAF of 31/125. This indicates 31 mutant alleles were found out of 125 total alleles. -->
 
 Click 'Back to list' and select another sample, as shown below.
 
@@ -325,8 +317,8 @@ Custom protein domains are added by clicking on the '+add protein domain' button
 2. Range, two integers joined by space: This is the codon position - start and stop
 3. Color (e.g., red, #FF0000, rgb (255,0,0)): This is the color to assign to the protein domain.
 
-### GDC Mutations
-The lollipop discs are color coded per GDC mutation classes. The legend for the mutations appears below the protein domains with more advanced show/hide functions.
+### MMRF Mutations
+The lollipop discs are color coded per MMRF mutation classes. The legend for the mutations appears below the protein domains with more advanced show/hide functions.
 
 [![Color Coding Legend](images/lollipop40.png)](images/lollipop40.png "Click to see the full image.")
 
@@ -357,6 +349,7 @@ Click "Export SVG" to download the lollipop and legend as an SVG file.
 [![Export SVG](images/lollipop45.png)](images/lollipop45.png "Click to see the full image.")
 
 The exported figure will contain following contents, reflecting a user's customization:
+
 * Displayed datasets, including custom data
 * Expand/fold states of all mutations
 * Sequences in the protein if at zoom-in level
@@ -368,18 +361,11 @@ The exported figure will contain following contents, reflecting a user's customi
 
 ### Copying the DNA Sequence
 
-The 'More' button also includes a 'DNA sequence' button.
+The 'More' button also includes a 'Reference DNA sequence' button.
 
 [![DNA Sequence](images/lollipop46.png)](images/lollipop46.png "Click to see the full image.")
 
-Clicking on 'DNA sequence' displays the DNA sequence as plain text for easy copying and pasting.
+Clicking on 'Reference DNA sequence' displays the DNA sequence as plain text for easy copying and pasting.
 
 [![DNA Sequence Plan Text](images/lollipop47.png)](images/lollipop47.png "Click to see the full image.")
 
-### Popup Option
-
-The pop up option under the More button allows for popping open another window with the same lollipop display selected by the user. Below is an example.
-
-[![Popup](images/lollipop48.png)](images/lollipop48.png "Click to see the full image.")
-
-[![Popup Window](images/lollipop49.png)](images/lollipop49.png "Click to see the full image.")
