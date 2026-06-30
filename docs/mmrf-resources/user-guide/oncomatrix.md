@@ -128,7 +128,7 @@ Additionally, to have a finer control on the zoom the user may follow the steps 
 
 ### Clicking on sample columns
 
-In the same zoomed in view as shown above, click on any sample column for TP53. This displays a clickable button `Disco plot` as shown.
+In the same zoomed in view as shown above, click on any sample column for KRAS. This displays a clickable button `Disco plot` as shown.
 
 [![Clicking on sample column label](./images/oncomatrix/6-clicksamplebtn.png)](./images/oncomatrix/6-clicksamplebtn.png 'Click to see the full image.')
 
@@ -502,7 +502,7 @@ Scroll down to view individual samples at the bottom of the plot as shown below.
 
 The zoom action can also be implemented by following steps as outlined in section - Drag to zoom.
 
-<!--## Disco Plot
+## Disco Plot
 
 Click on any sample to reveal a second type of plot called as the `Disco Plot` as shown.
 
@@ -514,7 +514,7 @@ Click on `Disco plot` as shown above in gray. This loads a new chart above the m
 
 This plot shows all the mutations and CNV associated with that sample id as shown above. The plot also displays the legend for the mutation class and the CNV.
 
-To reset the zoom level to default, click on the `Reset` button as shown. This will reset the zoom level to a default of 1.0
+<!--To reset the zoom level to default, click on the `Reset` button as shown. This will reset the zoom level to a default of 1.0
 
 [![Reset Zoom](./images/oncomatrix/55-reset_zoom.png)](./images/oncomatrix/55-reset_zoom.png 'Click to see the full image.')
 -->

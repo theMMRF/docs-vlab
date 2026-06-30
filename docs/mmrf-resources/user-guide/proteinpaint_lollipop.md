@@ -48,7 +48,7 @@ Clicking on the number of samples opens a window to view annotations grouped by 
 
 [![Adenomas and Adenocarcinomas Example: Side-by-Side View](images/lollipop24.png)](images/lollipop24.png "Click to see the full image.")
 
-<!-- Each subtrack offers advanced filtering for users to narrow down particular features. Clicking on the value to the right of the Lollipop launches a pop-up window where users can add subsequent filters using the `+AND` or `+OR` options.
+Each subtrack offers advanced filtering for users to narrow down particular features. 
 
 [![Advanced Filtering](images/lollipop25.png)](images/lollipop25.png "Click to see the full image.")
 
@@ -56,18 +56,12 @@ Detailed variant annotation is viewable by clicking on the disc next to the vari
 
 [![Variant Occurrence](images/lollipop31.png)](images/lollipop31.png "Click to see the full image.")
 
-Hovering over the inner and outer rings displays the disease type or primary site, number of samples, and cohort size.
-
-[![Node](images/lollipop33.png)](images/lollipop33.png "Click to see the full image.")
-
 An aggregate table displaying all the samples associated with that variant is available by clicking the 'Info' button in the center of the sunburst.
 
 [![Sample Annotation Table](images/lollipop_sample_table.png)](images/lollipop_sample_table.png "Click to see the full image.")
 
-The top of the table displays consequence, mutation, and occurrence count with a link to the [GDC Mutation Summary Page](mutation_frequency.md#gene-and-mutation-summary-pages).
+The sample table contains a number of columns for various associated features per sample. Users can create a new cohort by selecting the checkboxes in the first column then clicking 'Create Cohort' in the bottom right corner of the table. The table also includes options to launch the [Disco plot](oncomatrix.md#disco-plot) for each sample.
 
-The sample table contains a number of columns for various associated features per sample such as Disease type, Mutations, and Tumor DNA Mutant Allele Frequency. Users can create a new cohort by selecting the checkboxes in the first column then clicking 'Create Cohort' in the bottom right corner of the table. The table also includes options to launch the [Disco plot](oncomatrix.md#disco-plot) and the [GDC Case Summary Page](quick_start.md#cohort-case-table) for each sample.
--->
 #### Protein View
 
 The Protein View, which displays the nucleotides, codons in the exon region, introns, and protein domains, is the primary area in which a user will visualize and interact with protein coding regions.
@@ -179,9 +173,9 @@ The lollipop chart for the variants appears above the Protein View. The circular
 
 Exon variants report the amino acid change at the referenced codon. For example, G12D is a G > D substitution at the 12th codon of the protein.
 
-Clickable links for the number of cases (e.g. 1315 samples) and number of variants (e.g. 99 out of 110 variants) appear to the left of the lollipop. Clicking on these links reveals detailed annotations about the samples and variants, described in the next section "Viewing Variants and Case Samples".
+Clickable links for the number of cases and number of variants appear to the left of the lollipop. Clicking on these links reveals detailed annotations about the samples and variants, described in the next section "Viewing Variants and Case Samples".
 
-[![Sample and Variant Annotations](images/lollipop11.png)](images/lollipop11.png "Click to see the full image.")
+[![Sample and Variant Annotations](images/lollipop11.png)](images/lollipop11.png "Click to see the full image.") -->
 
 ## Viewing Variants and Case Samples
 
@@ -196,16 +190,14 @@ A pop-up window appears with the entire list of variants, as shown below.
 
 Lollipop plot limits up to 2000 variants. When this limit is exceeded, the number of variants label is in red; click the label to see an alert message.
 
-[![Exceeds limit](images/lollipop13.5.png)](images/lollipop13.5.png "Click to see the full image.")
-
-<!--Click on the variant of interest and a new annotation table appears. From the table, view various associated features per sample such as: Disease type, Primary site, Project id, Gender, Race, Ethnicity, and Tumor DNA Mutant Allele Frequency (MAF). In the figure below, 333 occurrences are shown for the G12D variant, which represents a missense mutation at chromosome chr12:25245350 C>T.  
+Click on the variant of interest and a new annotation table appears. From the table, view various associated features per sample such as: Sample.Gender, Race, Mutations, Tumor WGS, Germline WGS, Tumor RNA-seq, Source of the variant. 
 [![Annotation Table](images/lollipop14.png)](images/lollipop14.png "Click to see the full image.")
 
-The first sample that is highlighted in yellow is a male with ductal and lobular neoplasms with a tumor DNA MAF of 31/125. This indicates 31 mutant alleles were found out of 125 total alleles. -->
+The first sample that is highlighted in yellow is a male with ductal and lobular neoplasms with a tumor DNA MAF of 31/125. This indicates 31 mutant alleles were found out of 125 total alleles.
 
 Click 'Back to list' and select another sample, as shown below.
 
-[![Back to List](images/lollipop15.png)](images/lollipop15.png "Click to see the full image.")
+[![Back to List](images/lollipop15.png)](images/lollipop15.png "Click to see the full image.") 
 
 After clicking on the variant menu again, select the 'Collapse' option to collapse all skewers in the lollipop.
 
@@ -219,7 +211,7 @@ The lollipop chart includes an option to arrange variants by the range of occurr
 
 [![Occurrence as Y Axis](images/lollipop18.png)](images/lollipop18.png "Click to see the full image.")
 
-The lollipop re-renders with the variants sorted on the y-axis from lowest and highest occurrence. Hover over a variant to display the number of occurrences. In the example below, a user is hovering over G12D to display 333 occurrences of this variant.
+The lollipop re-renders with the variants sorted on the y-axis from lowest and highest occurrence. Hover over a variant to display the number of occurrences.
 
 [![Number of Occurrences](images/lollipop19.png)](images/lollipop19.png "Click to see the full image.")
 
@@ -229,23 +221,23 @@ Clicking on the variant loads the sample table again as shown below.
 
 ### Case Filtering
 
-Clicking on the sample hyperlink on the left of the lollipop (e.g. 1315 samples) opens a menu to list all samples. Aggregate data for all samples by attribute appears in a series of tabs. The ability for advanced filtering and creating subtracks is available from this new display.
+Clicking on the sample hyperlink on the left of the lollipop (e.g. 319 samples) opens a menu to list all samples. Aggregate data for all samples by attribute appears in a series of tabs. The ability for advanced filtering and creating subtracks is available from this new display.
 
 [![Menu to List All Samples](images/lollipop21.png)](images/lollipop21.png "Click to see the full image.")
 
-Click on 1315 samples to view annotations grouped by attributes such as: Disease type, Primary site, Project id, Gender, Race, Ethnicity, etc.. For each attribute, the number of values is represented by 'n' to the right of the group label. In the figure below, 21 values for Disease type are reported.
+Click on 319 samples to view annotations grouped by attributes such as: Gender, Race, Disease Type, etc.. For each attribute, the number of values is represented by 'n' to the right of the group label. 
 
 [![Annotations Grouped by Attributes Example: Disease type](images/lollipop22.png)](images/lollipop22.png "Click to see the full image.")
 
-To start filtering, click on the value label or the value's sample fraction. Clicking on 'Adenomas and Adenocarcinomas' or '675/ 4866' for example, loads a new lollipop subtrack underneath the main GDC lollipop track.
+To start filtering, click on the value label or the value's sample fraction. Clicking on 'Female' or '127/ 1421' for example, loads a new lollipop subtrack underneath the main GDC lollipop track.
 
 [![Filtering Example: Adenomas and Adenocarcinomas](images/lollipop23.png)](images/lollipop23.png "Click to see the full image.")
 
-This new subtrack only shows the 675 Adenomas and Adenocarcinomas samples. This side-by-side view allows for a comparison between the mutations in the main track vs the subtrack.
+This new subtrack only shows the 127 Female subjects. This side-by-side view allows for a comparison between the mutations in the main track vs the subtrack.
 
-[![Adenomas and Adenocarcinomas Example: Side-by-Side View](images/lollipop24.png)](images/lollipop24.png "Click to see the full image.")
+[![Adenomas and Adenocarcinomas Example: Side-by-Side View](images/lollipop24.png)](images/lollipop24.png "Click to see the full image.") 
 
-Each subtrack offers advanced filtering, shown below, for users to narrow down particular features.
+<!--Each subtrack offers advanced filtering, shown below, for users to narrow down particular features.
 
 [![Advanced Filtering](images/lollipop25.png)](images/lollipop25.png "Click to see the full image.")
 
@@ -253,22 +245,22 @@ Clicking on 'Filter' displays a pop-up window with the feature the user selected
 
 Click on the 'Close' option to remove the subtrack from the page.
 
-[![Remove Subtrack](images/lollipop29.png)](images/lollipop29.png "Click to see the full image.")
+[![Remove Subtrack](images/lollipop29.png)](images/lollipop29.png "Click to see the full image.") -->
 
 ### Viewing in the Lollipop Display
 In the lollipop chart, users can drag the protein track down by clicking the name of the gene on the left of the protein track and pulling it below the lollipop chart.
 
 [![Protein Track](images/lollipop30.png)](images/lollipop30.png "Click to see the full image.")
 
-Detailed variant annotation is viewable by clicking on the variant disc next to the label. For G12D highlighted in a red outline in the image above, click on the '333' disc. A sunburst chart will appear, shown below.
+Detailed variant annotation is viewable by clicking on the variant disc next to the label. For G12D highlighted in a red outline in the image above, click on the '41' disc. A sunburst chart will appear, shown below.
 
-The center displays the occurrence of the variant (333) above the variant label. The ring
+The center displays the occurrence of the variant (41) above the variant label. The ring
 
 [![Variant Occurrence](images/lollipop31.png)](images/lollipop31.png "Click to see the full image.")
 
-hierarchy is arranged by disease types then broken down by primary sites. Hovering over the inner ring displays the disease type, number of samples, and cohort size. In this example, the inner green ring displays 'Plasma Cell Tumors' with 28 samples out of a total 949 samples.
+hierarchy is arranged by disease types then broken down by primary sites. Hovering over the inner ring displays the disease type, number of samples, and cohort size. In this example, the inner green ring displays 'Plasma Cell Tumors' with 41 samples out of a total 319 samples.
 
-The outer ring represents the primary sites. Hovering over the primary site displays the number of samples relative to the disease type. In the figure below, for Ductal and lobular
+<!--The outer ring represents the primary sites. Hovering over the primary site displays the number of samples relative to the disease type. In the figure below, for Ductal and lobular
 
 [![Variant Occurrence](images/lollipop32.png)](images/lollipop32.png "Click to see the full image.")
 
@@ -284,7 +276,7 @@ An aggregate sample table is available by clicking the 'Info' button in the cent
 
 Clicking on the sample name hyperlink opens a new tab to the sample's GDC Case Summary page.
 
-Clicking on the variant label or anywhere outside of the sunburst removes the sunburst chart.
+Clicking on the variant label or anywhere outside of the sunburst removes the sunburst chart.-->
 
 ### Working With the Protein Track
 There are two zoom methods: highlighting a region and zoom buttons in the toolbar. For viewing a nucleotide of interest, click and drag the mouse in the top, x-axis, Protein length scale. The region appears highlighted in red with the calculated protein length in center.
@@ -315,7 +307,7 @@ Clicking on the colored box next to the protein domain label removes the color f
 Custom protein domains are added by clicking on the '+add protein domain' button at the bottom of the list. An input box appears requiring the following information:
 1. Name, text with space, no semicolon: This is the name of the protein domain
 2. Range, two integers joined by space: This is the codon position - start and stop
-3. Color (e.g., red, #FF0000, rgb (255,0,0)): This is the color to assign to the protein domain.
+3. Color (e.g., red, #FF0000, rgb (255,0,0)): This is the color to assign to the protein domain. 
 
 ### MMRF Mutations
 The lollipop discs are color coded per MMRF mutation classes. The legend for the mutations appears below the protein domains with more advanced show/hide functions.
