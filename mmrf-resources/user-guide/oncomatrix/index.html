@@ -11,10 +11,10 @@
         <link rel="canonical" href="http://127.0.0.1:8000/mmrf-resources/user-guide/oncomatrix/">
       
       
-        <link rel="prev" href="../proteinpaint/">
+        <link rel="prev" href="../discovery-page/">
       
       
-        <link rel="next" href="../discovery-page/">
+        <link rel="next" href="../gene_expression_clustering/">
       
       
         
@@ -407,6 +407,8 @@
       
         
       
+        
+      
     
     
     
@@ -631,14 +633,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../proteinpaint/" class="md-nav__link">
+      <a href="../discovery-page/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ProteinPaint
+    Discovery Page
   
 
     
@@ -668,6 +670,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oncomatrix
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -685,6 +705,418 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-matrix-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the Matrix Chart
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the Matrix Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrix-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix plot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrix plot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matrix-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix cells
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-zoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatic Zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drag-and-drop-genes-and-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag and drop genes and variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legend-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legend Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrix-plot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix plot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrix plot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hovering-on-sample-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hovering on sample columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drag-to-zoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag to zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clicking-on-sample-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clicking on sample columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clicking-on-genevariable-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clicking on gene/variable labels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-panel_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Panel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Control Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drag-and-drop-gene-labelvariable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag and Drop Gene Label/Variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-case-counts-for-gene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display Case Counts for Gene
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genomic-alterations-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genomic Alterations Rendering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort-genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sort Genes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum # Genes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-gene-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing gene set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msigdb-genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSigDB genes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legend-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legend Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zooming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zooming
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disco-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disco Plot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legend
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -697,14 +1129,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../discovery-page/" class="md-nav__link">
+      <a href="../gene_expression_clustering/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Discovery Page
+    Gene Expression Clustering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proteinpaint_lollipop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProteinPaint
   
 
     
@@ -1064,33 +1524,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../coming-soon/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Coming Soon
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1110,6 +1543,407 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-matrix-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the Matrix Chart
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the Matrix Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrix-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix plot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrix plot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matrix-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix cells
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-zoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatic Zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drag-and-drop-genes-and-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag and drop genes and variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legend-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legend Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrix-plot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix plot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrix plot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hovering-on-sample-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hovering on sample columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drag-to-zoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag to zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clicking-on-sample-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clicking on sample columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clicking-on-genevariable-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clicking on gene/variable labels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-panel_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Panel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Control Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drag-and-drop-gene-labelvariable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag and Drop Gene Label/Variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-case-counts-for-gene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display Case Counts for Gene
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genomic-alterations-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genomic Alterations Rendering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort-genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sort Genes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum # Genes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-gene-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing gene set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msigdb-genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSigDB genes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legend-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legend Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zooming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zooming
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disco-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disco Plot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legend
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1177,8 +2011,374 @@
   
 
 
-<div><h1 id="oncomatrix">OncoMatrix<a class="headerlink" href="#oncomatrix" title="Permanent link">¶</a></h1>
-<p>Coming soon!</p></div>
+<div><h1 id="oncomatrix">Oncomatrix<a class="headerlink" href="#oncomatrix" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>The OncoMatrix tool is a web-based tool for visualizing coding mutations such as Simple Somatic Mutations (SSM) and Copy Number Variations (CNV) from the MMRF Virtual Lab (VLab).</p>
+<h2 id="accessing-the-matrix-chart">Accessing the Matrix Chart<a class="headerlink" href="#accessing-the-matrix-chart" title="Permanent link">¶</a></h2>
+<p>At the Analysis Center, click on the "OncoMatrix" card to launch the app.
+<a href="../images/oncomatrix/1-analysis_center.png" title="Click to see the full image."><img alt="Analysis Tools with Oncomatrix Card" src="../images/oncomatrix/1-analysis_center.png"></a></p>
+<p>There are three main panels in the OncoMatrix tool: <a href="#control-panel">control panel</a>, <a href="#matrix-plot">matrix plot</a>, and <a href="#legend-panel">legend panel</a>.</p>
+<p><a href="../images/oncomatrix/2-entire_matrix.png" title="Click to see the full image."><img alt="Oncomatrix chart overview" src="../images/oncomatrix/2-entire_matrix.png"></a></p>
+<p>Each of the features and functionalities are described in detail in the following sections.</p>
+<h3 id="control-panel">Control Panel<a class="headerlink" href="#control-panel" title="Permanent link">¶</a></h3>
+<p>The control panel has various functionalities with which users can change or modify the appearance of the matrix. The control panel provides flexibility and a wide range of options to maximize user control.</p>
+<p><a href="../images/oncomatrix/18-control-panel.png" title="Click to see the full image."><img alt="OncoMatrix Control Panel" src="../images/oncomatrix/18-control-panel.png"></a></p>
+<p><strong>Control Panel:</strong></p>
+<ul>
+<li><strong>Cases:</strong> Choose how to sort the cases, specify the maximum number of cases to display, group cases according to selected variables, and adjust the visible characters of the case labels</li>
+<li><strong>Genes:</strong> Modify how cases are represented for each gene (Absolute, Percent, or None), row group and label lengths, rendering style, how genes are sorted, the maximum number of genes displayed, and the existing gene set<ul>
+<li><strong>Edit Group:</strong> Displays a panel of currently selected genes, which can be modified by clicking on a gene to remove it from the gene set, searching for a particular gene to add, loading top variably expressed genes, or loading a pre-defined gene set provided by the MSigDB database</li>
+<li><strong>Create Group:</strong> Create a new gene set by searching for a particular gene, loading top mutated genes, or loading a pre-defined gene set provided by the MSigDB database</li>
+</ul>
+</li>
+<li><strong>Mutation:</strong> Show or hide specific mutation consequences</li>
+<li><strong>CNV:</strong> Show or hide specific CNVs</li>
+<li><strong>Variables:</strong> Search and select variables to add to the bottom of the matrix</li>
+<li><strong>Cell Layout:</strong> Modify the format of the cells by changing colors, cell dimensions and spacing, and label formatting</li>
+<li><strong>Legend Layout:</strong> Alter the legend by changing the font size, dimensions and spacing, and other formatting preferences</li>
+<li><strong>Download:</strong> Download the matrix in svg format</li>
+<li><strong>Zoom:</strong> Adjust the zoom level by using the up and down arrows on the input box, entering a number, or using the sliding scale to view the case labels.</li>
+</ul>
+<h2 id="matrix-plot">Matrix plot<a class="headerlink" href="#matrix-plot" title="Permanent link">¶</a></h2>
+<p>The OncoMatrix plot displays the genes along the left panel with each column representing a case.</p>
+<h3 id="matrix-cells">Matrix cells<a class="headerlink" href="#matrix-cells" title="Permanent link">¶</a></h3>
+<p>Each column in the matrix represents a case. Hovering over a cell will display the corresponding case submitter_id, gene name, copy number information, and mutation class if any are provided. Clicking on a cell also gives users the option to launch the Disco Plot.</p>
+<p><a href="../images/oncomatrix/oncomatrix_disco_plot_button.png" title="Click to see the full image."><img alt="Disco Plot button" src="../images/oncomatrix/oncomatrix_disco_plot_button.png"></a></p>
+<p>The Disco Plot is a circular plot that shows all the mutations and CNVs for a given case. The Disco Plot also displays the legend for the mutation class and the CNV.</p>
+<p><a href="../images/oncomatrix/oncomatrix_disco_plot.png" title="Click to see the full image."><img alt="Disco Plot" src="../images/oncomatrix/oncomatrix_disco_plot.png"></a></p>
+<h3 id="automatic-zoom">Automatic Zoom<a class="headerlink" href="#automatic-zoom" title="Permanent link">¶</a></h3>
+<p>To perform an automatic zoom, users can click on and hold a case column then drag the mouse from left to right to form a zoom boundary. From the pop-up window, users can choose to zoom in to the cases, list all highlighted cases, or create a cohort of the selected cases.</p>
+<p><a href="../images/oncomatrix/oncomatrix_zoom.png" title="Click to see the full image."><img alt="Dragging and zooming on case columns" src="../images/oncomatrix/oncomatrix_zoom.png"></a></p>
+<p>The individual case columns are now visible with a demarcated boundary. Above the cases, a slider has been provided for moving from one view to another to accommodate all cases.</p>
+<p><a href="../images/oncomatrix/oncomatrix_zoom2.png" title="Click to see the full image."><img alt="Zoom using input control and slider" src="../images/oncomatrix/oncomatrix_zoom2.png"></a></p>
+<h3 id="genes">Genes<a class="headerlink" href="#genes" title="Permanent link">¶</a></h3>
+<p>In the panel of genes on the left, users can hover over a gene to view the number of mutated samples, a breakdown of consequence type, and copy number gain and loss counts.</p>
+<p><a href="../images/oncomatrix/oncomatrix_gene_hover.png" title="Click to see the full image."><img alt="Hover over gene" src="../images/oncomatrix/oncomatrix_gene_hover.png"></a></p>
+<p>Clicking on a gene opens a pop-up window where users can rename it, launch the <a href="../proteinpaint_lollipop/">ProteinPaint Lollipop plot</a>, display the <a href="mutation_frequency.md#gene-and-mutation-summary-pages">Gene Summary Page</a>, and replace or remove the gene. The lollipop plot displays all cases across the Multiple Myeloma Research Foundation Virtual Lab (MMRF VLab) affected by SSMs in the selected gene.</p>
+<p><a href="../images/oncomatrix/oncomatrix_gene_click.png" title="Click to see the full image."><img alt="Click on a gene" src="../images/oncomatrix/oncomatrix_gene_click.png"></a></p>
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
+<p>Any variables added to the matrix appear at the bottom of the plot. Users can hover over a cell in a variable row to display the case submitter_id and their value for the given variable.</p>
+<p><a href="../images/oncomatrix/oncomatrix_variable_cell.png" title="Click to see the full image."><img alt="Hover over a variable cell" src="../images/oncomatrix/oncomatrix_variable_cell.png"></a></p>
+<p>Clicking on a variable allows users to rename it, edit it by excluding categories, replace it with a different variable, or remove it entirely.</p>
+<p><a href="../images/oncomatrix/oncomatrix_variable_click.png" title="Click to see the full image."><img alt="Click on a variable" src="../images/oncomatrix/oncomatrix_variable_click.png"></a></p>
+<h3 id="drag-and-drop-genes-and-variables">Drag and drop genes and variables<a class="headerlink" href="#drag-and-drop-genes-and-variables" title="Permanent link">¶</a></h3>
+<p>By default, the genes in the matrix are sorted in descending order according to which genes have the highest number of rendered cases. Users can override this by dragging and dropping gene and variable row labels to sort the rows manually.</p>
+<h3 id="legend-panel">Legend Panel<a class="headerlink" href="#legend-panel" title="Permanent link">¶</a></h3>
+<p>Below the matrix, the legend displays color coding for mutation classes, CNV, as well as each variable that is selected to appear in the plot.</p>
+<p><a href="../images/oncomatrix/oncomatrix_legend.png" title="Click to see the full image."><img alt="OncoMatrix Legend" src="../images/oncomatrix/oncomatrix_legend.png"></a>
+Clicking on <code>CNV</code> allows users to hide CNV.</p>
+<p><a href="../images/oncomatrix/oncomatrix_legend_cnv.png" title="Click to see the full image."><img alt="OncoMatrix Legend - CNV button" src="../images/oncomatrix/oncomatrix_legend_cnv.png"></a></p>
+<p>Additionally, users can click on a variable's category to hide a specific group, only show a specific group, or show all groups for the selected variable.</p>
+<p><a href="../images/oncomatrix/oncomatrix_legend_var_cat.png" title="Click to see the full image."><img alt="OncoMatrix Legend - variable category" src="../images/oncomatrix/oncomatrix_legend_var_cat.png"></a></p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">¶</a></h2>
+<p>The following features are viewable once the matrix application is loaded.
+There are three main panels as outlined in the figure below i.e., the <code>Control panel</code>, <code>Matrix chart</code>, and the <code>Legend panel</code>.</p>
+<p><a href="../images/oncomatrix/2-entire_matrix.png" title="Click to see the full image."><img alt="Oncomatrix chart overview" src="../images/oncomatrix/2-entire_matrix.png"></a></p>
+<p>Each of the features and functionalities are described in detail in the following sections.</p>
+<h2 id="matrix-plot_1">Matrix plot<a class="headerlink" href="#matrix-plot_1" title="Permanent link">¶</a></h2>
+<h3 id="hovering-on-sample-columns">Hovering on sample columns<a class="headerlink" href="#hovering-on-sample-columns" title="Permanent link">¶</a></h3>
+<p>Each column in the matrix represents a sample.
+Hover over sample cells/columns to display information about the sample such as case id, gene name, Copy number information and mutation/mutation class (if any provided) as shown.</p>
+<p><a href="../images/oncomatrix/3-sample_hovering.png" title="Click to see the full image."><img alt="Hovering over samples" src="../images/oncomatrix/3-sample_hovering.png"></a></p>
+<h3 id="drag-to-zoom">Drag to zoom<a class="headerlink" href="#drag-to-zoom" title="Permanent link">¶</a></h3>
+<p>A user may click a row label and drag it while keeping the mouse button down, to sort the rows manually. Click and hold on a column of sample and drag the mouse from left to right to form a zoom boundary as shown in the image and leave the mouse.</p>
+<p><a href="../images/oncomatrix/4-drag2zoom.png" title="Click to see the full image."><img alt="Drag and zoom" src="../images/oncomatrix/4-drag2zoom.png"></a></p>
+<p>This allows for an automatic zoom as shown. The individual sample columns are now visible with a well demarcated boundary. Above the samples, a slider (as shown in gray) has been provided for moving from one view to another to accommodate all cases.</p>
+<p><a href="../images/oncomatrix/5-slide%26zoom.png" title="Click to see the full image."><img alt="Zoom using input control and slider" src="../images/oncomatrix/5-slide%26zoom.png"></a></p>
+<p>Additionally, to have a finer control on the zoom the user may follow the steps outlined in the section - Zooming</p>
+<h3 id="clicking-on-sample-columns">Clicking on sample columns<a class="headerlink" href="#clicking-on-sample-columns" title="Permanent link">¶</a></h3>
+<p>In the same zoomed in view as shown above, click on any sample column for KRAS. This displays a clickable button <code>Disco plot</code> as shown.</p>
+<p><a href="../images/oncomatrix/6-clicksamplebtn.png" title="Click to see the full image."><img alt="Clicking on sample column label" src="../images/oncomatrix/6-clicksamplebtn.png"></a></p>
+<p>Click on the disco plot button to display a circular plot that shows all the mutations for a given sample as shown.</p>
+<p><a href="../images/oncomatrix/7-discoplot1.png" title="Click to see the full image."><img alt="Disco plot" src="../images/oncomatrix/7-discoplot1.png"></a></p>
+<p>The disco plot can also be accessed by following steps outlined in the section - Disco Plot</p>
+<h3 id="clicking-on-genevariable-labels">Clicking on gene/variable labels<a class="headerlink" href="#clicking-on-genevariable-labels" title="Permanent link">¶</a></h3>
+<p>Click on <code>KRAS</code> gene label to display the following options.</p>
+<p><a href="../images/oncomatrix/8-gene_sort_icons.png" title="Click to see the full image."><img alt="Sort gene labels" src="../images/oncomatrix/8-gene_sort_icons.png"></a></p>
+<p>The first row in the options highlighted by a red box as shown in the image above allows the user to sort rows and move rows up and down (please note that rows can also be moved by dragging and dropping as outlined in section Drag and Drop Gene Label/Variable variable). Every time a sorting icon is clicked the chart will update and reload.</p>
+<p>Click the first arrow as shown by clicking the gene label KRAS. This will sort the samples against the gene at the top left corner which is KRAS in this example.</p>
+<p><a href="../images/oncomatrix/9-diag_arrow.png" title="Click to see the full image."><img alt="Click to sort against the top left corner gene" src="../images/oncomatrix/9-diag_arrow.png"></a></p>
+<p>Next, click on the left arrow as shown. This allows for sorting samples against the gene.</p>
+<p><a href="../images/oncomatrix/10-left_arrow.png" title="Click to see the full image."><img alt="Sort up a gene row" src="../images/oncomatrix/10-left_arrow.png"></a></p>
+<p>Now click the down arrow as shown.
+The row with KRAS cases will move below NRAS.</p>
+<p><a href="../images/oncomatrix/11-down_arrow.png" title="Click to see the full image."><img alt="Move down a gene row" src="../images/oncomatrix/11-down_arrow.png"></a></p>
+<p>Click the gene label <code>KRAS</code> and click the up arrow as shown.</p>
+<p><a href="../images/oncomatrix/12-up_arrow.png" title="Click to see the full image."><img alt="Move up a gene row" src="../images/oncomatrix/12-up_arrow.png"></a></p>
+<p>The row containing KRAS cases now moves back up in position 1 above NRAS.</p>
+<!-- Click KRAS again to showcase the edit menu.
+
+Click on `Replace` as shown above to replace KRAS gene variable with `Primary site` as shown below. The chart updates with the first row as `Primary site` thereby replacing KRAS gene variable as shown below. User may choose to sort samples by clicking the `Primary site` label.
+
+[![Replace a gene row](./images/oncomatrix/13-replace_gene.png)](./images/oncomatrix/13-replace_gene.png 'Click to see the full image.')
+
+[![Replaced row](./images/oncomatrix/14-term-replaced.png)](./images/oncomatrix/14-term-replaced.png 'Click to see the full image.')
+
+Click on the label `Primary site` and click the option `Remove` as shown to remove the row completely. 
+
+[![Remove term](./images/oncomatrix/15-remove-primary.png)](./images/oncomatrix/15-remove-primary.png 'Click to see the full image.')
+
+This updates the chart. User may choose to add back KRAS through the gene panel.
+
+Click on `Replace` as shown above to replace KRAS gene variable with `Primary site` as shown below.
+
+Moreover, a user has the option to add rows for gene expression data. Click on `KRAS` gene label, click on the option `Gene expression` and search for a gene of interest as shown.
+
+[![Gene Exp1](./images/oncomatrix/13.1-replace_term_gene_exp.png)](./images/oncomatrix/13.1-replace_term_gene_exp.png 'Click to see the full image.')
+
+After a gene expression term is selected, the chart updates with the selected term shown as a separate row at the end of the matrix in a continuous distribution
+
+[![Gene Exp2](./images/oncomatrix/13.2_gene_exp_term_row.png)](./images/oncomatrix/13.2_gene_exp_term_row.png 'Click to see the full image.')
+-->
+<h2 id="control-panel_1">Control Panel<a class="headerlink" href="#control-panel_1" title="Permanent link">¶</a></h2>
+<p>The control panel as shown has various functionalities with which users can change or modify the appearance of the matrix. The control panel provides flexibility and a wide range of options to maximize user control.</p>
+<p><a href="../images/oncomatrix/18-control-panel.png" title="Click to see the full image."><img alt="Control Panel" src="../images/oncomatrix/18-control-panel.png"></a></p>
+<h3 id="drag-and-drop-gene-labelvariable">Drag and Drop Gene Label/Variable<a class="headerlink" href="#drag-and-drop-gene-labelvariable" title="Permanent link">¶</a></h3>
+<p>The genes on the matrix are sorted by default on the number of cases with the gene having the highest number of cases at the top of the matrix. A user may choose to override this by dragging a gene label and dropping it above or below any other gene in order to customize their own gene groupings. </p>
+<p>Select <code>PTEN</code> gene label and drag it below the gene labeled <code>EGFR</code> as shown. When dragging a gene label, hover over EGFR such that the EGFR gene label would appear blue.</p>
+<p><a href="../images/oncomatrix/16-drag-gene-row.png" title="Click to see the full image."><img alt="Drag a gene row" src="../images/oncomatrix/16-drag-gene-row.png"></a></p>
+<p>When the EGFR gene label appears blue, then drop the PTEN gene label row. The display updates to show PTEN below EGFR as shown below.</p>
+<p><a href="../images/oncomatrix/17-dragged-gene-row.png" title="Click to see the full image."><img alt="Dragged gene row" src="../images/oncomatrix/17-dragged-gene-row.png"></a></p>
+<h3 id="cases">Cases<a class="headerlink" href="#cases" title="Permanent link">¶</a></h3>
+<p>Within the control panel, the first button displays the number of cases that are shown as columns of the matrix. The default view is as shown.</p>
+<p><a href="../images/oncomatrix/19-default-view.png" title="Click to see the full image."><img alt="Default view" src="../images/oncomatrix/19-default-view.png"></a></p>
+<p>Click on the <code>10000 Cases</code> button to display the following options as shown.</p>
+<ol>
+<li>Maximum #cases</li>
+<li>Case Label Character Limit</li>
+<li>Group Cases by</li>
+<li>Sort Case Priority</li>
+</ol>
+<p><a href="../images/oncomatrix/20-cases-controls.png" title="Click to see the full image."><img alt="Cases menu" src="../images/oncomatrix/20-cases-controls.png"></a></p>
+<p>These sections are described below.</p>
+<h4 id="maximum-cases">Maximum #cases<a class="headerlink" href="#maximum-cases" title="Permanent link">¶</a></h4>
+<p>There is a default number of samples that are shown in the matrix chart. Users can choose to increase or decrease the number of samples. This allows the chart to re-render and display the number of columns based on the user's selection. Figure below shows increased cases to 10000. Please note that any high arbitrary number can be selected but the chart will only show the maximum cases that the MMRF VLab has.</p>
+<p>The chart will reload with new cases added.</p>
+<h4 id="case-label-character-limit">Case Label Character Limit<a class="headerlink" href="#case-label-character-limit" title="Permanent link">¶</a></h4>
+<p>This option allows users to increase or decrease the length of the case label. The default number is 32 characters. The chart will reload with new cases added.</p>
+<h4 id="group-cases-by">Group cases by<a class="headerlink" href="#group-cases-by" title="Permanent link">¶</a></h4>
+<p>This option allows users to group cases by different variables from the MMRF Virtual Lab dictionary. Click on the <code>+</code> icon shown in blue to display different variables. Users may also search for a variable from the search bar provided in the menu as shown by <code>Search Variables</code>.</p>
+<p><a href="../images/oncomatrix/group-cases-by.png" title="Click to see the full image."><img alt="Group cases by another variable" src="../images/oncomatrix/group-cases-by.png"></a></p>
+<!--Search for the term `Age at diagnosis` and Click the term. The matrix reloads to show the following view.
+
+[![Select a grouping variable](./images/oncomatrix/22-group-age-at-diag.png)](./images/oncomatrix/22-group-age-at-diag.png 'Click to see the full image.')
+
+As shown above, labels for different age groups show up vertically and all cases get distributed with a clearcut separation according to the age bins.
+
+Click on the `Age at diagnosis` (blue pill, as shown). This opens a short menu with action items. Click on the first item `Edit` as shown.
+
+[![Click the variable button to edit](./images/oncomatrix/23-edit-groups.png)](./images/oncomatrix/23-edit-groups.png 'Click to see the full image.')
+
+Drag the red lines on the density distribution to select binning or input numbers for custom binning and select `Apply`.
+
+[![Click the variable button to edit bins](./images/oncomatrix/24-binning.png)](./images/oncomatrix/24-binning.png 'Click to see the full image.')
+
+The matrix reloads with new bin groupings The labels for the groups are user controlled and hence can be modified according to user requirements. 
+
+Click on the blue pill for `Age at diagnosis` again and click `Replace`. Select `Primary site` as shown.
+
+[![Replace the grouping variable](./images/oncomatrix/25-replace-group.png)](./images/oncomatrix/25-replace-group.png 'Click to see the full image.')
+
+The matrix reloads with the new variable distribution.
+
+The last option on the menu is `Remove`. Click on the `917 Cases` button, followed by `Age at diagnosis` shown in blue to reveal the menu option. Click `Remove` to completely get rid of any groups.
+
+[![Remove the grouping variable](./images/oncomatrix/26-remove-group.png)](./images/oncomatrix/26-remove-group.png 'Click to see the full image.')
+
+This will remove all and any groupings and show the default view again.
+
+### Adding Survival term as a grouping variable
+
+Click on the `Age at diagnosis` (blue pill, as shown). This opens a short menu with action items. Click on the second item `Replace` as shown.
+
+[![Click the variable button to edit](./images/oncomatrix/23-edit-groups.png)](./images/oncomatrix/23-edit-groups.png 'Click to see the full image.')
+
+Select the term 'Overall Survival'. 
+
+[![Selecting survival term](./images/oncomatrix/OS_term.png)](./images/oncomatrix/OS_term.png 'Click to see the full image.')
+
+The matrix reloads with the new variable distribution. Cases are shown for categories 'Alive' vs 'Dead'.
+
+[![Selecting survival term](./images/oncomatrix/grouped_by_survival.png)](./images/oncomatrix/grouped_by_survival.png 'Click to see the full image.')
+
+To view a continuous distribution of the survival outcome data, replace a gene row with a survival term as shown. Click on 'Overall survival'.
+
+[![Selecting survival term](./images/oncomatrix/replace_tp53_survival.png)](./images/oncomatrix/replace_tp53_survival.png 'Click to see the full image.')
+
+The matrix reloads with replacement of gene row 'Tp53' with 'Overall survival'.
+
+[![Replacing gene row](./images/oncomatrix/replace_tp53_survival2.png)](./images/oncomatrix/replace_tp53_survival2.png 'Click to see the full image.')
+
+Once the survival term is loaded, click on the term label, and click edit to display the following options.
+
+[![Edit survival term row](./images/oncomatrix/edit_survival_term.png)](./images/oncomatrix/edit_survival_term.png 'Click to see the full image.')
+
+Now the user has the option to display the survival term as a continuous distribution, or to show it as a discrete distribution. The default is a discrete distribution with no z-scoring.
+
+Click 'Apply' to load the continuous distribution for 'Time to event'
+
+This reloads the matrix and now displays the survival outcome as a continuous distribution. 
+
+[![Survival term as continuous distribution](./images/oncomatrix/OS_cont_distribution.png)](./images/oncomatrix/OS_cont_distribution.png 'Click to see the full image.')
+-->
+<h4 id="sort-case-priority">Sort Case Priority<a class="headerlink" href="#sort-case-priority" title="Permanent link">¶</a></h4>
+<p>The default sort setting sorts the cases 'by presence' under 'Basic' sort settings. </p>
+<p>Click the second option <code>by consequence</code> to change the sorting. The matrix reloads with the new sorting as shown below.</p>
+<p><a href="../images/oncomatrix/20.1-by_consequence.png" title="Click to see the full image."><img alt="Sort oncomatrix by consequence" src="../images/oncomatrix/20.1-by_consequence.png"></a></p>
+<p>To perform an advanced sorting, click 'Advanced' on the 'Sort Case Priority' menu as shown below. </p>
+<p><a href="../images/oncomatrix/20.2-sort_advanced.png" title="Click to see the full image."><img alt="Advanced sorting options" src="../images/oncomatrix/20.2-sort_advanced.png"></a></p>
+<p>Now user has the option to sort the cases by each selected row, gene mutation, dictionary variable or alphabetically by name. Details of each sort option are provided. </p>
+<!--### Sort Case Groups
+
+Add the variable `Age at diagnosis` again using the `Group Cases by` button as shown in the previous section. By default, groups are loaded ordered by their name. Change the selection to `Case count` as shown below. 
+
+[![Sorting Case groups](./images/oncomatrix/27-sort-case-groups.png)](./images/oncomatrix/27-sort-case-groups.png 'Click to see the full image.')
+
+The third selection option `Hits` orders the groupings based on the number of gene variants for a particular case or case group for the genes in display. Click `Hits` under `Sort Case Groups` to change the order of groupings.
+
+Next, hover over the group label `<=30 years (81)` as shown below.
+
+[![Hover over lables](./images/oncomatrix/28-label-hover.png)](./images/oncomatrix/28-label-hover.png 'Click to see the full image.')
+
+This shows the number of cases in parenthesis of the group label and the breakdown for the  number of variants and CNV for all the samples within that group for the genes in display.
+-->
+<h2 id="genes_1">Genes<a class="headerlink" href="#genes_1" title="Permanent link">¶</a></h2>
+<p>The gene panel as shown below has several options as listed below for modifying the genes visible on the plot as well as their appearance/style.</p>
+<ul>
+<li>Genomic Alterations Gene Set</li>
+<li>Display Case Counts for Gene</li>
+<li>Genomic Alterations Rendering</li>
+<li>Sort Genes</li>
+<li>Maximum # Genes</li>
+</ul>
+<p><a href="../images/oncomatrix/29-genes-btn.png" title="Click to see the full image."><img alt="Genes button" src="../images/oncomatrix/29-genes-btn.png"></a></p>
+<h3 id="display-case-counts-for-gene">Display Case Counts for Gene<a class="headerlink" href="#display-case-counts-for-gene" title="Permanent link">¶</a></h3>
+<p>This option allows change in the number of cases that is represented in parentheses next to the gene variable label as shown below. By default, the number of cases for each gene is an <code>Absolute</code>.</p>
+<p>Click on the button <code>50 Genes</code> to display the menu and select <code>Percent</code></p>
+<p>This shows the case counts as a percentage of the absolute values as shown. </p>
+<p><a href="../images/oncomatrix/30-genes-percent-display.png" title="Click to see the full image."><img alt="Counts as percent of cases" src="../images/oncomatrix/30-genes-percent-display.png"></a></p>
+<p>User has the option to hide the display of case counts. Click <code>Genes</code> button again and select <code>None</code> for <code>Display Case Counts for Gene</code> as shown below</p>
+<p><a href="../images/oncomatrix/31-genes_none1.png" title="Click to see the full image."><img alt="Genes None" src="../images/oncomatrix/31-genes_none1.png"></a></p>
+<p>This hides all the case counts as shown.</p>
+<p><a href="../images/oncomatrix/32-genes-none-display.png" title="Click to see the full image."><img alt="Hide case counts" src="../images/oncomatrix/32-genes-none-display.png"></a></p>
+<h3 id="genomic-alterations-rendering">Genomic Alterations Rendering<a class="headerlink" href="#genomic-alterations-rendering" title="Permanent link">¶</a></h3>
+<p>The style of rendering for the sample cells/columns is an Oncoprint style by default. Click on <code>Stacked</code> option via <code>50 Genes</code> button as shown below.</p>
+<p><a href="../images/oncomatrix/33-rendering_stacked1.png" title="Click to see the full image."><img alt="Rendering Style" src="../images/oncomatrix/33-rendering_stacked1.png"></a></p>
+<p><a href="../images/oncomatrix/34-stacked-view.png" title="Click to see the full image."><img alt="Stacked rendering" src="../images/oncomatrix/34-stacked-view.png"></a></p>
+<p>To view the rendering in an oncoprint style, click <code>Oncoprint</code> button on the control panel. This updates the rendering as shown.</p>
+<h3 id="sort-genes">Sort Genes<a class="headerlink" href="#sort-genes" title="Permanent link">¶</a></h3>
+<p>The default sorting option for genes is <code>By Sample Count</code>. This means the genes are sorted by the number of samples from increasing to decreasing order. Click <code>50 Genes</code> button on the control panel, and select <code>By Input Data Order</code> under the <code>Sort Genes</code> as shown below.</p>
+<p><a href="../images/oncomatrix/35-sort-genes.png" title="Click to see the full image."><img alt="Sort genes" src="../images/oncomatrix/35-sort-genes.png"></a></p>
+<p>The genes will now sort according to the order that is stored in the dataset and queried. However, please note that the sorting order can be overridden by the users choice as described in the section - Drag and Drop Gene Label/Variable.</p>
+<h3 id="maximum-genes">Maximum # Genes<a class="headerlink" href="#maximum-genes" title="Permanent link">¶</a></h3>
+<p>The number of genes to display on the matrix plot can be modified by the input option as shown below. Click <code>50 Genes</code> button and change input number for <code>Maximum # Genes</code> to 100.</p>
+<p><a href="../images/oncomatrix/36-max_genes.png" title="Click to see the full image."><img alt="Maximum number of genes to display" src="../images/oncomatrix/36-max_genes.png"></a></p>
+<p>The chart updates and loads the extra 50 genes. User can modify the set of genes by using the <code>Gene set</code> option next.</p>
+<h3 id="editing-gene-set">Editing gene set<a class="headerlink" href="#editing-gene-set" title="Permanent link">¶</a></h3>
+<p>Gene groups can be edited using the <code>Gene set</code> option as shown below. Click <code>Edit Current Group</code> button to display this option and then click the <code>Custom gene set</code> button as shown.</p>
+<p><a href="../images/oncomatrix/37-geneset_edit1.png" title="Click to see the full image."><img alt="Edit geneset" src="../images/oncomatrix/37-geneset_edit1.png"></a></p>
+<p>User may choose to remove single genes one at a time by clicking over the genes.To do so, hover over PAX5 as shown in the image below. A red cross mark appears with a description box. Click PAX5 to delete the gene as shown below.</p>
+<p><a href="../images/oncomatrix/39-geneset_edit3.png" title="Click to see the full image."><img alt="Deleting a gene" src="../images/oncomatrix/39-geneset_edit3.png"></a></p>
+<p>User may choose to delete all genes from view by clicking the <code>Clear</code> button as shown below. However, a gene/variable selection is mandatory for the chart to load.</p>
+<p><a href="../images/oncomatrix/40-clear_genes.png" title="Click to see the full image."><img alt="Clear genes" src="../images/oncomatrix/40-clear_genes.png"></a></p>
+<!--For loading user specific gene sets, click the 'Load gene set' button within the geneset edit panel. This shows an input option for the user to add a comma separated gene set of their own.
+
+[![Load gene set](./images/oncomatrix/load_gene_set.png)](./images/oncomatrix/load_gene_set.png 'Click to see the full image.')-->
+
+<h3 id="msigdb-genes">MSigDB genes<a class="headerlink" href="#msigdb-genes" title="Permanent link">¶</a></h3>
+<p>The MSigDB database (Human Molecular Signatures Database) has 33591 gene sets divided into 9 major collections and several subcollections. Users can choose to view the gene sets on the matrix plot.</p>
+<p>Click on the <code>50 Genes</code> button. Then click on the <code>Edit Current Group</code> and <code>Prebuilt gene set</code>. Here user can see a button with a dropdown for loading MSigDB genes. Click on this dropdown to display a tree for the different gene sets.</p>
+<p><a href="../images/oncomatrix/41-msigdb1.png" title="Click to see the full image."><img alt="msigdb dropdown" src="../images/oncomatrix/41-msigdb1.png"></a></p>
+<!--Click on this dropdown to display a tree for the different gene sets.
+
+[![msigdb tree](./images/oncomatrix/42-msigdb_tree.png)](./images/oncomatrix/42-msigdb_tree.png 'Click to see the full image.')
+
+Select `C2: curated gene sets` and select `NABA_COLLAGENS` as shown below.
+
+[![NABA collagens gene set](./images/oncomatrix/43-naba_collagens.png)](./images/oncomatrix/43-naba_collagens.png 'Click to see the full image.')
+
+This loads the following genes as shown below.
+
+[![NABA collagens genes loaded](./images/oncomatrix/44-msigdb2.png)](./images/oncomatrix/44-msigdb2.png 'Click to see the full image.')
+
+Click `Submit` and the matrix will update to reflect the selected MSigDB gene set as shown.
+
+[![NABA collagens genes matrix](./images/oncomatrix/45-msigdb_collagen_matrix.png)](./images/oncomatrix/45-msigdb_collagen_matrix.png 'Click to see the full image.')-->
+
+<!--## Mutation
+
+To view specific mutations click on the 'Mutations' tab in the control panel to display the following options:
+
+[![Show mutations](./images/oncomatrix/mutations-tab.png)](./images/oncomatrix/mutations-tab.png 'Click to see the full image.')
+
+1. Show all mutations - selecting this will display all the mutations for the cohort.
+2. Show only truncating mutations - this option only shows truncated mutations and hides other mutations 
+3. Show only protein-changing mutations - this option only shows mutations that alter the protein and hides other mutations. This is the default option.
+4. Do not show mutations - this option hides all the mutations and only displays CNV cases
+5. Show selected mutations - here a user can specifically select the consequence of mutations they want to visualize
+
+[![Show selected mutations](./images/oncomatrix/select-mutations.png)](./images/oncomatrix/select-mutations.png 'Click to see the full image.')
+
+### Edit mutation data on gene row
+
+To create distinct grouping on variants within a gene row, click 'edit' on the gene row to view the following options.
+
+[![Edit mutation data on gene row](./images/oncomatrix/edit_mutation_data_gene_row.png)](./images/oncomatrix/edit_mutation_data_gene_row.png 'Click to see the full image.')
+
+Here user has the option to cancel any groupings on variant data or depending on the variant type (SNV/Indel or CNV), user can further create custom groups. The pre-defined groups 'Wildtype' and 'Mutated' are shown. 
+
+## CNV
+
+By default the CNVs are hidden. User can select the `Show all CNV` option to display the CNV data by clicking the 'CNV' tab from the control panel.
+
+[![CNV tab](./images/oncomatrix/CNV-tab.png)](./images/oncomatrix/CNV-tab.png 'Click to see the full image.')
+
+This re-loads the matrix with CNVs as shown.
+
+[![CNV data](./images/oncomatrix/CNV-data.png)](./images/oncomatrix/CNV-data.png 'Click to see the full image.')
+
+To select specific CNVs, click on the 'Show selected CNV' tab in the control panel and select the CNVs you want to visualize.
+
+[![Select CNV](./images/oncomatrix/select-CNV.png)](./images/oncomatrix/select-CNV.png 'Click to see the full image.')
+-->
+<h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
+<p>The third button from the left called <code>Variables</code> allows user to add in additional variables in the form of rows on the matrix. Click <code>Variables</code> to display a tree of variables and select <code>Race</code> and <code>Gender</code>. Click the button <code>Submit 2 variables</code> as shown.</p>
+<p><a href="../images/oncomatrix/46-variables.png" title="Click to see the full image."><img alt="Variables menu" src="../images/oncomatrix/46-variables.png"></a></p>
+<p>This updates the chart to display the selected variables on the bottom of the matrix as shown below. User may choose to configure these rows by following steps outlined in section Clicking on gene/variable labels.</p>
+<p><a href="../images/oncomatrix/47-variable-loaded.png" title="Click to see the full image."><img alt="Loaded variables" src="../images/oncomatrix/47-variable-loaded.png"></a></p>
+<h2 id="cell-layout">Cell Layout<a class="headerlink" href="#cell-layout" title="Permanent link">¶</a></h2>
+<p>The cell layout menu enables customization of the appearance such as cell dimensions, spacing, font sizes, and borders. You may mouseover an input to see the description for that input, or try checking or editing inputs to test the effects of the control input and undo/redo as needed.</p>
+<p><a href="../images/oncomatrix/48-cell_layout.png" title="Click to see the full image."><img alt="Cell layout" src="../images/oncomatrix/48-cell_layout.png"></a></p>
+<h2 id="legend-layout">Legend Layout<a class="headerlink" href="#legend-layout" title="Permanent link">¶</a></h2>
+<p>The legend layout menu enables customization of the appearance of the legend, such as dimensions, spacing, and font sizes. These customizations can help avoid or minimize the need for post-download edits when generating figures.</p>
+<p><a href="../images/oncomatrix/49-legend_layout.png" title="Click to see the full image."><img alt="Legend layout" src="../images/oncomatrix/49-legend_layout.png"></a></p>
+<h2 id="zooming">Zooming<a class="headerlink" href="#zooming" title="Permanent link">¶</a></h2>
+<p>The matrix plot offers an interactive zoom panel as shown below with which a user can zoom in to view individual samples. There are two ways to use this panel. One by changing the input number and second by sliding the zoom bar to a desired zoom level as shown.</p>
+<p><a href="../images/oncomatrix/50-zoom_slider.png" title="Click to see the full image."><img alt="Zoom slider" src="../images/oncomatrix/50-zoom_slider.png"></a></p>
+<p>Change zoom level to 10+ as shown.</p>
+<p><a href="../images/oncomatrix/51-zoom_slider_plus.png" title="Click to see the full image."><img alt="Zoom slider plus" src="../images/oncomatrix/51-zoom_slider_plus.png"></a></p>
+<p>Scroll down to view individual samples at the bottom of the plot as shown below.</p>
+<p><a href="../images/oncomatrix/52-zoomed-in.png" title="Click to see the full image."><img alt="Zoomed in matrix view" src="../images/oncomatrix/52-zoomed-in.png"></a></p>
+<p>The zoom action can also be implemented by following steps as outlined in section - Drag to zoom.</p>
+<h2 id="disco-plot">Disco Plot<a class="headerlink" href="#disco-plot" title="Permanent link">¶</a></h2>
+<p>Click on any sample to reveal a second type of plot called as the <code>Disco Plot</code> as shown.</p>
+<p><a href="../images/oncomatrix/53-disco_plot1.png" title="Click to see the full image."><img alt="Sample label clicking to show disco plot button" src="../images/oncomatrix/53-disco_plot1.png"></a></p>
+<p>Click on <code>Disco plot</code> as shown above in gray. This loads a new chart above the matrix plot as shown below.</p>
+<p><a href="../images/oncomatrix/54-disco_plot2.png" title="Click to see the full image."><img alt="Disco plot" src="../images/oncomatrix/54-disco_plot2.png"></a></p>
+<p>This plot shows all the mutations and CNV associated with that sample id as shown above. The plot also displays the legend for the mutation class and the CNV.</p>
+<!--To reset the zoom level to default, click on the `Reset` button as shown. This will reset the zoom level to a default of 1.0
+
+[![Reset Zoom](./images/oncomatrix/55-reset_zoom.png)](./images/oncomatrix/55-reset_zoom.png 'Click to see the full image.')
+-->
+<h2 id="download">Download<a class="headerlink" href="#download" title="Permanent link">¶</a></h2>
+<p>The control panel shows an option to download the plot as an svg after user has specified their customizations. Select the <code>Download</code> button as shown below to save the svg.</p>
+<p><a href="../images/oncomatrix/59-download_svg1.png" title="Click to see the full image."><img alt="Download button" src="../images/oncomatrix/59-download_svg1.png"></a></p>
+<p>If svg format is selected then the download will get saved to the default download folder as shown at the bottom of the browser window.</p>
+<p><a href="../images/oncomatrix/60-download_svg2.png" title="Click to see the full image."><img alt="Download" src="../images/oncomatrix/60-download_svg2.png"></a></p>
+<h2 id="legend">Legend<a class="headerlink" href="#legend" title="Permanent link">¶</a></h2>
+<p>The legend for the matrix is below the plot and shows color coding for different mutation classes as well as color codes for CNV as shown here. This legend is interactive and user may choose to hide or show features such as mutation classes or copy number changes.</p>
+<p>Click on the legend icons to hide anything.</p>
+<p><a href="../images/oncomatrix/61-legend.png" title="Click to see the full image."><img alt="Legend" src="../images/oncomatrix/61-legend.png"></a></p></div>
 
 
 
@@ -1240,9 +2440,9 @@
         
           
           <a
-            href="../proteinpaint/"
+            href="../discovery-page/"
             class="md-footer__link md-footer__link--prev"
-            aria-label="Previous: ProteinPaint"
+            aria-label="Previous: Discovery Page"
           >
             <div class="md-footer__button md-icon">
               
@@ -1253,7 +2453,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                ProteinPaint
+                Discovery Page
               </div>
             </div>
           </a>
@@ -1263,16 +2463,16 @@
         
           
           <a
-            href="../discovery-page/"
+            href="../gene_expression_clustering/"
             class="md-footer__link md-footer__link--next"
-            aria-label="Next: Discovery Page"
+            aria-label="Next: Gene Expression Clustering"
           >
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Discovery Page
+                Gene Expression Clustering
               </div>
             </div>
             <div class="md-footer__button md-icon">
