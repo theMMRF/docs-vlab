@@ -1,5 +1,7 @@
 # Discovery
 
+## Introduction
+
 The **Discovery page** in the MMRF Virtual Lab provides a centralized interface for exploring publications and associated datasets derived from CoMMpass and related MMRF studies.
 
 ---

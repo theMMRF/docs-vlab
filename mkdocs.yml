@@ -18,6 +18,8 @@ nav:
     - Oncomatrix: mmrf-resources/user-guide/oncomatrix.md
     - Gene Expression Clustering: mmrf-resources/user-guide/gene_expression_clustering.md
     - ProteinPaint: mmrf-resources/user-guide/proteinpaint_lollipop.md
+    - Correlation Plot: mmrf-resources/user-guide/correlation.md
+    - Single Cell RNA-seq: mmrf-resources/user-guide/single-cell-UMAP.md
   - MMRF CoMMpass:
     - mmrf-resources/mmrf-commpass/index.md
     - About the CoMMpass Study: mmrf-resources/mmrf-commpass/about-commpass.md

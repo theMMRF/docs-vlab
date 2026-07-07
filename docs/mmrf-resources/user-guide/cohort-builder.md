@@ -1,8 +1,12 @@
 # Cohort Builder
 
-The **Cohort Builder** allows users to define a set of cases based on clinical and molecular criteria, and use that same cohort across Virtual Lab (Repository, visualizations, <!--downloads,--> and analyses). It is the fastest way to focus your work on exactly the patient population you are interested in. This section will cover hte process of building a cohort and downstream actions will be documented in their respective sections.
+## Introduction
+
+The **Cohort Builder** allows users to define a set of cases based on clinical and molecular criteria, and use that same cohort across Virtual Lab (Repository, visualizations, <!--downloads,--> and analyses). It is the fastest way to focus your work on exactly the patient population you are interested in. This section will cover the process of building a cohort and downstream actions will be documented in their respective sections.
 
 **Tip:** Filters within the Cohort Builder are applied to the cases in your cohort. If you wish to target specific types of files for download, use the filters within the Repository.
+
+## Launch Cohort Builder
 
 The Cohort Builder can be accessed via:
 

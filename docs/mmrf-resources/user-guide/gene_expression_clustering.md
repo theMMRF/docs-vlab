@@ -1,8 +1,8 @@
 # Gene Expression Clustering Tool
 
-## Introduction to Gene Expression Clustering
+## Introduction
 
-The Gene Expression Clustering tool is a web-based tool for performing sample clustering by selecting a desired set of genes and visualizing a heatmap of a z-score transformed matrix.
+The **Gene Expression Clustering** tool is a web-based tool for performing sample clustering by selecting a desired set of genes and visualizing a heatmap of a z-score transformed matrix.
 
 ## Quick Reference Guide
 

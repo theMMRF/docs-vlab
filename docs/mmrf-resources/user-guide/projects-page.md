@@ -1,5 +1,7 @@
 # Projects
 
+## Introduction
+
 In the MMRF Virtual Lab, data is organized at a high level by **project**. Each project represents a specific CoMMpass data release or dataset grouping and serves as the primary entry point for accessing associated files.
 
 The **Projects page** provides a centralized view of all available datasets and allows users to explore, navigate, and access data within the platform.
