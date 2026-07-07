@@ -1,6 +1,6 @@
 # Mutation Frequency
 
-## Overview
+## Introduction
 
 The **Mutation Frequency** app within the MMRF Virtual Lab allows users to visualize the most frequently mutated genes and the most common somatic mutations across the selected cohort. It provides insight into the mutation landscape of the cohort, enabling researchers to identify patterns in gene alteration frequency, impact, and survival outcomes.
 

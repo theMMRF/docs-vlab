@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Single Cell RNAseq tool is a framework to analyze single cell RNA sequencing data with cluster plots and gene expression overlays.
+The **Single Cell RNAseq** tool is a framework to analyze single cell RNA sequencing data with cluster plots and gene expression overlays.
 
 ## Launch Single Cell RNA-seq Tool
 

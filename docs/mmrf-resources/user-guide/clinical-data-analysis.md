@@ -1,6 +1,6 @@
 # Clinical Data Analysis
 
-## Overview
+## Introduction
 
 The **Clinical Data Analysis** tool in the MMRF Virtual Lab allows researchers to generate interactive visualizations of key clinical attributes within a selected cohort. Users can explore demographic and diagnostic variables, create custom groupings, and visualize the data across multiple chart types.
 

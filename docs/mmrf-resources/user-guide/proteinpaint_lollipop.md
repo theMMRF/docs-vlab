@@ -1,8 +1,8 @@
 # ProteinPaint Tool
 
-## Introduction to ProteinPaint
+## Introduction
 
-ProteinPaint visualizes cancer coding somatic mutations in an interactive lollipop plot.
+The **ProteinPaint** tool visualizes cancer coding somatic mutations in an interactive lollipop plot.
 
 For a given gene, it displays mutations associated with that gene as well as genomic position, consequence, and occurrence for each mutation.
 

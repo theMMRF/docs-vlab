@@ -1,6 +1,6 @@
 # Cohort Comparison
 
-## Overview
+## Introduction
 
 The **Cohort Comparison** tool allows researchers to compare two saved cohorts within the MMRF Virtual Lab. This feature displays side-by-side visual and tabular summaries that highlight similarities and differences between cohorts based on clinical and demographic variables.
 

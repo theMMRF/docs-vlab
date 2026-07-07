@@ -29,8 +29,8 @@ It provides step-by-step instructions for navigating the platform, building coho
 * [Oncomatrix](oncomatrix.md) - Visualize coding mutations across all datasets.
 * [Gene Expression Clustering](gene_expression_clustering.md) - Perform sample clustering and visualize with a heatmap.
 * [ProteinPaint](proteinpaint_lollipop.md) - Explore cancer coding somatic mutations in an interactive lollipop plot.
-* [Correlation](correlation.md) - correlate
-* [Single Cell Viewer](single-cell-UMAP.md) - UMAP
+* [Correlation](correlation.md) - Explore correlation plots across molecular and clinical variables.
+* [Single Cell Viewer](single-cell-UMAP.md) - Explore UMAP and gene-expression views for single-cell data.
 
 ---
 

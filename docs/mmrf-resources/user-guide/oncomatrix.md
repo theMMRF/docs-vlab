@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The OncoMatrix tool is a web-based tool for visualizing coding mutations such as Simple Somatic Mutations (SSM) and Copy Number Variations (CNV) from the MMRF Virtual Lab (VLab).
+The **OncoMatrix** tool is a web-based tool for visualizing coding mutations such as Simple Somatic Mutations (SSM) and Copy Number Variations (CNV) from the MMRF Virtual Lab (VLab).
 
 ## Accessing the Matrix Chart
 

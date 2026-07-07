@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Correlation Plot is a framework to correlate GDC molecular information (mutation, CNV, gene expression) with patient clinical and survival data.
+The **Correlation Plot** is a framework to correlate GDC molecular information (mutation, CNV, gene expression) with patient clinical and survival data.
 
 ## Launch Correlation Plot
 
